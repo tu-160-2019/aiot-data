@@ -37,4 +37,4 @@ Spring Cloud AIOT人工智能物联网平台与数据中台整合版。支持从
 6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
 
 #### 联系方式
-
+![输入图片说明](%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20240325121359.png)
