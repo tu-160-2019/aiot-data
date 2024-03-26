@@ -1,3 +1,5 @@
+建好数据库，使用Navicat Premium导入脚本即可。
+
 sys_user
 sys_user_role
 sys_role
