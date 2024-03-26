@@ -1,0 +1,46 @@
+server:
+  port: 8095
+
+spring:
+  application:
+    name: srt-cloud-monitor
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${nacos_host:127.0.0.1}:${nacos_port:8848}
+        # 命名空间，默认：public
+        namespace: ${nacos_namespace:}
+        service: ${spring.application.name}
+  boot:
+    admin:
+      instancdNameMap:
+        srt-cloud-monitor: 监控服务
+        srt-cloud-message: 消息服务
+        srt-cloud-quartz: 调度服务
+        srt-cloud-system: 系统服务
+        srt-cloud-gateway: 网关服务
+        srt-cloud-data-integrate: 数据集成
+        srt-cloud-data-development: 数据开发
+        srt-cloud-data-governance: 数据治理
+        srt-cloud-data-service: 数据服务
+        srt-cloud-data-assets: 数据资产
+      context-path: /
+      ui:
+        title: 数睿通监控平台
+        brand: <span>数睿通监控平台</span>
+
+logging:
+  # 只有配置了日志文件，才能被监控收集
+  file:
+    name: logs/${spring.application.name}.log
+#  endpoints config
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always

@@ -1,0 +1,32 @@
+version: '3.9'
+services:
+  srt-cloud-gateway:
+    image: srtcloud:1.0
+    container_name: srt-cloud-gateway
+    ports:
+      - 8080:8080
+    env_file:
+      - app.env
+    volumes:
+      - /work/www/srt-cloud/srt-cloud-gateway.jar:/app/app.jar
+  srt-cloud-system:
+    image: srtcloud:1.0
+    container_name: srt-cloud-system
+    env_file:
+      - app.env
+    volumes:
+      - /work/www/srt-cloud/srt-cloud-system.jar:/app/app.jar
+#  srt-cloud-quartz:
+#    image: srtcloud:1.0
+#    container_name: srt-cloud-quartz
+#    env_file:
+#      - app.env
+#    volumes:
+#      - /work/www/srt-cloud/srt-cloud-quartz.jar:/app/app.jar
+#  srt-cloud-message:
+#    image: srtcloud:1.0
+#    container_name: srt-cloud-message
+#    env_file:
+#      - app.env
+#    volumes:
+#      - /work/www/srt-cloud/srt-cloud-message.jar:/app/app.jar

@@ -1,0 +1,117 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: srt-cloud-gateway
+  profiles:
+    active: dev
+  cloud:
+    gateway:
+      httpclient:
+        connect-timeout: 120000
+      metrics:
+        enabled: true
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: srt-cloud-system
+          uri: lb://srt-cloud-system
+          order: 1
+          predicates:
+            - Path=/sys/**
+          filters:
+            - StripPrefix=1
+        - id: srt-cloud-quartz
+          uri: lb://srt-cloud-quartz
+          order: 2
+          predicates:
+            - Path=/schedule/**
+          filters:
+            - StripPrefix=1
+        - id: srt-cloud-message
+          uri: lb://srt-cloud-message
+          order: 3
+          predicates:
+            - Path=/message/**
+          filters:
+            - StripPrefix=1
+        - id: srt-cloud-data-integrate
+          uri: lb://srt-cloud-data-integrate
+          order: 4
+          predicates:
+            - Path=/data-integrate/**
+          filters:
+            - StripPrefix=1
+        - id: srt-cloud-data-development
+          uri: lb://srt-cloud-data-development
+          order: 5
+          predicates:
+            - Path=/data-development/**
+          filters:
+            - StripPrefix=1
+        - id: srt-cloud-data-service
+          uri: lb://srt-cloud-data-service
+          order: 6
+          predicates:
+            - Path=/data-service/**
+          filters:
+            - StripPrefix=1
+        - id: srt-cloud-data-governance
+          uri: lb://srt-cloud-data-governance
+          order: 7
+          predicates:
+            - Path=/data-governance/**
+          filters:
+            - StripPrefix=1
+        - id: srt-cloud-data-assets
+          uri: lb://srt-cloud-data-assets
+          order: 8
+          predicates:
+            - Path=/data-assets/**
+          filters:
+            - StripPrefix=1
+        - id: video-assist
+          uri: lb://video-assist
+          order: 9
+          predicates:
+            - Path=/video-assist/**
+          filters:
+            - StripPrefix=1
+        - id: openapi
+          uri: http://localhost:${server.port}
+          predicates:
+            - Path=/v3/api-docs/**
+          filters:
+            - RewritePath=/v3/api-docs/(?<path>.*), /$\{path}/v3/api-docs
+    nacos:
+      discovery:
+        server-addr: ${nacos_host:127.0.0.1}:${nacos_port:8848}
+        # 命名空间，默认：public
+        namespace: ${nacos_namespace:}
+        service: ${spring.application.name}
+
+springdoc:
+  swagger-ui:
+    path: doc.html
+
+
+logging:
+  level:
+    org:
+      springframework:
+        cloud:
+          gateway: TRACE
+  # 只有配置了日志文件，才能被监控收集
+  file:
+    name: logs/${spring.application.name}.log
+#  endpoints config
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always

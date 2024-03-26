@@ -1,0 +1,41 @@
+<assembly>
+	<id>linux</id>
+	<includeBaseDirectory>false</includeBaseDirectory>
+	<formats>
+		<format>tar.gz</format>
+	</formats>
+	<fileSets>
+		<fileSet>
+			<directory>target/generated-resources/appassembler/jsw/${project.artifactId}/bin</directory>
+			<outputDirectory>${project.artifactId}/bin</outputDirectory>
+            <fileMode>0755</fileMode>
+            <includes>
+				<include>${project.artifactId}</include>
+				<include>wrapper-linux*</include>
+			</includes>
+		</fileSet>
+		<fileSet>
+			<directory>target/generated-resources/appassembler/jsw/${project.artifactId}/lib</directory>
+			<outputDirectory>${project.artifactId}/lib</outputDirectory>
+			<includes>
+				<include>*.jar</include>
+				<include>libwrapper-linux*</include>
+			</includes>
+		</fileSet>
+		<fileSet>
+			<directory>target/generated-resources/appassembler/jsw/${project.artifactId}/conf</directory>
+			<outputDirectory>${project.artifactId}/conf</outputDirectory>
+			<includes>
+				<include>*</include>
+			</includes>
+		</fileSet>
+        <fileSet>
+            <directory>target/generated-resources/appassembler/jsw/${project.artifactId}/logs</directory>
+            <outputDirectory>${project.artifactId}/logs</outputDirectory>
+            <excludes>
+                <exclude>**/*</exclude>
+            </excludes>
+        </fileSet>
+	</fileSets>
+
+</assembly>
