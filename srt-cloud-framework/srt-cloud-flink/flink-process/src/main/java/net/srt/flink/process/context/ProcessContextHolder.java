@@ -1,0 +1,84 @@
+/*
+ *
+ *  Licensed to the Apache Software Foundation (ASF) under one or more
+ *  contributor license agreements.  See the NOTICE file distributed with
+ *  this work for additional information regarding copyright ownership.
+ *  The ASF licenses this file to You under the Apache License, Version 2.0
+ *  (the "License"); you may not use this file except in compliance with
+ *  the License.  You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *  Unless required by applicable law or agreed to in writing, software
+ *  distributed under the License is distributed on an "AS IS" BASIS,
+ *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *  See the License for the specific language governing permissions and
+ *  limitations under the License.
+ *
+ */
+
+package net.srt.flink.process.context;
+
+import cn.hutool.core.util.StrUtil;
+import net.srt.flink.common.assertion.Asserts;
+import net.srt.flink.process.model.ProcessEntity;
+import net.srt.flink.process.pool.ProcessPool;
+
+/**
+ * ProcessContextHolder
+ *
+ * @author zrx
+ * @since 2022/10/16 16:57
+ */
+public class ProcessContextHolder {
+
+	private static final ThreadLocal<ProcessEntity> PROCESS_CONTEXT = new ThreadLocal<>();
+
+	private static final ThreadLocal<ProcessEntity> FLOW_PROCESS_CONTEXT = new ThreadLocal<>();
+
+	public static void setProcess(ProcessEntity process) {
+		PROCESS_CONTEXT.set(process);
+	}
+
+	public static void setFlowProcess(ProcessEntity process) {
+		FLOW_PROCESS_CONTEXT.set(process);
+	}
+
+	public static ProcessEntity getFlowProcess() {
+		if (Asserts.isNull(FLOW_PROCESS_CONTEXT.get())) {
+			return ProcessEntity.NULL_PROCESS;
+		}
+		return FLOW_PROCESS_CONTEXT.get();
+	}
+
+	public static ProcessEntity getProcess() {
+		if (Asserts.isNull(PROCESS_CONTEXT.get())) {
+			return ProcessEntity.NULL_PROCESS;
+		}
+		return PROCESS_CONTEXT.get();
+	}
+
+	public static void clear() {
+		PROCESS_CONTEXT.remove();
+	}
+
+	public static void clearFlow() {
+		FLOW_PROCESS_CONTEXT.remove();
+	}
+
+	public static ProcessEntity registerProcess(ProcessEntity process) {
+		Asserts.checkNull(process, "Process can not be null.");
+		setProcess(process);
+		if (StrUtil.isNotBlank(process.getAccessToken())) {
+			ProcessPool.getInstance().push(process.getAccessToken(), process);
+		}
+		return process;
+	}
+
+	public static ProcessEntity registerFlowProcess(ProcessEntity process) {
+		Asserts.checkNull(process, "Process can not be null.");
+		setFlowProcess(process);
+		return process;
+	}
+
+}
