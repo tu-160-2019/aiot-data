@@ -13,6 +13,7 @@
 		<module>srt-cloud-security</module>
 		<module>srt-cloud-mybatis</module>
         <module>srt-cloud-dbswitch</module>
+		<module>srt-cloud-flink</module>
     </modules>
 
 
