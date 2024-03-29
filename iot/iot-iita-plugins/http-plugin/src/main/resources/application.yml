@@ -1,0 +1,6 @@
+plugin:
+  runMode: prod
+  mainPackage: cc.iotkit.plugin
+
+http:
+  port: 9081

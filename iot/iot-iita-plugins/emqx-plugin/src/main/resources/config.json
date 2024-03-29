@@ -1,0 +1,30 @@
+[
+  {
+    "id": "host",
+    "name": "emqx ip",
+    "type": "text",
+    "value": "127.0.0.1",
+    "desc": "emqx ip，默认为127.0.0.1"
+  },
+  {
+    "id": "port",
+    "name": "emqx端口",
+    "type": "number",
+    "value": 1883,
+    "desc": "emqx端口，默认为1883"
+  },
+  {
+    "id": "auth_port",
+    "name": "认证端口",
+    "type": "number",
+    "value": 8104,
+    "desc": "emqx http认证端口，默认为8104"
+  },
+  {
+    "id": "topics",
+    "name": "订阅主题",
+    "type": "text",
+    "value": "/sys/#",
+    "desc": "订阅主题多个用,隔开"
+  }
+]

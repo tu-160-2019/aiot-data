@@ -1,0 +1,8 @@
+case: ReportTest
+
+mqtt:
+  host: 127.0.0.1
+  port: 1883
+
+start: 0
+end: 100

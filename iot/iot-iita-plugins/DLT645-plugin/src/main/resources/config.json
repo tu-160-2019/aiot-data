@@ -1,0 +1,23 @@
+[
+  {
+    "id": "host",
+    "name": "服务端ip",
+    "type": "text",
+    "value": "25on621889.goho.co",
+    "desc": "服务端ip"
+  },
+  {
+    "id": "port",
+    "name": "服务端端口",
+    "type": "number",
+    "value": 43161,
+    "desc": "服务端端口"
+  },
+  {
+    "id": "interval",
+    "name": "采集频率",
+    "type": "number",
+    "value": 10000,
+    "desc": "采集频率"
+  }
+]

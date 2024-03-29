@@ -1,0 +1,73 @@
+[ {
+  "id" : "6293953092084e2df303ba3e",
+  "uid" : "1",
+  "name" : "三路开关",
+  "productKey" : "eDhXKwEzwFybM5R7",
+  "devices" : [ ],
+  "type" : "thingModel",
+  "script" : "\nvar mid=1000;\n\nfunction getMid(){\n  mid++;\n  if(mid>9999){\n\tmid=1;\n  }\n  return mid+\"\";\n}\n\nfunction getRequestId(){\n  return \"RID\"+new Date().getTime()+getMid();\n}\n\n\nthis.receive=function(service,device){\n  return [];\n}\n\nthis.report=function(device){\n  return {\n    \"mid\":getRequestId(),\n    \"productKey\":device.productKey,  \n    \"deviceName\":device.deviceName,\n    \"type\":\"property\",\n    \"identifier\":\"report\",\n    \"occurred\":new Date().getTime(),\t//时间戳，设备上的事件或数据产生的本地时间\n    \"time\":new Date().getTime(),\t\t//时间戳，消息上报时间\n    \"data\":{\n\t  \"rssi\":127-parseInt(Math.random()*127),\n\t  \"powerstate_1\":Math.random()>0.5?1:0,\n\t  \"powerstate_2\":Math.random()>0.5?1:0,\n\t  \"powerstate_3\":Math.random()>0.5?1:0\n    }\n  }\n}",
+  "trigger" : "random",
+  "triggerExpression" : "second",
+  "state" : "running",
+  "createAt" : 1653839152090
+}, {
+  "id" : "629391ae92084e2df303ba3d",
+  "uid" : "1",
+  "name" : "温湿度传感器",
+  "productKey" : "6kYp6jszrDns2yh4",
+  "devices" : [ ],
+  "type" : "thingModel",
+  "script" : "\nvar mid=1000;\n\nfunction getMid(){\n  mid++;\n  if(mid>9999){\n\tmid=1;\n  }\n  return mid+\"\";\n}\n\nfunction getRequestId(){\n  return \"RID\"+new Date().getTime()+getMid();\n}\n\n\nthis.receive=function(service,device){\n  return [];\n}\n\nthis.report=function(device){\n  return {\n    \"mid\":getRequestId(),\n    \"productKey\":device.productKey,  \n    \"deviceName\":device.deviceName,\n    \"type\":\"property\",\n    \"identifier\":\"report\",\n    \"occurred\":new Date().getTime(),\t//时间戳，设备上的事件或数据产生的本地时间\n    \"time\":new Date().getTime(),\t\t//时间戳，消息上报时间\n    \"data\":{\n      \"humidity\":parseInt(Math.random()*100),\n\t  \"temperature\":parseInt(Math.random()*500)-38\n    }\n  }\n}",
+  "trigger" : "random",
+  "triggerExpression" : "second",
+  "state" : "running",
+  "createAt" : 1653838254989
+}, {
+  "id" : "629390f492084e2df303ba3c",
+  "uid" : "1",
+  "name" : "调光灯",
+  "productKey" : "xpsYHExTKPFaQMS7",
+  "devices" : [ ],
+  "type" : "thingModel",
+  "script" : "\nvar mid=1000;\n\nfunction getMid(){\n  mid++;\n  if(mid>9999){\n\tmid=1;\n  }\n  return mid+\"\";\n}\n\nfunction getRequestId(){\n  return \"RID\"+new Date().getTime()+getMid();\n}\n\n\nthis.receive=function(service,device){\n  return [];\n}\n\nthis.report=function(device){\n  return {\n    \"mid\":getRequestId(),\n    \"productKey\":device.productKey,  \n    \"deviceName\":device.deviceName,\n    \"type\":\"property\",\n    \"identifier\":\"report\",\n    \"occurred\":new Date().getTime(),\t//时间戳，设备上的事件或数据产生的本地时间\n    \"time\":new Date().getTime(),\t\t//时间戳，消息上报时间\n    \"data\":{\n      \"brightness\":parseInt(Math.random()*100),\n\t  \"powerstate\":Math.random()>0.5?1:0\n    }\n  }\n}",
+  "trigger" : "random",
+  "triggerExpression" : "second",
+  "state" : "running",
+  "createAt" : 1653838068860
+}, {
+  "id" : "62925cb72002b44c15caeb1c",
+  "uid" : "1",
+  "name" : "虚拟门磁1",
+  "productKey" : "PN3EDmkBZDD8whDd",
+  "devices" : [ ],
+  "type" : "thingModel",
+  "script" : "\nvar mid=1000;\n\nfunction getMid(){\n  mid++;\n  if(mid>9999){\n\tmid=1;\n  }\n  return mid+\"\";\n}\n\nfunction getRequestId(){\n  return \"RID\"+new Date().getTime()+getMid();\n}\n\n\nthis.receive=function(service,device){\n  return [];\n}\n\nthis.report=function(device){\n  return {\n    \"mid\":getRequestId(),\n    \"productKey\":device.productKey,  \n    \"deviceName\":device.deviceName,\n    \"type\":\"property\",\n    \"identifier\":\"report\",\n    \"occurred\":new Date().getTime(),\t//时间戳，设备上的事件或数据产生的本地时间\n    \"time\":new Date().getTime(),\t\t//时间戳，消息上报时间\n    \"data\":{\n      \"rssi\":127-parseInt(Math.random()*127),\n      \"power\":parseInt(Math.random()*100),\n\t  \"doorStatus\":Math.random()>0.5?1:0\n    }\n  }\n}",
+  "trigger" : "random",
+  "triggerExpression" : "minute",
+  "state" : "running",
+  "createAt" : 1653759159567
+}, {
+  "id" : "628fd800fba69e633a972e12",
+  "uid" : "1",
+  "name" : "开关1",
+  "productKey" : "Rf4QSjbm65X45753",
+  "devices" : [ ],
+  "type" : "thingModel",
+  "script" : "\nvar mid=1000;\n\nfunction getMid(){\n  mid++;\n  if(mid>9999){\n\tmid=1;\n  }\n  return mid+\"\";\n}\n\nfunction getRequestId(){\n  return \"RID\"+new Date().getTime()+getMid();\n}\n\n\nthis.receive=function(service,device){\n  return [{\n    \"productKey\":service.productKey,\n    \"deviceName\":service.deviceName,\n    \"mid\":service.mid,\n    \"type\":\"service\",\n    \"identifier\":\"reboot_reply\",\n    \"data\":{},\n    \"code\":0\n  },{\n    \"mid\":getRequestId(),\n    \"productKey\":service.productKey,  \n    \"deviceName\":service.deviceName,\n    \"type\":\"property\",\n    \"identifier\":\"report\",\n    \"occurred\":new Date().getTime(),\n    \"time\":new Date().getTime(),\n    \"data\":{\n      \"volt\":parseInt(Math.random()*100),\n\t  \"powerstate\":Math.random()>0.5?1:0\n    }\n  }]\n}\n\nthis.report=function(device){\n  return {\n    \"mid\":getRequestId(),\n    \"productKey\":device.productKey,  \n    \"deviceName\":device.deviceName,\n    \"type\":\"property\",\n    \"identifier\":\"report\",\n    \"occurred\":new Date().getTime(),\t//时间戳，设备上的事件或数据产生的本地时间\n    \"time\":new Date().getTime(),\t\t//时间戳，消息上报时间\n    \"data\":{\n      \"volt\":parseInt(Math.random()*100)\n    }\n  }\n}",
+  "trigger" : "cron",
+  "triggerExpression" : "0 * * * * ? ",
+  "state" : "running",
+  "createAt" : 1653594112764
+}, {
+  "id" : "628fa6bc1b735b73cb260042",
+  "uid" : "1",
+  "name" : "虚拟插座12",
+  "productKey" : "cGCrkK7Ex4FESAwe",
+  "devices" : [ ],
+  "type" : "thingModel",
+  "script" : "\nvar mid=1000;\n\nfunction getMid(){\n  mid++;\n  if(mid>9999){\n\tmid=1;\n  }\n  return mid+\"\";\n}\n\nfunction getRequestId(){\n  return \"RID\"+new Date().getTime()+getMid();\n}\n\n\nthis.receive=function(service,device){\n  var identifier=service.identifier;\n  var result= [{\n    \"productKey\":service.productKey,\n    \"deviceName\":service.deviceName,\n    \"mid\":service.mid,\n    \"type\":\"service\",\n    \"identifier\":identifier+\"_reply\",\n    \"data\":{},\n    \"code\":0\n  }]\n  \n  if(service.type==\"property\" && (identifier==\"get\" || identifier==\"set\")){\n\tresult.push({\n\t  \"mid\":getRequestId(),\n\t  \"productKey\":device.productKey,  \n\t  \"deviceName\":device.deviceName,\n\t  \"type\":\"property\",\n\t  \"identifier\":\"report\",\n\t  \"occurred\":new Date().getTime(),\n\t  \"time\":new Date().getTime(),\n\t  \"data\":service.params\n\t});\n  }\n  \n  return result;\n}\n\nthis.report=function(device){\n  return {\n    \"mid\":getRequestId(),\n    \"productKey\":device.productKey,  \n    \"deviceName\":device.deviceName,\n    \"type\":\"property\",\n    \"identifier\":\"report\",\n    \"occurred\":new Date().getTime(),\t//时间戳，设备上的事件或数据产生的本地时间\n    \"time\":new Date().getTime(),\t\t//时间戳，消息上报时间\n    \"data\":{\n      \"rssi\":127-parseInt(Math.random()*127),\n\t  \"powerstate\":Math.random()>0.5?1:0\n    }\n  }\n}",
+  "trigger" : "random",
+  "triggerExpression" : "second",
+  "state" : "running",
+  "createAt" : 1653581500076
+} ]

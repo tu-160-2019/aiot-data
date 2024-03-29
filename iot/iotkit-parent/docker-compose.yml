@@ -1,0 +1,63 @@
+version: "3.4"
+
+services:
+  mysql:
+    container_name: iot-mysql
+    image: mysql:8
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: ${MYSQL_DATABASE:-iotkit}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-123456}
+    volumes:
+      - mysql:/var/lib/mysql/
+
+  redis:
+    container_name: iot-redis
+    image: redis:6-alpine
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis:/data
+
+  server:
+    container_name: iot-server
+    build:
+      context: .
+    image: iot-server
+    restart: unless-stopped
+    ports:
+      - "8089:8086"
+      - "8088:8082"
+    environment:
+      # https://github.com/polovyivan/docker-pass-configs-to-container
+      SPRING_PROFILES_ACTIVE: mysql
+      SPRING_DATASOURCE_DYNAMIC_DATASOURCE_MASTER_URL: ${MASTER_DATASOURCE_URL:-jdbc:mysql://iot-mysql:3306/iotkit?useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&nullCatalogMeansCurrent=true}
+      SPRING_DATASOURCE_DYNAMIC_DATASOURCE_MASTER_USERNAME: ${MASTER_DATASOURCE_USERNAME:-root}
+      SPRING_DATASOURCE_DYNAMIC_DATASOURCE_MASTER_PASSWORD: ${MASTER_DATASOURCE_PASSWORD:-123456}
+#      SPRING_DATASOURCE_DYNAMIC_DATASOURCE_SLAVE_URL: ${SLAVE_DATASOURCE_URL:-jdbc:mysql://iot-mysql:3306/iotkit?useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&nullCatalogMeansCurrent=true}
+#      SPRING_DATASOURCE_DYNAMIC_DATASOURCE_SLAVE_USERNAME: ${SLAVE_DATASOURCE_USERNAME:-root}
+#      SPRING_DATASOURCE_DYNAMIC_DATASOURCE_SLAVE_PASSWORD: ${SLAVE_DATASOURCE_PASSWORD:-123456}
+      SPRING_REDIS_HOST: ${REDIS_HOST:-iot-redis}
+      SPRING_REDIS_PORT: 6379
+      JAVA_OPTS:
+        ${JAVA_OPTS:-
+        -Xms512m
+        -Xmx512m
+        -Djava.security.egd=file:/dev/./urandom
+        -DdisabledEmbeddedRedis=true
+        }
+    volumes:
+      - ./data/dist:/usr/share/nginx/html
+    depends_on:
+      - redis
+      - mysql
+
+volumes:
+  mysql:
+    driver: local
+  redis:
+    driver: local

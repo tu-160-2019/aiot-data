@@ -121,6 +121,10 @@
             <scope>runtime</scope>
             <exclusions>
                 <exclusion>
+                    <groupId>jdk.tools</groupId>
+                    <artifactId>jdk.tools</artifactId>
+                </exclusion>
+                <exclusion>
                     <groupId>org.eclipse.jetty.aggregate</groupId>
                     <artifactId>jetty-all</artifactId>
                 </exclusion>
@@ -271,6 +275,5 @@
             <version>1.0</version>
         </dependency>
     </dependencies>
-
 
 </project>

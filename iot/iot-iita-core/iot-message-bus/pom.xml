@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>iot-iita-core</artifactId>
+        <groupId>cc.iotkit</groupId>
+        <version>1.0.5</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <packaging>pom</packaging>
+    <description>
+        消息队列适配模块，用于提供默认消息队列和适配不同消息队列接入
+    </description>
+
+    <artifactId>iot-message-bus</artifactId>
+
+    <modules>
+        <module>iot-message-core</module>
+        <module>iot-message-event-bus</module>
+        <module>iot-message-rocketmq</module>
+    </modules>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>cc.iotkit</groupId>
+            <artifactId>iot-common-core</artifactId>
+        </dependency>
+
+        <!--====================第三方库===================-->
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>io.vertx</groupId>
+            <artifactId>vertx-core</artifactId>
+        </dependency>
+
+    </dependencies>
+
+</project>

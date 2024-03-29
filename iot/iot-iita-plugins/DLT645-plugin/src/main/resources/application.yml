@@ -1,0 +1,8 @@
+plugin:
+  runMode: prod
+  mainPackage: cc.iotkit.plugin
+
+tcp:
+  host: 25on621889.goho.co
+  port: 43161
+  interval: 10000

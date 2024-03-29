@@ -1,0 +1,3285 @@
+[
+  {
+    "id": 1,
+    "productKey": "xpsYHExTKPFaQMS7",
+    "model": {
+      "properties": [
+        {
+          "identifier": "powerstate",
+          "dataType": {
+            "type": "enum",
+            "specs": {
+              "0": "关",
+              "1": "开"
+            }
+          },
+          "name": "开关",
+          "accessMode": "rw"
+        },
+        {
+          "identifier": "brightness",
+          "dataType": {
+            "type": "int32",
+            "specs": {
+              "min": "1",
+              "max": "100"
+            }
+          },
+          "name": "亮度",
+          "accessMode": "rw"
+        }
+      ],
+      "services": [],
+      "events": []
+    }
+  },
+  {
+    "id": 2,
+    "productKey": "hdX3PCMcFrCYpesJ",
+    "model": {
+      "properties": [
+        {
+          "identifier": "windSpeed",
+          "dataType": {
+            "type": "int32",
+            "specs": {
+              "min": "1",
+              "max": "10"
+            }
+          },
+          "name": "风速",
+          "accessMode": "rw"
+        },
+        {
+          "identifier": "powerSwitch",
+          "dataType": {
+            "type": "bool",
+            "specs": {
+              "0": "关",
+              "1": "开"
+            }
+          },
+          "name": "电源开关",
+          "accessMode": "rw"
+        },
+        {
+          "identifier": "workMode",
+          "dataType": {
+            "type": "enum",
+            "specs": {
+              "1": "正常风",
+              "2": "自然风",
+              "3": "睡眠风",
+              "4": "静音风"
+            }
+          },
+          "name": "工作模式",
+          "accessMode": "rw"
+        }
+      ],
+      "services": [],
+      "events": []
+    }
+  },
+  {
+    "id": 3,
+    "productKey": "hbtgIA0SuVw9lxjB",
+    "model": {
+      "properties": [],
+      "services": [
+        {
+          "identifier": "allowJoin",
+          "inputData": [],
+          "outputData": [],
+          "name": "开启入网"
+        },
+        {
+          "identifier": "rawSend",
+          "inputData": [
+            {
+              "identifier": "data",
+              "dataType": {
+                "type": "text",
+                "specs": {
+                  "length": "255"
+                }
+              },
+              "name": "数据",
+              "required": false
+            },
+            {
+              "identifier": "deviceName",
+              "dataType": {
+                "type": "text",
+                "specs": {
+                  "length": "128"
+                }
+              },
+              "name": "设备唯一码",
+              "required": false
+            },
+            {
+              "identifier": "model",
+              "dataType": {
+                "type": "text",
+                "specs": {
+                  "length": "128"
+                }
+              },
+              "name": "设备型号",
+              "required": false
+            }
+          ],
+          "outputData": [],
+          "name": "透传下发"
+        }
+      ],
+      "events": [
+        {
+          "identifier": "rawReport",
+          "outputData": [
+            {
+              "identifier": "data",
+              "dataType": {
+                "type": "text",
+                "specs": {
+                  "length": "255"
+                }
+              },
+              "name": "数据",
+              "required": false
+            },
+            {
+              "identifier": "deviceName",
+              "dataType": {
+                "type": "text",
+                "specs": {
+                  "length": "128"
+                }
+              },
+              "name": "设备唯一码",
+              "required": false
+            },
+            {
+              "identifier": "model",
+              "dataType": {
+                "type": "text",
+                "specs": {
+                  "length": "128"
+                }
+              },
+              "name": "设备型号",
+              "required": false
+            }
+          ],
+          "name": "透传上报"
+        }
+      ]
+    }
+  },
+  {
+    "id": 4,
+    "productKey": "eDhXKwEzwFybM5R7",
+    "model": {
+      "properties": [
+        {
+          "identifier": "powerstate",
+          "dataType": {
+            "type": "enum",
+            "specs": {
+              "0": "关",
+              "1": "开"
+            }
+          },
+          "name": "全开关",
+          "accessMode": "rw"
+        },
+        {
+          "identifier": "powerstate_1",
+          "dataType": {
+            "type": "enum",
+            "specs": {
+              "0": "关",
+              "1": "开"
+            }
+          },
+          "name": "开关1",
+          "accessMode": "rw"
+        },
+        {
+          "identifier": "powerstate_2",
+          "dataType": {
+            "type": "enum",
+            "specs": {
+              "0": "关",
+              "1": "开"
+            }
+          },
+          "name": "开关2",
+          "accessMode": "rw"
+        },
+        {
+          "identifier": "powerstate_3",
+          "dataType": {
+            "type": "enum",
+            "specs": {
+              "0": "关",
+              "1": "开"
+            }
+          },
+          "name": "开关3",
+          "accessMode": "rw"
+        },
+        {
+          "identifier": "DeviceType",
+          "dataType": {
+            "type": "text",
+            "specs": {
+              "length": "128"
+            }
+          },
+          "name": "型号",
+          "accessMode": "r"
+        },
+        {
+          "identifier": "rssi",
+          "dataType": {
+            "type": "int32",
+            "specs": {
+              "min": "-127",
+              "max": "127"
+            }
+          },
+          "name": "信号强度",
+          "accessMode": "r"
+        }
+      ],
+      "services": [],
+      "events": [
+        {
+          "identifier": "faultReportEvent",
+          "outputData": [
+            {
+              "identifier": "code",
+              "dataType": {
+                "type": "int32",
+                "specs": {}
+              },
+              "name": "错误代码"
+            }
+          ],
+          "name": "故障上报"
+        }
+      ]
+    }
+  },
+  {
+    "id": 5,
+    "productKey": "cGCrkK7Ex4FESAwe",
+    "model": {
+      "properties": [
+        {
+          "identifier": "rssi",
+          "dataType": {
+            "type": "int32",
+            "specs": {
+              "min": "-127",
+              "max": "127"
+            }
+          },
+          "name": "信号强度",
+          "accessMode": "r"
+        },
+        {
+          "identifier": "DeviceType",
+          "dataType": {
+            "type": "text",
+            "specs": {
+              "length": "128"
+            }
+          },
+          "name": "设备型号",
+          "accessMode": "r"
+        },
+        {
+          "identifier": "powerstate",
+          "dataType": {
+            "type": "bool",
+            "specs": {
+              "0": "关",
+              "1": "开"
+            }
+          },
+          "name": "开关",
+          "accessMode": "rw"
+        }
+      ],
+      "services": [
+        {
+          "identifier": "Toggle",
+          "inputData": [],
+          "outputData": [],
+          "name": "开关切换"
+        }
+      ],
+      "events": [
+        {
+          "identifier": "faultReportEvent",
+          "outputData": [
+            {
+              "identifier": "code",
+              "dataType": {
+                "type": "int32",
+                "specs": {
+                  "min": "0",
+                  "max": "255"
+                }
+              },
+              "name": "错误代码"
+            }
+          ],
+          "name": "故障上报"
+        }
+      ]
+    }
+  },
+  {
+    "id": 6,
+    "productKey": "Rf4QSjbm65X45753",
+    "model": {
+      "properties": [
+        {
+          "identifier": "powerstate",
+          "dataType": {
+            "type": "bool",
+            "specs": {
+              "0": "关",
+              "1": "开"
+            }
+          },
+          "name": "开关状态",
+          "accessMode": "rw"
+        },
+        {
+          "identifier": "volt",
+          "dataType": {
+            "type": "int32",
+            "specs": {
+              "min": "0",
+              "max": "100"
+            }
+          },
+          "name": "电压",
+          "accessMode": "r"
+        }
+      ],
+      "services": [
+        {
+          "identifier": "service1",
+          "inputData": [
+            {
+              "identifier": "p1",
+              "dataType": {
+                "type": "int32",
+                "specs": {
+                  "min": "1",
+                  "max": "100"
+                }
+              },
+              "name": "参数1"
+            },
+            {
+              "identifier": "p2",
+              "dataType": {
+                "type": "text",
+                "specs": {
+                  "length": "90"
+                }
+              },
+              "name": "参数2"
+            }
+          ],
+          "outputData": [],
+          "name": "服务1"
+        }
+      ],
+      "events": [
+        {
+          "identifier": "event1",
+          "outputData": [
+            {
+              "identifier": "p1",
+              "dataType": {
+                "type": "int32",
+                "specs": {
+                  "min": "0",
+                  "max": "100"
+                }
+              },
+              "name": "参数p1"
+            },
+            {
+              "identifier": "p2",
+              "dataType": {
+                "type": "text",
+                "specs": {
+                  "length": "100"
+                }
+              },
+              "name": "参数p2"
+            }
+          ],
+          "name": "测试event1"
+        }
+      ]
+    },
+    "_class": "cc.iotkit.model.ThingModel"
+  },
+  {
+    "id": 7,
+    "productKey": "PN3EDmkBZDD8whDd",
+    "model": {
+      "properties": [
+        {
+          "identifier": "power",
+          "dataType": {
+            "type": "int32",
+            "specs": {}
+          },
+          "name": "电量",
+          "accessMode": "r"
+        },
+        {
+          "identifier": "DeviceType",
+          "dataType": {
+            "type": "text",
+            "specs": {
+              "length": "128"
+            }
+          },
+          "name": "设备型号",
+          "accessMode": "r"
+        },
+        {
+          "identifier": "rssi",
+          "dataType": {
+            "type": "int32",
+            "specs": {
+              "min": "-127",
+              "max": "127"
+            }
+          },
+          "name": "信号强度",
+          "accessMode": "r"
+        },
+        {
+          "identifier": "doorStatus",
+          "dataType": {
+            "type": "enum",
+            "specs": {
+              "0": "关",
+              "1": "开"
+            }
+          },
+          "name": "门状态",
+          "accessMode": "r"
+        }
+      ],
+      "services": [],
+      "events": [
+        {
+          "identifier": "prylockEvent",
+          "outputData": [],
+          "name": "防撬报警事件"
+        }
+      ]
+    }
+  },
+  {
+    "id": 8,
+    "productKey": "N523nWsCiG3CAn6X",
+    "model": {
+      "properties": [
+        {
+          "identifier": "DeviceType",
+          "dataType": {
+            "type": "text",
+            "specs": {
+              "length": "128"
+            }
+          },
+          "name": "设备型号",
+          "accessMode": "r"
+        },
+        {
+          "identifier": "UnbindAndDelete",
+          "dataType": {
+            "type": "bool",
+            "specs": {
+              "0": "否",
+              "1": "是"
+            }
+          },
+          "name": "解绑并删除设备",
+          "accessMode": "rw"
+        }
+      ],
+      "services": [
+        {
+          "identifier": "Reboot",
+          "inputData": [],
+          "outputData": [],
+          "name": "重启"
+        },
+        {
+          "identifier": "AllowJoin",
+          "inputData": [],
+          "outputData": [],
+          "name": "开启组网"
+        },
+        {
+          "identifier": "OpenTrace",
+          "inputData": [
+            {
+              "identifier": "enable",
+              "dataType": {
+                "type": "bool",
+                "specs": {
+                  "0": "Close",
+                  "1": "Open"
+                }
+              },
+              "name": "值"
+            }
+          ],
+          "outputData": [],
+          "name": "打开调试"
+        },
+        {
+          "identifier": "ShowDesc",
+          "inputData": [
+            {
+              "identifier": "ieee",
+              "dataType": {
+                "type": "text",
+                "specs": {
+                  "length": "32"
+                }
+              },
+              "name": "设备地址"
+            }
+          ],
+          "outputData": [],
+          "name": "显示设备信息"
+        },
+        {
+          "identifier": "rawSend",
+          "inputData": [
+            {
+              "identifier": "model",
+              "dataType": {
+                "type": "text",
+                "specs": {}
+              },
+              "name": "设备型号"
+            },
+            {
+              "identifier": "mac",
+              "dataType": {
+                "type": "text",
+                "specs": {}
+              },
+              "name": "设备mac"
+            },
+            {
+              "identifier": "data",
+              "dataType": {
+                "type": "text",
+                "specs": {}
+              },
+              "name": "数据"
+            }
+          ],
+          "outputData": [],
+          "name": "透传下发"
+        }
+      ],
+      "events": [
+        {
+          "identifier": "faultReport",
+          "outputData": [
+            {
+              "identifier": "code",
+              "dataType": {
+                "type": "int32",
+                "specs": {
+                  "min": "0",
+                  "max": "255"
+                }
+              },
+              "name": "错误码"
+            }
+          ],
+          "name": "故障上报"
+        },
+        {
+          "identifier": "rawReport",
+          "outputData": [
+            {
+              "identifier": "model",
+              "dataType": {
+                "type": "text",
+                "specs": {
+                  "length": "128"
+                }
+              },
+              "name": "设备型号"
+            },
+            {
+              "identifier": "mac",
+              "dataType": {
+                "type": "text",
+                "specs": {}
+              },
+              "name": "设备mac"
+            },
+            {
+              "identifier": "data",
+              "dataType": {
+                "type": "text",
+                "specs": {}
+              },
+              "name": "数据"
+            }
+          ],
+          "name": "透传上报"
+        }
+      ]
+    }
+  },
+  {
+    "id": 9,
+    "productKey": "KdJYpTp5ywNhmrmC",
+    "model": {
+      "properties": [],
+      "services": [],
+      "events": [
+        {
+          "identifier": "userDevicesChange",
+          "outputData": [
+            {
+              "identifier": "uid",
+              "dataType": {
+                "type": "text",
+                "specs": {
+                  "length": "100"
+                }
+              },
+              "name": "用户Id"
+            }
+          ],
+          "name": "用户设备列表变更"
+        }
+      ]
+    }
+  },
+  {
+    "id": 10,
+    "productKey": "Eit3kmGJtxSHfCKT",
+    "model": {
+      "properties": [
+        {
+          "identifier": "flow",
+          "dataType": {
+            "type": "int32",
+            "specs": {
+              "min": "0",
+              "max": "100000"
+            }
+          },
+          "name": "用量",
+          "accessMode": "r"
+        },
+        {
+          "identifier": "fee",
+          "dataType": {
+            "type": "int32",
+            "specs": {
+              "min": "0",
+              "max": "100000"
+            }
+          },
+          "name": "费用",
+          "accessMode": "rw"
+        }
+      ],
+      "services": [],
+      "events": []
+    }
+  },
+  {
+    "id": 11,
+    "productKey": "D8c5pXFmt2KJDxNm",
+    "model": {
+      "properties": [
+        {
+          "identifier": "powerstate_1",
+          "dataType": {
+            "type": "enum",
+            "specs": {
+              "0": "关",
+              "1": "开"
+            }
+          },
+          "name": "开关1",
+          "accessMode": "r"
+        },
+        {
+          "identifier": "powerstate_2",
+          "dataType": {
+            "type": "enum",
+            "specs": {
+              "0": "关",
+              "1": "开"
+            }
+          },
+          "name": "开关2",
+          "accessMode": "r"
+        },
+        {
+          "identifier": "powerstate_3",
+          "dataType": {
+            "type": "enum",
+            "specs": {
+              "0": "关",
+              "1": "开"
+            }
+          },
+          "name": "开关3",
+          "accessMode": "r"
+        },
+        {
+          "identifier": "powerstate_4",
+          "dataType": {
+            "type": "enum",
+            "specs": {
+              "0": "关",
+              "1": "开"
+            }
+          },
+          "name": "开关4",
+          "accessMode": "r"
+        },
+        {
+          "identifier": "DeviceType",
+          "dataType": {
+            "type": "text",
+            "specs": {
+              "length": "128"
+            }
+          },
+          "name": "型号",
+          "accessMode": "r"
+        },
+        {
+          "identifier": "rssi",
+          "dataType": {
+            "type": "int32",
+            "specs": {
+              "min": "-127",
+              "max": "127"
+            }
+          },
+          "name": "信号强度",
+          "accessMode": "r"
+        }
+      ],
+      "services": [],
+      "events": [
+        {
+          "identifier": "faultReportEvent",
+          "outputData": [
+            {
+              "identifier": "code",
+              "dataType": {
+                "type": "int32",
+                "specs": {}
+              },
+              "name": "错误代码"
+            }
+          ],
+          "name": "故障上报"
+        }
+      ]
+    }
+  },
+  {
+    "id": 12,
+    "productKey": "AWcJnf7ymGSkaz5M",
+    "model": {
+      "properties": [
+        {
+          "identifier": "rssi",
+          "dataType": {
+            "type": "int32",
+            "specs": {
+              "min": "-128",
+              "max": "128"
+            }
+          },
+          "name": "信号强度",
+          "accessMode": "r"
+        },
+        {
+          "identifier": "switch",
+          "dataType": {
+            "type": "bool",
+            "specs": {
+              "0": "关",
+              "1": "开"
+            }
+          },
+          "name": "开关",
+          "accessMode": "rw"
+        },
+        {
+          "identifier": "voltage",
+          "dataType": {
+            "type": "int32",
+            "specs": {
+              "min": "0",
+              "max": "1000"
+            }
+          },
+          "name": "电压",
+          "accessMode": "r"
+        },
+        {
+          "identifier": "current",
+          "dataType": {
+            "type": "int32",
+            "specs": {
+              "min": "0",
+              "max": "1000"
+            }
+          },
+          "name": "电流",
+          "accessMode": "r"
+        },
+        {
+          "identifier": "power",
+          "dataType": {
+            "type": "int32",
+            "specs": {
+              "min": "0",
+              "max": "1000000"
+            }
+          },
+          "name": "功率",
+          "accessMode": "r"
+        },
+        {
+          "identifier": "electricty",
+          "dataType": {
+            "type": "int32",
+            "specs": {
+              "min": "0",
+              "max": "1000000000"
+            }
+          },
+          "name": "电量",
+          "accessMode": "r"
+        },
+        {
+          "identifier": "back_light",
+          "dataType": {
+            "type": "bool",
+            "specs": {
+              "0": "关",
+              "1": "开"
+            }
+          },
+          "name": "背光灯",
+          "accessMode": "rw"
+        },
+        {
+          "identifier": "start_onoff",
+          "dataType": {
+            "type": "enum",
+            "specs": {
+              "0": "off",
+              "1": "onoff with swithc",
+              "2": "on"
+            }
+          },
+          "name": "上电启动配置",
+          "accessMode": "rw"
+        },
+        {
+          "identifier": "cycle_timer",
+          "dataType": {
+            "type": "text",
+            "specs": {
+              "length": "64"
+            }
+          },
+          "name": "循环定时",
+          "accessMode": "rw"
+        },
+        {
+          "identifier": "countdown",
+          "dataType": {
+            "type": "int32",
+            "specs": {
+              "min": "0",
+              "max": "1000000"
+            }
+          },
+          "name": "倒计时",
+          "accessMode": "rw"
+        }
+      ],
+      "services": [],
+      "events": []
+    }
+  },
+  {
+    "id": 13,
+    "productKey": "6kYp6jszrDns2yh4",
+    "model": {
+      "properties": [
+        {
+          "identifier": "humidity",
+          "dataType": {
+            "type": "int32",
+            "specs": {
+              "min": "0",
+              "max": "100"
+            }
+          },
+          "name": "湿度\t",
+          "accessMode": "r"
+        },
+        {
+          "identifier": "temperature",
+          "dataType": {
+            "type": "int32",
+            "specs": {
+              "min": "-38",
+              "max": "656"
+            }
+          },
+          "name": "温度\t",
+          "accessMode": "r"
+        }
+      ],
+      "services": [],
+      "events": [
+        {
+          "identifier": "temperatureTooLowEvent",
+          "outputData": [],
+          "name": "温度过低事件"
+        }
+      ]
+    }
+  },
+  {
+    "id": 14,
+    "productKey": "bGdZt8ffBETtsirm",
+    "model": {
+      "properties": [
+        {
+          "identifier": "temp",
+          "dataType": {
+            "type": "int32",
+            "specs": {
+              "min": "17",
+              "max": "32"
+            }
+          },
+          "name": "温度",
+          "accessMode": "rw"
+        },
+        {
+          "identifier": "swing_modes",
+          "dataType": {
+            "type": "bool",
+            "specs": {
+              "0": "关",
+              "1": "开"
+            }
+          },
+          "name": "扫风开关",
+          "accessMode": "rw"
+        },
+        {
+          "identifier": "modes",
+          "dataType": {
+            "type": "enum",
+            "specs": {
+              "0": "制热",
+              "1": "关闭",
+              "2": "制冷",
+              "3": "送风"
+            }
+          },
+          "name": "模式",
+          "accessMode": "rw"
+        },
+        {
+          "identifier": "fan_modes",
+          "dataType": {
+            "type": "enum",
+            "specs": {
+              "0": "高",
+              "1": "中",
+              "2": "低"
+            }
+          },
+          "name": "风模式",
+          "accessMode": "rw"
+        },
+        {
+          "identifier": "presets_modes",
+          "dataType": {
+            "type": "enum",
+            "specs": {
+              "0": "节能",
+              "1": "睡眠",
+              "2": "活动"
+            }
+          },
+          "name": "预设模式",
+          "accessMode": "rw"
+        }
+      ],
+      "services": [
+      ],
+      "events": [
+      ]
+    }
+  },
+  {
+    "id": 15,
+    "productKey": "BRD3x4fkKxkaxXFt",
+    "model": {
+      "properties": [],
+      "services": [
+        {
+          "identifier": "readData",
+          "inputData": [
+            {
+              "identifier": "deviceAddr",
+              "dataType": {
+                "type": "text",
+                "specs": {
+                  "length": "12"
+                }
+              },
+              "name": "设备地址",
+              "required": false
+            },
+            {
+              "identifier": "dataIdentifier",
+              "dataType": {
+                "type": "text",
+                "specs": {
+                  "length": "4"
+                }
+              },
+              "name": "数据标识",
+              "required": false
+            }
+          ],
+          "outputData": [],
+          "name": "读数据"
+        },
+        {
+          "identifier": "writeData",
+          "inputData": [
+            {
+              "identifier": "deviceAddr",
+              "dataType": {
+                "type": "text",
+                "specs": {
+                  "length": "12"
+                }
+              },
+              "name": "设备地址",
+              "required": false
+            },
+            {
+              "identifier": "dataIdentifier",
+              "dataType": {
+                "type": "text",
+                "specs": {
+                  "length": "4"
+                }
+              },
+              "name": "数据标识",
+              "required": false
+            }
+          ],
+          "outputData": [],
+          "name": "写数据"
+        }
+      ],
+      "events": []
+    }
+  },
+  {
+    "id": 16,
+    "productKey": "PwMfpXmp4ZWkGahn",
+    "model": {
+      "properties": [
+        {
+          "identifier": "p9010",
+          "dataType": {
+            "type": "text",
+            "specs": {
+              "length": "20"
+            }
+          },
+          "name": "(当前)正向有功总电能",
+          "accessMode": "r"
+        },
+        {
+          "identifier": "p9410",
+          "dataType": {
+            "type": "text",
+            "specs": {
+              "length": "20"
+            }
+          },
+          "name": "(上月)正向有功总电能",
+          "accessMode": "r"
+        }
+      ],
+      "services": [],
+      "events": []
+    }
+  },
+  {
+    "id": 17,
+    "productKey": "openiitapump01",
+    "model": {
+      "properties": [
+        {
+          "identifier": "status",
+          "dataType": {
+            "type": "bool",
+            "specs": {
+              "0": "关",
+              "1": "开"
+            }
+          },
+          "name": "状态",
+          "accessMode": "rw"
+        },
+        {
+          "identifier": "pressure",
+          "dataType": {
+            "type": "int32",
+            "specs": {}
+          },
+          "name": "压力",
+          "accessMode": "rw"
+        },
+        {
+          "identifier": "model",
+          "dataType": {
+            "type": "enum",
+            "specs": {
+              "0": "自动模式",
+              "1": "手动模式",
+              "2": "定时模式",
+              "3": "防锈模式",
+              "4": "防冻模式"
+            }
+          },
+          "name": "模式",
+          "accessMode": "rw"
+        },
+        {
+          "identifier": "slave_id",
+          "dataType": {
+            "type": "int32",
+            "specs": {
+              "min": "0",
+              "max": "255"
+            }
+          },
+          "name": "连接配置-从机地址",
+          "accessMode": "rw"
+        },
+        {
+          "identifier": "baud",
+          "dataType": {
+            "type": "int32",
+            "specs": {}
+          },
+          "name": "连接配置-波特率",
+          "accessMode": "rw"
+        },
+        {
+          "identifier": "verify",
+          "dataType": {
+            "type": "int32",
+            "specs": {
+              "min": "0",
+              "max": "1"
+            }
+          },
+          "name": "连接配置-奇偶校验",
+          "accessMode": "rw"
+        },
+        {
+          "identifier": "retain",
+          "dataType": {
+            "type": "int32",
+            "specs": {}
+          },
+          "name": "连接配置-保留位",
+          "accessMode": "rw"
+        },
+        {
+          "identifier": "data_len",
+          "dataType": {
+            "type": "int32",
+            "specs": {}
+          },
+          "name": "连接配置-数据位",
+          "accessMode": "rw"
+        },
+        {
+          "identifier": "alarm",
+          "dataType": {
+            "type": "int32",
+            "specs": {}
+          },
+          "name": "故障信息",
+          "accessMode": "r"
+        },
+        {
+          "identifier": "vol",
+          "dataType": {
+            "type": "int32",
+            "specs": {}
+          },
+          "name": "电压",
+          "accessMode": "r"
+        },
+        {
+          "identifier": "elect",
+          "dataType": {
+            "type": "int32",
+            "specs": {}
+          },
+          "name": "电流",
+          "accessMode": "r"
+        },
+        {
+          "identifier": "power",
+          "dataType": {
+            "type": "int32",
+            "specs": {}
+          },
+          "name": "功率",
+          "accessMode": "r"
+        },
+        {
+          "identifier": "spd",
+          "dataType": {
+            "type": "int32",
+            "specs": {}
+          },
+          "name": "转速",
+          "accessMode": "r"
+        },
+        {
+          "identifier": "realPre",
+          "dataType": {
+            "type": "int32",
+            "specs": {}
+          },
+          "name": "实时压力1",
+          "accessMode": "r"
+        },
+        {
+          "identifier": "runStat",
+          "dataType": {
+            "type": "int32",
+            "specs": {}
+          },
+          "name": "实时状态",
+          "accessMode": "r"
+        },
+        {
+          "identifier": "mcuVersion",
+          "dataType": {
+            "type": "text",
+            "type": "text",
+            "specs": {
+              "length": "255"
+            }
+          },
+          "name": "MCU版本",
+          "accessMode": "r"
+        }
+      ],
+      "services": [],
+      "events": []
+    }
+  },
+  {
+    "id": 18,
+    "productKey": "openiitanbpump01",
+    "model": {
+      "properties": [
+        {
+          "identifier": "WorkMode",
+          "dataType": {
+            "type": "enum",
+            "specs": {
+              "0": "自动",
+              "1": "手动",
+              "2": "自检1",
+              "3": "防锈",
+              "4": "防冻",
+              "5": "自检2",
+              "6": "温控"
+            }
+          },
+          "name": "模式",
+          "accessMode": "rw"
+        },
+        {
+          "identifier": "Pressure",
+          "dataType": {
+            "type": "float",
+            "specs": {
+              "min": "0",
+              "max": "10",
+              "precision": "1"
+            }
+          },
+          "name": "设置压力",
+          "accessMode": "rw"
+        },
+        {
+          "identifier": "Switch",
+          "dataType": {
+            "type": "enum",
+            "specs": {
+              "85": "关闭",
+              "170": "开启"
+            }
+          },
+          "name": "开关",
+          "accessMode": "rw"
+        },
+        {
+          "identifier": "EmtyRunPressure",
+          "dataType": {
+            "type": "float",
+            "specs": {
+              "min": "0",
+              "max": "10",
+              "precision": "1"
+            }
+          },
+          "name": "缺水压力",
+          "accessMode": "rw"
+        },
+        {
+          "identifier": "StartPressure",
+          "dataType": {
+            "type": "float",
+            "specs": {
+              "min": "0",
+              "max": "10",
+              "precision": "1"
+            }
+          },
+          "name": "开启压力",
+          "accessMode": "rw"
+        },
+        {
+          "identifier": "WaterT",
+          "dataType": {
+            "type": "int32",
+            "specs": {
+              "min": "35",
+              "max": "100"
+            }
+          },
+          "name": "水温保护",
+          "accessMode": "rw"
+        },
+        {
+          "identifier": "WaterTReset",
+          "dataType": {
+            "type": "int32",
+            "specs": {
+              "min": "35",
+              "max": "100"
+            }
+          },
+          "name": "水温复位",
+          "accessMode": "rw"
+        },
+        {
+          "identifier": "ClearIceEn",
+          "dataType": {
+            "type": "enum",
+            "specs": {
+              "0": "关闭",
+              "1": "开启"
+            }
+          },
+          "name": "防冻",
+          "accessMode": "rw"
+        },
+        {
+          "identifier": "ErrorMsg",
+          "dataType": {
+            "type": "enum",
+            "specs": {
+              "0": "无",
+              "1": "过压",
+              "2": "欠压",
+              "3": "过流",
+              "4": "电机高温",
+              "5": "IPM高温",
+              "6": "堵转",
+              "7": "温升保护",
+              "8": "启动失败",
+              "9": "缺相",
+              "10": "无-",
+              "11": "软件过流",
+              "12": "缺水",
+              "13": "未激活",
+              "14": "传感器故障",
+              "15": "通信故障"
+            }
+          },
+          "name": "故障信息",
+          "accessMode": "r"
+        },
+        {
+          "identifier": "Voltage",
+          "dataType": {
+            "type": "int32",
+            "specs": {
+              "min": "0",
+              "max": "300"
+            }
+          },
+          "name": "电压",
+          "accessMode": "r"
+        },
+        {
+          "identifier": "Electric",
+          "dataType": {
+            "type": "float",
+            "specs": {
+              "min": "0",
+              "max": "100",
+              "precision": ""
+            }
+          },
+          "name": "电流",
+          "accessMode": "r"
+        },
+        {
+          "identifier": "Power",
+          "dataType": {
+            "type": "int32",
+            "specs": {
+              "min": "0",
+              "max": "5000"
+            }
+          },
+          "name": "功率",
+          "accessMode": "r"
+        },
+        {
+          "identifier": "Speed",
+          "dataType": {
+            "type": "int32",
+            "specs": {
+              "min": "0",
+              "max": "10000"
+            }
+          },
+          "name": "转速",
+          "accessMode": "r"
+        },
+        {
+          "identifier": "CurrentPressure1",
+          "dataType": {
+            "type": "float",
+            "specs": {
+              "min": "0",
+              "max": "10"
+            }
+          },
+          "name": "实时压力1",
+          "accessMode": "r"
+        },
+        {
+          "identifier": "CurrentPressure2",
+          "dataType": {
+            "type": "float",
+            "specs": {
+              "min": "0",
+              "max": "10"
+            }
+          },
+          "name": "实时压力2",
+          "accessMode": "r"
+        },
+        {
+          "identifier": "IpmTemperature",
+          "dataType": {
+            "type": "int32",
+            "specs": {
+              "min": "0",
+              "max": "100"
+            }
+          },
+          "name": "IPM温度",
+          "accessMode": "r"
+        },
+        {
+          "identifier": "MotorTemperature",
+          "dataType": {
+            "type": "int32",
+            "specs": {
+              "min": "0",
+              "max": "100"
+            }
+          },
+          "name": "电机温度",
+          "accessMode": "r"
+        },
+        {
+          "identifier": "WaterTemperature",
+          "dataType": {
+            "type": "int32",
+            "specs": {
+              "min": "0",
+              "max": "100"
+            }
+          },
+          "name": "水温度",
+          "accessMode": "r"
+        },
+        {
+          "identifier": "McuStatus",
+          "dataType": {
+            "type": "enum",
+            "specs": {
+              "0": "APP",
+              "8": "BootLoader"
+            }
+          },
+          "name": "MCU状态",
+          "accessMode": "r"
+        },
+        {
+          "identifier": "Scene",
+          "dataType": {
+            "type": "enum",
+            "specs": {
+              "0": "增压泵",
+              "1": "回水器",
+              "2": "循环泵"
+            }
+          },
+          "name": "设备场景",
+          "accessMode": "r"
+        },
+        {
+          "identifier": "WarnInfo",
+          "dataType": {
+            "type": "text",
+            "specs": {
+              "length": "255"
+            }
+          },
+          "name": "警告信息",
+          "accessMode": "r"
+        },
+        {
+          "identifier": "ActiveTime",
+          "dataType": {
+            "type": "text",
+            "specs": {
+              "length": "255"
+            }
+          },
+          "name": "激活时间",
+          "accessMode": "rw"
+        },
+        {
+          "identifier": "SensorMode",
+          "dataType": {
+            "type": "enum",
+            "specs": {
+              "0": "自动",
+              "1": "手动"
+            }
+          },
+          "name": "传感器组合模式",
+          "accessMode": "rw"
+        },
+        {
+          "identifier": "SensorGroup",
+          "dataType": {
+            "type": "enum",
+            "specs": {
+              "0": "无传感器",
+              "1": "水流开关-压力",
+              "2": "单水流开关",
+              "3": "单压力",
+              "4": "双压力"
+            }
+          },
+          "name": "传感器组合",
+          "accessMode": "rw"
+        },
+        {
+          "identifier": "ElectronicTMax",
+          "dataType": {
+            "type": "int32",
+            "specs": {
+              "min": "0",
+              "max": "100"
+            }
+          },
+          "name": "电机保护温度",
+          "accessMode": "rw"
+        },
+        {
+          "identifier": "ElectronicTMaxReset",
+          "dataType": {
+            "type": "int32",
+            "specs": {
+              "min": "0",
+              "max": "100"
+            }
+          },
+          "name": "电机复位温度",
+          "accessMode": "rw"
+        },
+        {
+          "identifier": "History",
+          "dataType": {
+            "type": "text",
+            "specs": {
+              "length": "255"
+            }
+          },
+          "name": "历史上报",
+          "accessMode": "r"
+        },
+        {
+          "identifier": "Model",
+          "dataType": {
+            "type": "text",
+            "specs": {
+              "length": "255"
+            }
+          },
+          "name": "设备型号",
+          "accessMode": "r"
+        },
+        {
+          "identifier": "HandMode",
+          "dataType": {
+            "type": "int32",
+            "specs": {
+              "min": "1",
+              "max": "5"
+            }
+          },
+          "name": "手动模式挡位",
+          "accessMode": "rw"
+        },
+        {
+          "identifier": "TempGear",
+          "dataType": {
+            "type": "int32",
+            "specs": {
+              "min": "1",
+              "max": "5"
+            }
+          },
+          "name": "温控挡位",
+          "accessMode": "rw"
+        },
+        {
+          "identifier": "RatioGear",
+          "dataType": {
+            "type": "int32",
+            "specs": {
+              "min": "1",
+              "max": "5"
+            }
+          },
+          "name": "比例挡位",
+          "accessMode": "rw"
+        },
+        {
+          "identifier": "SpeedGear",
+          "dataType": {
+            "type": "int32",
+            "specs": {
+              "min": "1",
+              "max": "5"
+            }
+          },
+          "name": "速度挡位",
+          "accessMode": "rw"
+        },
+        {
+          "identifier": "PressureGear",
+          "dataType": {
+            "type": "int32",
+            "specs": {
+              "min": "1",
+              "max": "5"
+            }
+          },
+          "name": "压力挡位",
+          "accessMode": "rw"
+        },
+        {
+          "identifier": "SceneMode",
+          "dataType": {
+            "type": "enum",
+            "specs": {
+              "0": "节能模式-自动挡",
+              "1": "温控模式-温控模式",
+              "2": "一键热水-恒速模式",
+              "3": "定时模式-恒压模式",
+              "4": "比例模式"
+            }
+          },
+          "name": "回水器/循环泵-设置模式",
+          "accessMode": "rw"
+        },
+        {
+          "identifier": "EnergyModeTime",
+          "dataType": {
+            "type": "int32",
+            "specs": {
+              "min": "0",
+              "max": "65532"
+            }
+          },
+          "name": "节能模式运行时间",
+          "accessMode": "rw"
+        },
+        {
+          "identifier": "WaterTime",
+          "dataType": {
+            "type": "text",
+            "specs": {
+              "length": "255"
+            }
+          },
+          "name": "水流开关设置",
+          "accessMode": "rw"
+        },
+        {
+          "identifier": "HotWaterTime",
+          "dataType": {
+            "type": "int32",
+            "specs": {
+              "min": "0",
+              "max": "65532"
+            }
+          },
+          "name": "一键热水运行时间",
+          "accessMode": "rw"
+        },
+        {
+          "identifier": "TempSet",
+          "dataType": {
+            "type": "text",
+            "specs": {
+              "length": "255"
+            }
+          },
+          "name": "温控上下限设置",
+          "accessMode": "rw"
+        },
+        {
+          "identifier": "CountDown",
+          "dataType": {
+            "type": "int32",
+            "specs": {
+              "min": "0",
+              "max": "65532"
+            }
+          },
+          "name": "回水器倒计时",
+          "accessMode": "rw"
+        },
+        {
+          "identifier": "Enabled",
+          "dataType": {
+            "type": "enum",
+            "specs": {
+              "0": "停止",
+              "1": "开启"
+            }
+          },
+          "name": "实时运行状态",
+          "accessMode": "rw"
+        },
+        {
+          "identifier": "TimeModeSet",
+          "dataType": {
+            "type": "text",
+            "specs": {
+              "length": "255"
+            }
+          },
+          "name": "定时模式时间设置",
+          "accessMode": "rw"
+        },
+        {
+          "identifier": "McuVersion",
+          "dataType": {
+            "type": "text",
+            "specs": {
+              "length": "255"
+            }
+          },
+          "name": "Mcu版本号",
+          "accessMode": "rw"
+        }
+      ],
+      "services": [
+        {
+          "identifier": "set",
+          "inputData": [
+            {
+              "identifier": "WorkMode",
+              "dataType": {
+                "type": "enum",
+                "specs": {
+                  "0": "自动",
+                  "1": "手动",
+                  "2": "自检1",
+                  "3": "防锈",
+                  "4": "防冻",
+                  "5": "自检2",
+                  "6": "温控"
+                }
+              },
+              "name": "模式",
+              "required": false
+            },
+            {
+              "identifier": "Pressure",
+              "dataType": {
+                "type": "float",
+                "specs": {
+                  "min": "0",
+                  "max": "10",
+                  "precision": "1"
+                }
+              },
+              "name": "设置压力",
+              "required": false
+            },
+            {
+              "identifier": "Switch",
+              "dataType": {
+                "type": "enum",
+                "specs": {
+                  "85": "关闭",
+                  "170": "开启"
+                }
+              },
+              "name": "开关",
+              "required": false
+            },
+            {
+              "identifier": "EmtyRunPressure",
+              "dataType": {
+                "type": "float",
+                "specs": {
+                  "min": "0",
+                  "max": "10",
+                  "precision": "1"
+                }
+              },
+              "name": "缺水压力",
+              "required": false
+            },
+            {
+              "identifier": "StartPressure",
+              "dataType": {
+                "type": "float",
+                "specs": {
+                  "min": "0",
+                  "max": "10"
+                }
+              },
+              "name": "开启压力",
+              "required": false
+            },
+            {
+              "identifier": "WaterT",
+              "dataType": {
+                "type": "int32",
+                "specs": {
+                  "min": "35",
+                  "max": "100"
+                }
+              },
+              "name": "水温保护",
+              "required": false
+            },
+            {
+              "identifier": "WaterTReset",
+              "dataType": {
+                "type": "int32",
+                "specs": {
+                  "min": "35",
+                  "max": "100"
+                }
+              },
+              "name": "水温复位",
+              "required": false
+            },
+            {
+              "identifier": "ClearIceEn",
+              "dataType": {
+                "type": "enum",
+                "specs": {
+                  "0": "关闭",
+                  "1": "开启"
+                }
+              },
+              "name": "防冻",
+              "required": false
+            },
+            {
+              "identifier": "ActiveTime",
+              "dataType": {
+                "type": "text",
+                "specs": {
+                  "length": "255"
+                }
+              },
+              "name": "激活时间",
+              "required": false
+            },
+            {
+              "identifier": "SensorMode",
+              "dataType": {
+                "type": "enum",
+                "specs": {
+                  "0": "自动",
+                  "1": "手动"
+                }
+              },
+              "name": "传感器组合模式",
+              "required": false
+            },
+            {
+              "identifier": "SensorGroup",
+              "dataType": {
+                "type": "enum",
+                "specs": {
+                  "0": "无传感器",
+                  "1": "水流开关-压力",
+                  "2": "单水流开关",
+                  "3": "单压力",
+                  "4": "双压力"
+                }
+              },
+              "name": "传感器组合",
+              "required": false
+            },
+            {
+              "identifier": "ElectronicTMax",
+              "dataType": {
+                "type": "int32",
+                "specs": {
+                  "min": "0",
+                  "max": "100"
+                }
+              },
+              "name": "电机保护温度",
+              "required": false
+            },
+            {
+              "identifier": "ElectronicTMaxReset",
+              "dataType": {
+                "type": "int32",
+                "specs": {
+                  "min": "0",
+                  "max": "100"
+                }
+              },
+              "name": "电机复位温度",
+              "required": false
+            },
+            {
+              "identifier": "HandMode",
+              "dataType": {
+                "type": "int32",
+                "specs": {
+                  "min": "1",
+                  "max": "5"
+                }
+              },
+              "name": "手动模式挡位",
+              "required": false
+            },
+            {
+              "identifier": "TempGear",
+              "dataType": {
+                "type": "int32",
+                "specs": {
+                  "min": "1",
+                  "max": "5"
+                }
+              },
+              "name": "温控挡位",
+              "required": false
+            },
+            {
+              "identifier": "RatioGear",
+              "dataType": {
+                "type": "int32",
+                "specs": {
+                  "min": "1",
+                  "max": "5"
+                }
+              },
+              "name": "比例挡位",
+              "required": false
+            },
+            {
+              "identifier": "SpeedGear",
+              "dataType": {
+                "type": "int32",
+                "specs": {
+                  "min": "1",
+                  "max": "5"
+                }
+              },
+              "name": "速度挡位",
+              "required": false
+            },
+            {
+              "identifier": "PressureGear",
+              "dataType": {
+                "type": "int32",
+                "specs": {
+                  "min": "1",
+                  "max": "5"
+                }
+              },
+              "name": "压力挡位",
+              "required": false
+            },
+            {
+              "identifier": "SceneMode",
+              "dataType": {
+                "type": "enum",
+                "specs": {
+                  "0": "节能模式-自动挡",
+                  "1": "温控模式-温控模式",
+                  "2": "一键热水-恒速模式",
+                  "3": "定时模式-恒压模式",
+                  "4": "比例模式"
+                }
+              },
+              "name": "回水器/循环泵-设置模式",
+              "required": false
+            },
+            {
+              "identifier": "EnergyModeTime",
+              "dataType": {
+                "type": "int32",
+                "specs": {
+                  "min": "0",
+                  "max": "65532"
+                }
+              },
+              "name": "节能模式运行时间",
+              "required": false
+            },
+            {
+              "identifier": "WaterTime",
+              "dataType": {
+                "type": "text",
+                "specs": {
+                  "length": "255"
+                }
+              },
+              "name": "水流开关设置",
+              "required": false
+            },
+            {
+              "identifier": "HotWaterTime",
+              "dataType": {
+                "type": "int32",
+                "specs": {
+                  "min": "0",
+                  "max": "65532"
+                }
+              },
+              "name": "一键热水运行时间",
+              "required": false
+            },
+            {
+              "identifier": "TempSet",
+              "dataType": {
+                "type": "text",
+                "specs": {
+                  "length": "255"
+                }
+              },
+              "name": "温控上下限设置",
+              "required": false
+            },
+            {
+              "identifier": "CountDown",
+              "dataType": {
+                "type": "int32",
+                "specs": {
+                  "min": "0",
+                  "max": "65532"
+                }
+              },
+              "name": "回水器倒计时",
+              "required": false
+            },
+            {
+              "identifier": "Enabled",
+              "dataType": {
+                "type": "enum",
+                "specs": {
+                  "0": "停止",
+                  "1": "开启"
+                }
+              },
+              "name": "实时运行状态",
+              "required": false
+            },
+            {
+              "identifier": "TimeModeSet",
+              "dataType": {
+                "type": "text",
+                "specs": {
+                  "length": "255"
+                }
+              },
+              "name": "定时模式时间设置",
+              "required": false
+            },
+            {
+              "identifier": "McuVersion",
+              "dataType": {
+                "type": "text",
+                "specs": {
+                  "length": "255"
+                }
+              },
+              "name": "Mcu版本号",
+              "required": false
+            }
+          ],
+          "outputData": [],
+          "name": "属性设置"
+        },
+        {
+          "identifier": "get",
+          "inputData": [
+            {
+              "identifier": "propertyName",
+              "dataType": {
+                "type": "text",
+                "specs": {
+                  "length": "500"
+                }
+              },
+              "name": "属性名",
+              "required": false
+            }
+          ],
+          "outputData": [
+            {
+              "identifier": "WorkMode",
+              "dataType": {
+                "type": "enum",
+                "specs": {
+                  "0": "自动",
+                  "1": "手动",
+                  "2": "自检1",
+                  "3": "防锈",
+                  "4": "防冻",
+                  "5": "自检2",
+                  "6": "温控"
+                }
+              },
+              "name": "模式",
+              "required": false
+            },
+            {
+              "identifier": "Pressure",
+              "dataType": {
+                "type": "float",
+                "specs": {
+                  "min": "0",
+                  "max": "10",
+                  "precision": "1"
+                }
+              },
+              "name": "设置压力",
+              "required": false
+            },
+            {
+              "identifier": "Switch",
+              "dataType": {
+                "type": "enum",
+                "specs": {
+                  "85": "关闭",
+                  "170": "开启"
+                }
+              },
+              "name": "开关",
+              "required": false
+            },
+            {
+              "identifier": "EmtyRunPressure",
+              "dataType": {
+                "type": "float",
+                "specs": {
+                  "min": "0",
+                  "max": "10",
+                  "precision": "1"
+                }
+              },
+              "name": "缺水压力",
+              "required": false
+            },
+            {
+              "identifier": "StartPressure",
+              "dataType": {
+                "type": "float",
+                "specs": {
+                  "min": "0",
+                  "max": "10"
+                }
+              },
+              "name": "开启压力",
+              "required": false
+            },
+            {
+              "identifier": "WaterT",
+              "dataType": {
+                "type": "int32",
+                "specs": {
+                  "min": "35",
+                  "max": "100"
+                }
+              },
+              "name": "水温保护",
+              "required": false
+            },
+            {
+              "identifier": "WaterTReset",
+              "dataType": {
+                "type": "int32",
+                "specs": {
+                  "min": "35",
+                  "max": "100"
+                }
+              },
+              "name": "水温复位",
+              "required": false
+            },
+            {
+              "identifier": "ClearIceEn",
+              "dataType": {
+                "type": "enum",
+                "specs": {
+                  "0": "关闭",
+                  "1": "开启"
+                }
+              },
+              "name": "防冻",
+              "required": false
+            },
+            {
+              "identifier": "ErrorMsg",
+              "dataType": {
+                "type": "enum",
+                "specs": {
+                  "0": "无",
+                  "1": "过压",
+                  "2": "欠压",
+                  "3": "过流",
+                  "4": "电机高温",
+                  "5": "IPM高温",
+                  "6": "堵转",
+                  "7": "温升保护",
+                  "8": "启动失败",
+                  "9": "缺相",
+                  "10": "无-",
+                  "11": "软件过流",
+                  "12": "缺水",
+                  "13": "未激活",
+                  "14": "传感器故障",
+                  "15": "通信故障"
+                }
+              },
+              "name": "故障信息",
+              "required": false
+            },
+            {
+              "identifier": "Voltage",
+              "dataType": {
+                "type": "int32",
+                "specs": {
+                  "min": "0",
+                  "max": "300"
+                }
+              },
+              "name": "电压",
+              "required": false
+            },
+            {
+              "identifier": "Electric",
+              "dataType": {
+                "type": "float",
+                "specs": {
+                  "min": "0",
+                  "max": "100"
+                }
+              },
+              "name": "电流",
+              "required": false
+            },
+            {
+              "identifier": "Power",
+              "dataType": {
+                "type": "int32",
+                "specs": {
+                  "min": "0",
+                  "max": "5000"
+                }
+              },
+              "name": "功率",
+              "required": false
+            },
+            {
+              "identifier": "Speed",
+              "dataType": {
+                "type": "int32",
+                "specs": {
+                  "min": "0",
+                  "max": "10000"
+                }
+              },
+              "name": "转速",
+              "required": false
+            },
+            {
+              "identifier": "CurrentPressure1",
+              "dataType": {
+                "type": "float",
+                "specs": {
+                  "min": "0",
+                  "max": "10"
+                }
+              },
+              "name": "实时压力1",
+              "required": false
+            },
+            {
+              "identifier": "CurrentPressure2",
+              "dataType": {
+                "type": "float",
+                "specs": {
+                  "min": "0",
+                  "max": "10"
+                }
+              },
+              "name": "实时压力2",
+              "required": false
+            },
+            {
+              "identifier": "IpmTemperature",
+              "dataType": {
+                "type": "int32",
+                "specs": {
+                  "min": "0",
+                  "max": "100"
+                }
+              },
+              "name": "IPM温度",
+              "required": false
+            },
+            {
+              "identifier": "MotorTemperature",
+              "dataType": {
+                "type": "int32",
+                "specs": {
+                  "min": "0",
+                  "max": "100"
+                }
+              },
+              "name": "电机温度",
+              "required": false
+            },
+            {
+              "identifier": "WaterTemperature",
+              "dataType": {
+                "type": "int32",
+                "specs": {
+                  "min": "0",
+                  "max": "100"
+                }
+              },
+              "name": "水温度",
+              "required": false
+            },
+            {
+              "identifier": "McuStatus",
+              "dataType": {
+                "type": "enum",
+                "specs": {
+                  "0": "APP",
+                  "8": "BootLoader"
+                }
+              },
+              "name": "MCU状态",
+              "required": false
+            },
+            {
+              "identifier": "Scene",
+              "dataType": {
+                "type": "enum",
+                "specs": {
+                  "0": "增压泵",
+                  "1": "回水器",
+                  "2": "循环泵"
+                }
+              },
+              "name": "设备场景",
+              "required": false
+            },
+            {
+              "identifier": "WarnInfo",
+              "dataType": {
+                "type": "text",
+                "specs": {
+                  "length": "255"
+                }
+              },
+              "name": "警告信息",
+              "required": false
+            },
+            {
+              "identifier": "ActiveTime",
+              "dataType": {
+                "type": "text",
+                "specs": {
+                  "length": "255"
+                }
+              },
+              "name": "激活时间",
+              "required": false
+            },
+            {
+              "identifier": "SensorMode",
+              "dataType": {
+                "type": "enum",
+                "specs": {
+                  "0": "自动",
+                  "1": "手动"
+                }
+              },
+              "name": "传感器组合模式",
+              "required": false
+            },
+            {
+              "identifier": "SensorGroup",
+              "dataType": {
+                "type": "enum",
+                "specs": {
+                  "0": "无传感器",
+                  "1": "水流开关-压力",
+                  "2": "单水流开关",
+                  "3": "单压力",
+                  "4": "双压力"
+                }
+              },
+              "name": "传感器组合",
+              "required": false
+            },
+            {
+              "identifier": "ElectronicTMax",
+              "dataType": {
+                "type": "int32",
+                "specs": {
+                  "min": "0",
+                  "max": "100"
+                }
+              },
+              "name": "电机保护温度",
+              "required": false
+            },
+            {
+              "identifier": "ElectronicTMaxReset",
+              "dataType": {
+                "type": "int32",
+                "specs": {
+                  "min": "0",
+                  "max": "100"
+                }
+              },
+              "name": "电机复位温度",
+              "required": false
+            },
+            {
+              "identifier": "History",
+              "dataType": {
+                "type": "text",
+                "specs": {
+                  "length": "255"
+                }
+              },
+              "name": "历史上报",
+              "required": false
+            },
+            {
+              "identifier": "Model",
+              "dataType": {
+                "type": "text",
+                "specs": {
+                  "length": "255"
+                }
+              },
+              "name": "设备型号",
+              "required": false
+            },
+            {
+              "identifier": "HandMode",
+              "dataType": {
+                "type": "int32",
+                "specs": {
+                  "min": "1",
+                  "max": "5"
+                }
+              },
+              "name": "手动模式挡位",
+              "required": false
+            },
+            {
+              "identifier": "TempGear",
+              "dataType": {
+                "type": "int32",
+                "specs": {
+                  "min": "1",
+                  "max": "5"
+                }
+              },
+              "name": "温控挡位",
+              "required": false
+            },
+            {
+              "identifier": "RatioGear",
+              "dataType": {
+                "type": "int32",
+                "specs": {
+                  "min": "1",
+                  "max": "5"
+                }
+              },
+              "name": "比例挡位",
+              "required": false
+            },
+            {
+              "identifier": "SpeedGear",
+              "dataType": {
+                "type": "int32",
+                "specs": {
+                  "min": "1",
+                  "max": "5"
+                }
+              },
+              "name": "速度挡位",
+              "required": false
+            },
+            {
+              "identifier": "PressureGear",
+              "dataType": {
+                "type": "int32",
+                "specs": {
+                  "min": "1",
+                  "max": "5"
+                }
+              },
+              "name": "压力挡位",
+              "required": false
+            },
+            {
+              "identifier": "SceneMode",
+              "dataType": {
+                "type": "enum",
+                "specs": {
+                  "0": "节能模式-自动挡",
+                  "1": "温控模式-温控模式",
+                  "2": "一键热水-恒速模式",
+                  "3": "定时模式-恒压模式",
+                  "4": "比例模式"
+                }
+              },
+              "name": "回水器/循环泵-设置模式",
+              "required": false
+            },
+            {
+              "identifier": "EnergyModeTime",
+              "dataType": {
+                "type": "int32",
+                "specs": {
+                  "min": "0",
+                  "max": "65532"
+                }
+              },
+              "name": "节能模式运行时间",
+              "required": false
+            },
+            {
+              "identifier": "WaterTime",
+              "dataType": {
+                "type": "text",
+                "specs": {
+                  "length": "255"
+                }
+              },
+              "name": "水流开关设置",
+              "required": false
+            },
+            {
+              "identifier": "HotWaterTime",
+              "dataType": {
+                "type": "int32",
+                "specs": {
+                  "min": "0",
+                  "max": "65532"
+                }
+              },
+              "name": "一键热水运行时间",
+              "required": false
+            },
+            {
+              "identifier": "TempSet",
+              "dataType": {
+                "type": "text",
+                "specs": {
+                  "length": "255"
+                }
+              },
+              "name": "温控上下限设置",
+              "required": false
+            },
+            {
+              "identifier": "CountDown",
+              "dataType": {
+                "type": "int32",
+                "specs": {
+                  "min": "0",
+                  "max": "65532"
+                }
+              },
+              "name": "回水器倒计时",
+              "required": false
+            },
+            {
+              "identifier": "Enabled",
+              "dataType": {
+                "type": "enum",
+                "specs": {
+                  "0": "停止",
+                  "1": "开启"
+                }
+              },
+              "name": "实时运行状态",
+              "required": false
+            },
+            {
+              "identifier": "TimeModeSet",
+              "dataType": {
+                "type": "text",
+                "specs": {
+                  "length": "255"
+                }
+              },
+              "name": "定时模式时间设置",
+              "required": false
+            },
+            {
+              "identifier": "McuVersion",
+              "dataType": {
+                "type": "text",
+                "specs": {
+                  "length": "255"
+                }
+              },
+              "name": "Mcu版本号",
+              "required": false
+            }
+          ],
+          "name": "属性获取"
+        }
+      ],
+      "events": [
+        {
+          "identifier": "post",
+          "inputData": [],
+          "outputData": [
+            {
+              "identifier": "WorkMode",
+              "dataType": {
+                "type": "enum",
+                "specs": {
+                  "0": "自动",
+                  "1": "手动",
+                  "2": "自检1",
+                  "3": "防锈",
+                  "4": "防冻",
+                  "5": "自检2",
+                  "6": "温控"
+                }
+              },
+              "name": "模式",
+              "required": false
+            },
+            {
+              "identifier": "Pressure",
+              "dataType": {
+                "type": "float",
+                "specs": {
+                  "min": "0",
+                  "max": "10",
+                  "precision": "1"
+                }
+              },
+              "name": "设置压力",
+              "required": false
+            },
+            {
+              "identifier": "Switch",
+              "dataType": {
+                "type": "enum",
+                "specs": {
+                  "85": "关闭",
+                  "170": "开启"
+                }
+              },
+              "name": "开关",
+              "required": false
+            },
+            {
+              "identifier": "EmtyRunPressure",
+              "dataType": {
+                "type": "float",
+                "specs": {
+                  "min": "0",
+                  "max": "10",
+                  "precision": "1"
+                }
+              },
+              "name": "缺水压力",
+              "required": false
+            },
+            {
+              "identifier": "StartPressure",
+              "dataType": {
+                "type": "float",
+                "specs": {
+                  "min": "0",
+                  "max": "10"
+                }
+              },
+              "name": "开启压力",
+              "required": false
+            },
+            {
+              "identifier": "WaterT",
+              "dataType": {
+                "type": "int32",
+                "specs": {
+                  "min": "35",
+                  "max": "100"
+                }
+              },
+              "name": "水温保护",
+              "required": false
+            },
+            {
+              "identifier": "WaterTReset",
+              "dataType": {
+                "type": "int32",
+                "specs": {
+                  "min": "35",
+                  "max": "100"
+                }
+              },
+              "name": "水温复位",
+              "required": false
+            },
+            {
+              "identifier": "ClearIceEn",
+              "dataType": {
+                "type": "enum",
+                "specs": {
+                  "0": "关闭",
+                  "1": "开启"
+                }
+              },
+              "name": "防冻",
+              "required": false
+            },
+            {
+              "identifier": "ErrorMsg",
+              "dataType": {
+                "type": "enum",
+                "specs": {
+                  "0": "无",
+                  "1": "过压",
+                  "2": "欠压",
+                  "3": "过流",
+                  "4": "电机高温",
+                  "5": "IPM高温",
+                  "6": "堵转",
+                  "7": "温升保护",
+                  "8": "启动失败",
+                  "9": "缺相",
+                  "10": "无-",
+                  "11": "软件过流",
+                  "12": "缺水",
+                  "13": "未激活",
+                  "14": "传感器故障",
+                  "15": "通信故障"
+                }
+              },
+              "name": "故障信息",
+              "required": false
+            },
+            {
+              "identifier": "Voltage",
+              "dataType": {
+                "type": "int32",
+                "specs": {
+                  "min": "0",
+                  "max": "300"
+                }
+              },
+              "name": "电压",
+              "required": false
+            },
+            {
+              "identifier": "Electric",
+              "dataType": {
+                "type": "float",
+                "specs": {
+                  "min": "0",
+                  "max": "100"
+                }
+              },
+              "name": "电流",
+              "required": false
+            },
+            {
+              "identifier": "Power",
+              "dataType": {
+                "type": "int32",
+                "specs": {
+                  "min": "0",
+                  "max": "5000"
+                }
+              },
+              "name": "功率",
+              "required": false
+            },
+            {
+              "identifier": "Speed",
+              "dataType": {
+                "type": "int32",
+                "specs": {
+                  "min": "0",
+                  "max": "10000"
+                }
+              },
+              "name": "转速",
+              "required": false
+            },
+            {
+              "identifier": "CurrentPressure1",
+              "dataType": {
+                "type": "float",
+                "specs": {
+                  "min": "0",
+                  "max": "10"
+                }
+              },
+              "name": "实时压力1",
+              "required": false
+            },
+            {
+              "identifier": "CurrentPressure2",
+              "dataType": {
+                "type": "float",
+                "specs": {
+                  "min": "0",
+                  "max": "10"
+                }
+              },
+              "name": "实时压力2",
+              "required": false
+            },
+            {
+              "identifier": "IpmTemperature",
+              "dataType": {
+                "type": "int32",
+                "specs": {
+                  "min": "0",
+                  "max": "100"
+                }
+              },
+              "name": "IPM温度",
+              "required": false
+            },
+            {
+              "identifier": "MotorTemperature",
+              "dataType": {
+                "type": "int32",
+                "specs": {
+                  "min": "0",
+                  "max": "100"
+                }
+              },
+              "name": "电机温度",
+              "required": false
+            },
+            {
+              "identifier": "WaterTemperature",
+              "dataType": {
+                "type": "int32",
+                "specs": {
+                  "min": "0",
+                  "max": "100"
+                }
+              },
+              "name": "水温度",
+              "required": false
+            },
+            {
+              "identifier": "McuStatus",
+              "dataType": {
+                "type": "enum",
+                "specs": {
+                  "0": "APP",
+                  "8": "BootLoader"
+                }
+              },
+              "name": "MCU状态",
+              "required": false
+            },
+            {
+              "identifier": "Scene",
+              "dataType": {
+                "type": "enum",
+                "specs": {
+                  "0": "增压泵",
+                  "1": "回水器",
+                  "2": "循环泵"
+                }
+              },
+              "name": "设备场景",
+              "required": false
+            },
+            {
+              "identifier": "WarnInfo",
+              "dataType": {
+                "type": "text",
+                "specs": {
+                  "length": "255"
+                }
+              },
+              "name": "警告信息",
+              "required": false
+            },
+            {
+              "identifier": "ActiveTime",
+              "dataType": {
+                "type": "text",
+                "specs": {
+                  "length": "255"
+                }
+              },
+              "name": "激活时间",
+              "required": false
+            },
+            {
+              "identifier": "SensorMode",
+              "dataType": {
+                "type": "enum",
+                "specs": {
+                  "0": "自动",
+                  "1": "手动"
+                }
+              },
+              "name": "传感器组合模式",
+              "required": false
+            },
+            {
+              "identifier": "SensorGroup",
+              "dataType": {
+                "type": "enum",
+                "specs": {
+                  "0": "无传感器",
+                  "1": "水流开关-压力",
+                  "2": "单水流开关",
+                  "3": "单压力",
+                  "4": "双压力"
+                }
+              },
+              "name": "传感器组合",
+              "required": false
+            },
+            {
+              "identifier": "ElectronicTMax",
+              "dataType": {
+                "type": "int32",
+                "specs": {
+                  "min": "0",
+                  "max": "100"
+                }
+              },
+              "name": "电机保护温度",
+              "required": false
+            },
+            {
+              "identifier": "ElectronicTMaxReset",
+              "dataType": {
+                "type": "int32",
+                "specs": {
+                  "min": "0",
+                  "max": "100"
+                }
+              },
+              "name": "电机复位温度",
+              "required": false
+            },
+            {
+              "identifier": "History",
+              "dataType": {
+                "type": "text",
+                "specs": {
+                  "length": "255"
+                }
+              },
+              "name": "历史上报",
+              "required": false
+            },
+            {
+              "identifier": "Model",
+              "dataType": {
+                "type": "text",
+                "specs": {
+                  "length": "255"
+                }
+              },
+              "name": "设备型号",
+              "required": false
+            },
+            {
+              "identifier": "HandMode",
+              "dataType": {
+                "type": "int32",
+                "specs": {
+                  "min": "1",
+                  "max": "5"
+                }
+              },
+              "name": "手动模式挡位",
+              "required": false
+            },
+            {
+              "identifier": "TempGear",
+              "dataType": {
+                "type": "int32",
+                "specs": {
+                  "min": "1",
+                  "max": "5"
+                }
+              },
+              "name": "温控挡位",
+              "required": false
+            },
+            {
+              "identifier": "RatioGear",
+              "dataType": {
+                "type": "int32",
+                "specs": {
+                  "min": "1",
+                  "max": "5"
+                }
+              },
+              "name": "比例挡位",
+              "required": false
+            },
+            {
+              "identifier": "SpeedGear",
+              "dataType": {
+                "type": "int32",
+                "specs": {
+                  "min": "1",
+                  "max": "5"
+                }
+              },
+              "name": "速度挡位",
+              "required": false
+            },
+            {
+              "identifier": "PressureGear",
+              "dataType": {
+                "type": "int32",
+                "specs": {
+                  "min": "1",
+                  "max": "5"
+                }
+              },
+              "name": "压力挡位",
+              "required": false
+            },
+            {
+              "identifier": "SceneMode",
+              "dataType": {
+                "type": "enum",
+                "specs": {
+                  "0": "节能模式-自动挡",
+                  "1": "温控模式-温控模式",
+                  "2": "一键热水-恒速模式",
+                  "3": "定时模式-恒压模式",
+                  "4": "比例模式"
+                }
+              },
+              "name": "回水器/循环泵-设置模式",
+              "required": false
+            },
+            {
+              "identifier": "EnergyModeTime",
+              "dataType": {
+                "type": "int32",
+                "specs": {
+                  "min": "0",
+                  "max": "65532"
+                }
+              },
+              "name": "节能模式运行时间",
+              "required": false
+            },
+            {
+              "identifier": "WaterTime",
+              "dataType": {
+                "type": "text",
+                "specs": {
+                  "length": "255"
+                }
+              },
+              "name": "水流开关设置",
+              "required": false
+            },
+            {
+              "identifier": "HotWaterTime",
+              "dataType": {
+                "type": "int32",
+                "specs": {
+                  "min": "0",
+                  "max": "65532"
+                }
+              },
+              "name": "一键热水运行时间",
+              "required": false
+            },
+            {
+              "identifier": "TempSet",
+              "dataType": {
+                "type": "text",
+                "specs": {
+                  "length": "255"
+                }
+              },
+              "name": "温控上下限设置",
+              "required": false
+            },
+            {
+              "identifier": "CountDown",
+              "dataType": {
+                "type": "int32",
+                "specs": {
+                  "min": "0",
+                  "max": "65532"
+                }
+              },
+              "name": "回水器倒计时",
+              "required": false
+            },
+            {
+              "identifier": "Enabled",
+              "dataType": {
+                "type": "enum",
+                "specs": {
+                  "0": "停止",
+                  "1": "开启"
+                }
+              },
+              "name": "实时运行状态",
+              "required": false
+            },
+            {
+              "identifier": "TimeModeSet",
+              "dataType": {
+                "type": "text",
+                "specs": {
+                  "length": "255"
+                }
+              },
+              "name": "定时模式时间设置",
+              "required": false
+            },
+            {
+              "identifier": "McuVersion",
+              "dataType": {
+                "type": "text",
+                "specs": {
+                  "length": "255"
+                }
+              },
+              "name": "Mcu版本号",
+              "required": false
+            }
+          ],
+          "name": "属性上报"
+        }
+      ]
+    }
+  }
+]

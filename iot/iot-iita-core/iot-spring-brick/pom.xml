@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>cc.iotkit</groupId>
+        <artifactId>iot-iita-core</artifactId>
+        <version>1.0.5</version>
+    </parent>
+
+    <groupId>com.gitee.starblues</groupId>
+    <artifactId>iot-spring-brick</artifactId>
+    <packaging>pom</packaging>
+    <version>3.1.4</version>
+
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <modules>
+        <module>spring-brick-common</module>
+        <module>spring-brick-loader</module>
+        <module>spring-brick</module>
+        <module>spring-brick-bootstrap</module>
+        <module>spring-brick-maven-packager</module>
+    </modules>
+
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <scm>
+        <url>https://gitee.com/starblues/springboot-plugin-framework-parent</url>
+        <connection>scm:https://gitee.com/starblues/springboot-plugin-framework-parent.git</connection>
+        <developerConnection>scm:https://gitee.com/starblues/springboot-plugin-framework-parent.git</developerConnection>
+        <tag>1.0</tag>
+    </scm>
+
+    <developers>
+        <developer>
+            <name>StarBlues</name>
+            <email>starblues@foxmail.com</email>
+            <url>https://gitee.com/starblues/</url>
+        </developer>
+    </developers>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+            <scope>provided</scope>
+            <optional>true</optional>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <plugin.skip>true</plugin.skip>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>release</id>
+            <properties>
+                <plugin.skip>false</plugin.skip>
+            </properties>
+        </profile>
+    </profiles>
+
+</project>

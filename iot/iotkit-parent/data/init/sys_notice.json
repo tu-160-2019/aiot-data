@@ -1,0 +1,29 @@
+[ {
+  "createDept" : 103,
+  "createBy" : 1,
+  "createTime" : 1708254322623,
+  "updateBy" : null,
+  "updateTime" : 1708254322623,
+  "tenantId" : "000000",
+  "id" : 1,
+  "noticeTitle" : "温馨提醒：2018-07-01 新版本发布啦",
+  "noticeType" : "2",
+  "noticeContent" : "5paw54mI5pys5YaF5a65",
+  "status" : "0",
+  "remark" : "管理员",
+  "createByName" : null
+}, {
+  "createDept" : 103,
+  "createBy" : 1,
+  "createTime" : 1708254322639,
+  "updateBy" : null,
+  "updateTime" : 1708254322639,
+  "tenantId" : "000000",
+  "id" : 2,
+  "noticeTitle" : "维护通知：2018-07-01 系统凌晨维护",
+  "noticeType" : "1",
+  "noticeContent" : "57u05oqk5YaF5a65",
+  "status" : "0",
+  "remark" : "管理员",
+  "createByName" : null
+} ]

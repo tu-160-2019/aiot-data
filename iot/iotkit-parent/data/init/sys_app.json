@@ -1,0 +1,14 @@
+[ {
+  "createDept" : null,
+  "createBy" : null,
+  "createTime" : 1708254323547,
+  "updateBy" : null,
+  "updateTime" : 1708254323547,
+  "tenantId" : "000000",
+  "id" : 453554819821637,
+  "appName" : "微信小程序",
+  "appId" : "xxx",
+  "appSecret" : "xxx",
+  "appType" : "1",
+  "remark" : "微信小程序"
+} ]

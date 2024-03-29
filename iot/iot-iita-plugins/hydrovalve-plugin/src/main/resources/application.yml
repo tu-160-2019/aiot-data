@@ -1,0 +1,8 @@
+plugin:
+  runMode: prod
+  mainPackage: cc.iotkit.plugin
+
+hydrovalve:
+  host: xxxx
+  port: 38807
+  interval: 20000

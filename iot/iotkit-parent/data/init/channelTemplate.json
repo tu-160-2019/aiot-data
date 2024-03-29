@@ -1,0 +1,19 @@
+[ {
+  "id" : 12312312,
+  "channelConfigId" : 1312312,
+  "title" : "告警邮件模板",
+  "content" : "您的设备【${title}】<font color=\"warning\">温度过高</font>",
+  "createAt" : 1683816661690
+}, {
+  "id" : 342353425,
+  "channelConfigId" : 1313123,
+  "title" : "告警钉钉模板",
+  "content" : "您的设备【${title}】<font color=\"warning\">温度过高</font>",
+  "createAt" : 1683816661690
+}, {
+  "id" : 786778567,
+  "channelConfigId" : 32141342,
+  "title" : "告警企业微信模板",
+  "content" : "您的设备【${title}】<font color=\"warning\">温度过高</font>",
+  "createAt" : 1683816661690
+} ]

@@ -1,0 +1,2022 @@
+[
+  {
+    "id": "16552595723210menci0001008000012f",
+    "deviceId": "16552595723210menci0001008000012f",
+    "productKey": "PN3EDmkBZDD8whDd",
+    "deviceName": "MENCI0001008",
+    "secret": "rMAweEJrE7cxbQWa",
+    "uid": "1",
+    "subUid": [],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 1655415536032
+    },
+    "property": {
+      "doorStatus": 0,
+      "power": 65,
+      "rssi": 106
+    },
+    "tag": {},
+    "createAt": 1655259572321,
+    "group": {
+      "g1": {
+        "id": "g1",
+        "name": "分组1"
+      }
+    }
+  },
+  {
+    "id": "16552595685220menci00010070000127",
+    "deviceId": "16552595685220menci00010070000127",
+    "productKey": "PN3EDmkBZDD8whDd",
+    "deviceName": "MENCI0001007",
+    "secret": "eN4PjDhH4yx4mrmi",
+    "uid": "1",
+    "subUid": [],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 1655415536130
+    },
+    "property": {
+      "doorStatus": 1,
+      "power": 34,
+      "rssi": 64
+    },
+    "tag": {},
+    "createAt": 1655259568522,
+    "group": {
+      "g1": {
+        "id": "g1",
+        "name": "分组1"
+      }
+    }
+  },
+  {
+    "id": "16552595656210menci0001006000012d",
+    "deviceId": "16552595656210menci0001006000012d",
+    "productKey": "PN3EDmkBZDD8whDd",
+    "deviceName": "MENCI0001006",
+    "secret": "ePSkE7bzGMsR6rTs",
+    "uid": "1",
+    "subUid": [],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 1655415536135
+    },
+    "property": {
+      "doorStatus": 1,
+      "power": 33,
+      "rssi": 40
+    },
+    "tag": {},
+    "createAt": 1655259565621,
+    "group": {
+      "g1": {
+        "id": "g1",
+        "name": "分组1"
+      }
+    }
+  },
+  {
+    "id": "16552594933210linght001007000012f",
+    "deviceId": "16552594933210linght001007000012f",
+    "productKey": "xpsYHExTKPFaQMS7",
+    "deviceName": "LINGHT001007",
+    "secret": "mkQiSDk4rF3EWKFM",
+    "uid": "1",
+    "subUid": [],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 1655416465031
+    },
+    "property": {
+      "brightness": 12,
+      "powerstate": 0
+    },
+    "tag": {},
+    "createAt": 1655259493321,
+    "group": {
+      "g1": {
+        "id": "g1",
+        "name": "分组1"
+      },
+      "g2": {
+        "id": "g2",
+        "name": "组2"
+      }
+    }
+  },
+  {
+    "id": "16552594898210linght0010060000129",
+    "deviceId": "16552594898210linght0010060000129",
+    "productKey": "xpsYHExTKPFaQMS7",
+    "deviceName": "LINGHT001006",
+    "secret": "p72KAZyTA42zi8cJ",
+    "uid": "1",
+    "subUid": [],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 1655416465035
+    },
+    "property": {
+      "brightness": 86,
+      "powerstate": 1
+    },
+    "tag": {},
+    "createAt": 1655259489821,
+    "group": {
+      "g1": {
+        "id": "g1",
+        "name": "分组1"
+      }
+    }
+  },
+  {
+    "id": "16552594863210linght001005000012c",
+    "deviceId": "16552594863210linght001005000012c",
+    "productKey": "xpsYHExTKPFaQMS7",
+    "deviceName": "LINGHT001005",
+    "secret": "xnKZZyPKj2rH6ee3",
+    "uid": "1",
+    "subUid": [],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 1655416465133
+    },
+    "property": {
+      "brightness": 16,
+      "powerstate": 1
+    },
+    "tag": {},
+    "createAt": 1655259486321,
+    "group": {
+      "g1": {
+        "id": "g1",
+        "name": "分组1"
+      },
+      "g2": {
+        "id": "g2",
+        "name": "组2"
+      }
+    }
+  },
+  {
+    "id": "16552594812210linght001004000012d",
+    "deviceId": "16552594812210linght001004000012d",
+    "productKey": "xpsYHExTKPFaQMS7",
+    "deviceName": "LINGHT001004",
+    "secret": "PDkTxHPfw2H4WZjQ",
+    "uid": "1",
+    "subUid": [],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 1655416465231
+    },
+    "property": {
+      "brightness": 32,
+      "powerstate": 0
+    },
+    "tag": {},
+    "createAt": 1655259481221,
+    "group": {
+      "g1": {
+        "id": "g1",
+        "name": "分组1"
+      }
+    }
+  },
+  {
+    "id": "16552594646210pulg0a0010160000122",
+    "deviceId": "16552594646210pulg0a0010160000122",
+    "productKey": "cGCrkK7Ex4FESAwe",
+    "deviceName": "PULG0A001016",
+    "secret": "3KdPNBKZEyDGaNYK",
+    "uid": "1",
+    "subUid": [],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 1655652738672
+    },
+    "property": {
+      "powerstate": 0,
+      "rssi": 66
+    },
+    "tag": {},
+    "group": {
+      "g1": {
+        "id": "g1",
+        "name": "分组1"
+      }
+    },
+    "createAt": 1655259464621
+  },
+  {
+    "id": "16552594604220pulg0a0010150000127",
+    "deviceId": "16552594604220pulg0a0010150000127",
+    "productKey": "cGCrkK7Ex4FESAwe",
+    "deviceName": "PULG0A001015",
+    "secret": "TBwbHJdJBQCpGdHi",
+    "uid": "1",
+    "subUid": [],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 1655652738676
+    },
+    "property": {
+      "powerstate": 1,
+      "rssi": 67
+    },
+    "tag": {},
+    "group": {
+      "g2": {
+        "id": "g2",
+        "name": "组2"
+      }
+    },
+    "createAt": 1655259460422
+  },
+  {
+    "id": "16552594572370pulg0a001014000012e",
+    "deviceId": "16552594572370pulg0a001014000012e",
+    "productKey": "cGCrkK7Ex4FESAwe",
+    "deviceName": "PULG0A001014",
+    "secret": "86pTYbQxxX3wd2FR",
+    "uid": "1",
+    "subUid": [],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 1655652738773
+    },
+    "property": {
+      "powerstate": 1,
+      "rssi": 42
+    },
+    "tag": {},
+    "group": {
+      "g2": {
+        "id": "g2",
+        "name": "组2"
+      }
+    },
+    "createAt": 1655259457237
+  },
+  {
+    "id": "16552594542310pulg0a0010130000123",
+    "deviceId": "16552594542310pulg0a0010130000123",
+    "productKey": "cGCrkK7Ex4FESAwe",
+    "deviceName": "PULG0A001013",
+    "secret": "FtxYcTM5p6B5GyPk",
+    "uid": "1",
+    "subUid": [],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 1655652738872
+    },
+    "property": {
+      "powerstate": 1,
+      "rssi": 45
+    },
+    "tag": {},
+    "group": {
+      "g2": {
+        "id": "g2",
+        "name": "组2"
+      }
+    },
+    "createAt": 1655259454231
+  },
+  {
+    "id": "16552594511210pulg0a001012000012c",
+    "deviceId": "16552594511210pulg0a001012000012c",
+    "productKey": "cGCrkK7Ex4FESAwe",
+    "deviceName": "PULG0A001012",
+    "secret": "5yHFHseBHDbCK3eZ",
+    "uid": "1",
+    "subUid": [],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 1655652738972
+    },
+    "property": {
+      "powerstate": 0,
+      "rssi": 60
+    },
+    "tag": {},
+    "group": {
+      "g2": {
+        "id": "g2",
+        "name": "组2"
+      }
+    },
+    "createAt": 1655259451121
+  },
+  {
+    "id": "16552594475270pulg0a0010110000125",
+    "deviceId": "16552594475270pulg0a0010110000125",
+    "productKey": "cGCrkK7Ex4FESAwe",
+    "deviceName": "PULG0A001011",
+    "secret": "pGC4z4TrbjZhii2m",
+    "uid": "1",
+    "subUid": [],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 1655652739072
+    },
+    "property": {
+      "powerstate": 1,
+      "rssi": 27
+    },
+    "tag": {},
+    "group": {
+      "g2": {
+        "id": "g2",
+        "name": "组2"
+      }
+    },
+    "createAt": 1655259447528
+  },
+  {
+    "id": "16552594444210pulg0a0010100000128",
+    "deviceId": "16552594444210pulg0a0010100000128",
+    "productKey": "cGCrkK7Ex4FESAwe",
+    "deviceName": "PULG0A001010",
+    "secret": "HMxT2rQ55bzeRNJx",
+    "uid": "1",
+    "subUid": [],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 1655652739076
+    },
+    "property": {
+      "powerstate": 0,
+      "rssi": 117
+    },
+    "tag": {},
+    "group": {
+      "g2": {
+        "id": "g2",
+        "name": "组2"
+      }
+    },
+    "createAt": 1655259444422
+  },
+  {
+    "id": "16552594405220pulg0a0010090000124",
+    "deviceId": "16552594405220pulg0a0010090000124",
+    "productKey": "cGCrkK7Ex4FESAwe",
+    "deviceName": "PULG0A001009",
+    "secret": "Z6yMp6D6mHKMjFi7",
+    "uid": "1",
+    "subUid": [],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 1655652739174
+    },
+    "property": {
+      "powerstate": 1,
+      "rssi": 20
+    },
+    "tag": {},
+    "group": {
+      "g2": {
+        "id": "g2",
+        "name": "组2"
+      }
+    },
+    "createAt": 1655259440522
+  },
+  {
+    "id": "16552594368340pulg0a0010080000126",
+    "deviceId": "16552594368340pulg0a0010080000126",
+    "productKey": "cGCrkK7Ex4FESAwe",
+    "deviceName": "PULG0A001008",
+    "secret": "Ek3ZjwPayCymDxhN",
+    "uid": "1",
+    "subUid": [],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 1655652739272
+    },
+    "property": {
+      "powerstate": 1,
+      "rssi": 77
+    },
+    "tag": {},
+    "group": {
+      "g2": {
+        "id": "g2",
+        "name": "组2"
+      }
+    },
+    "createAt": 1655259436834
+  },
+  {
+    "id": "16552594320310pulg0a0010070000126",
+    "deviceId": "16552594320310pulg0a0010070000126",
+    "productKey": "cGCrkK7Ex4FESAwe",
+    "deviceName": "PULG0A001007",
+    "secret": "NnnHaibdHJXMxNbC",
+    "uid": "1",
+    "subUid": [],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 1655652739372
+    },
+    "property": {
+      "powerstate": 1,
+      "rssi": 75
+    },
+    "tag": {},
+    "group": {
+      "g2": {
+        "id": "g2",
+        "name": "组2"
+      }
+    },
+    "createAt": 1655259432067
+  },
+  {
+    "id": "16542484163750d60ee9025d8430e327",
+    "deviceId": "16542484163750d60ee9025d8430e327",
+    "productKey": "Eit3kmGJtxSHfCKT",
+    "deviceName": "2475b491e72541f7ad60ee9025d8430e",
+    "secret": "bWkiEmY6wKM8WQP5",
+    "uid": "1",
+    "subUid": [],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false
+    },
+    "property": {
+      "flow": "333",
+      "fee": "2121212"
+    },
+    "tag": {},
+    "createAt": 1654248416391
+  },
+  {
+    "id": "16538390924670pulg0a001006000012a",
+    "deviceId": "16538390924670pulg0a001006000012a",
+    "productKey": "cGCrkK7Ex4FESAwe",
+    "deviceName": "PULG0A001006",
+    "secret": "FFSdNXDRJbnE8fm2",
+    "uid": "1",
+    "subUid": [
+      "04c6722f-9a6d-40f3-ac9b-cd791b4c8933"
+    ],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 1653839933067
+    },
+    "property": {
+      "powerstate": 1,
+      "rssi": 53,
+      "DeviceType": "222"
+    },
+    "tag": {
+      "aligenie": {
+        "id": "aligenie",
+        "name": "天猫精灵",
+        "value": "是"
+      },
+      "dueros": {
+        "id": "dueros",
+        "name": "小度",
+        "value": "是"
+      },
+      "duerosOpenUid": {
+        "id": "duerosOpenUid",
+        "name": "小度OpenUid",
+        "value": "0cfd14fc6d1ec120fcd38885df09f33c"
+      }
+    },
+    "createAt": 1653839092467
+  },
+  {
+    "id": "16538390885690pulg0a0010050000126",
+    "deviceId": "16538390885690pulg0a0010050000126",
+    "productKey": "cGCrkK7Ex4FESAwe",
+    "deviceName": "PULG0A001005",
+    "secret": "CN8ZGpcAheAbsDn2",
+    "uid": "1",
+    "subUid": [],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 1653839933167
+    },
+    "property": {
+      "powerstate": 0,
+      "rssi": 117
+    },
+    "tag": {},
+    "createAt": 1653839088569
+  },
+  {
+    "id": "16538390853670pulg0a0010040000121",
+    "deviceId": "16538390853670pulg0a0010040000121",
+    "productKey": "cGCrkK7Ex4FESAwe",
+    "deviceName": "PULG0A001004",
+    "secret": "S4SDRKscRXAn43bc",
+    "uid": "1",
+    "subUid": [],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 1653839933267
+    },
+    "property": {
+      "powerstate": 1,
+      "rssi": 45
+    },
+    "tag": {},
+    "createAt": 1653839085367,
+    "group": {
+      "g3": {
+        "id": "g3",
+        "name": "组3"
+      }
+    }
+  },
+  {
+    "id": "16538390820760pulg0a0010030000127",
+    "deviceId": "16538390820760pulg0a0010030000127",
+    "productKey": "cGCrkK7Ex4FESAwe",
+    "deviceName": "PULG0A001003",
+    "secret": "7N4S6eYzMCjA7YfK",
+    "uid": "1",
+    "subUid": [],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 1653839933367
+    },
+    "property": {
+      "powerstate": 1,
+      "rssi": 101
+    },
+    "tag": {},
+    "createAt": 1653839082076
+  },
+  {
+    "id": "16538390787670pulg0a0010020000124",
+    "deviceId": "16538390787670pulg0a0010020000124",
+    "productKey": "cGCrkK7Ex4FESAwe",
+    "deviceName": "PULG0A001002",
+    "secret": "Jm7ecfyXawiend8K",
+    "uid": "1",
+    "subUid": [],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 1653839933376
+    },
+    "property": {
+      "powerstate": 1,
+      "rssi": 70
+    },
+    "tag": {},
+    "createAt": 1653839078767,
+    "group": {
+      "g3": {
+        "id": "g3",
+        "name": "组3"
+      }
+    }
+  },
+  {
+    "id": "16538390738670pulg0a0010010000125",
+    "deviceId": "16538390738670pulg0a0010010000125",
+    "productKey": "cGCrkK7Ex4FESAwe",
+    "deviceName": "PULG0A001001",
+    "secret": "rtsZbST3tiJHccbe",
+    "uid": "1",
+    "subUid": [],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 1653839933474
+    },
+    "property": {
+      "powerstate": 1,
+      "rssi": 118
+    },
+    "tag": {},
+    "createAt": 1653839073867,
+    "group": {
+      "g3": {
+        "id": "g3",
+        "name": "组3"
+      }
+    }
+  },
+  {
+    "id": "16538390097670switch0300100500143",
+    "deviceId": "16538390097670switch0300100500143",
+    "productKey": "eDhXKwEzwFybM5R7",
+    "deviceName": "SWITCH03001005",
+    "secret": "PXHwHXH4a8YJzZ3S",
+    "uid": "1",
+    "subUid": [],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 1653839918667
+    },
+    "property": {
+      "powerstate_1": 0,
+      "powerstate_2": 0,
+      "powerstate_3": 1,
+      "rssi": 86
+    },
+    "tag": {},
+    "createAt": 1653839009767,
+    "group": {
+      "g3": {
+        "id": "g3",
+        "name": "组3"
+      }
+    }
+  },
+  {
+    "id": "16538390048670switch0300100400141",
+    "deviceId": "16538390048670switch0300100400141",
+    "productKey": "eDhXKwEzwFybM5R7",
+    "deviceName": "SWITCH03001004",
+    "secret": "BQj5SZetsC3eGtfM",
+    "uid": "1",
+    "subUid": [],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 1653839918676
+    },
+    "property": {
+      "powerstate_1": 0,
+      "powerstate_2": 0,
+      "powerstate_3": 0,
+      "rssi": 27
+    },
+    "tag": {},
+    "createAt": 1653839004867,
+    "group": {
+      "g3": {
+        "id": "g3",
+        "name": "组3"
+      }
+    }
+  },
+  {
+    "id": "16538390008670switch0300100300145",
+    "deviceId": "16538390008670switch0300100300145",
+    "productKey": "eDhXKwEzwFybM5R7",
+    "deviceName": "SWITCH03001003",
+    "secret": "mbs4PsY4atEtzcA3",
+    "uid": "1",
+    "subUid": [],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 1653839918771
+    },
+    "property": {
+      "powerstate_1": 0,
+      "powerstate_2": 0,
+      "powerstate_3": 0,
+      "rssi": 29
+    },
+    "tag": {},
+    "createAt": 1653839000867,
+    "group": {
+      "g3": {
+        "id": "g3",
+        "name": "组3"
+      }
+    }
+  },
+  {
+    "id": "16538389971670switch0300100200140",
+    "deviceId": "16538389971670switch0300100200140",
+    "productKey": "eDhXKwEzwFybM5R7",
+    "deviceName": "SWITCH03001002",
+    "secret": "4nrNrjnFMSQZB562",
+    "uid": "1",
+    "subUid": [],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 1653839918871
+    },
+    "property": {
+      "powerstate_1": 1,
+      "powerstate_2": 0,
+      "powerstate_3": 0,
+      "rssi": 12
+    },
+    "tag": {},
+    "createAt": 1653838997167,
+    "group": {
+      "g3": {
+        "id": "g3",
+        "name": "组3"
+      }
+    }
+  },
+  {
+    "id": "16538389915670switch030010010014c",
+    "deviceId": "16538389915670switch030010010014c",
+    "productKey": "eDhXKwEzwFybM5R7",
+    "deviceName": "SWITCH03001001",
+    "secret": "Js66kBbXRjXmcpMB",
+    "uid": "1",
+    "subUid": [],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 1653839918967
+    },
+    "property": {
+      "powerstate_1": 0,
+      "powerstate_2": 1,
+      "powerstate_3": 0,
+      "rssi": 18
+    },
+    "tag": {},
+    "createAt": 1653838991567
+  },
+  {
+    "id": "16538383943670wenshidu01008000139",
+    "deviceId": "16538383943670wenshidu01008000139",
+    "productKey": "6kYp6jszrDns2yh4",
+    "deviceName": "WENSHIDU01008",
+    "secret": "pGxKYrNJC7rDhsr8",
+    "uid": "1",
+    "subUid": [],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 1655416485331
+    },
+    "property": {
+      "humidity": 93,
+      "temperature": 330
+    },
+    "tag": {},
+    "createAt": 1653838394367
+  },
+  {
+    "id": "16538383910670wenshidu01007000136",
+    "deviceId": "16538383910670wenshidu01007000136",
+    "productKey": "6kYp6jszrDns2yh4",
+    "deviceName": "WENSHIDU01007",
+    "secret": "ZxDQeQ8jhMrfx8eE",
+    "uid": "1",
+    "subUid": [],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 1655416485335
+    },
+    "property": {
+      "humidity": 91,
+      "temperature": -29
+    },
+    "tag": {},
+    "createAt": 1653838391067
+  },
+  {
+    "id": "16538383880670wenshidu0100600013b",
+    "deviceId": "16538383880670wenshidu0100600013b",
+    "productKey": "6kYp6jszrDns2yh4",
+    "deviceName": "WENSHIDU01006",
+    "secret": "fEbdXEayedpBx6wk",
+    "uid": "1",
+    "subUid": [],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 1655416485433
+    },
+    "property": {
+      "humidity": 95,
+      "temperature": 394
+    },
+    "tag": {},
+    "createAt": 1653838388067
+  },
+  {
+    "id": "16538383850710wenshidu01005000134",
+    "deviceId": "16538383850710wenshidu01005000134",
+    "productKey": "6kYp6jszrDns2yh4",
+    "deviceName": "WENSHIDU01005",
+    "secret": "Crm28CTD6iw7hYw5",
+    "uid": "1",
+    "subUid": [],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 1655416485531
+    },
+    "property": {
+      "humidity": 23,
+      "temperature": 425
+    },
+    "tag": {},
+    "createAt": 1653838385071
+  },
+  {
+    "id": "16538383810690wenshidu01004000132",
+    "deviceId": "16538383810690wenshidu01004000132",
+    "productKey": "6kYp6jszrDns2yh4",
+    "deviceName": "WENSHIDU01004",
+    "secret": "FkCQGREXYCmjzxaZ",
+    "uid": "1",
+    "subUid": [],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 1655416485631
+    },
+    "property": {
+      "humidity": 96,
+      "temperature": 263
+    },
+    "tag": {},
+    "createAt": 1653838381074
+  },
+  {
+    "id": "16537595658790linght0010030000128",
+    "deviceId": "16537595658790linght0010030000128",
+    "productKey": "xpsYHExTKPFaQMS7",
+    "deviceName": "LINGHT001003",
+    "secret": "JwKxnDWGrRcP8xAJ",
+    "uid": "1",
+    "subUid": [],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 1653839919567
+    },
+    "property": {
+      "brightness": 9,
+      "powerstate": 0
+    },
+    "tag": {},
+    "createAt": 1653759565879
+  },
+  {
+    "id": "16537595624750linght001002000012c",
+    "deviceId": "16537595624750linght001002000012c",
+    "productKey": "xpsYHExTKPFaQMS7",
+    "deviceName": "LINGHT001002",
+    "secret": "xrX2mrkQwf3YYaWc",
+    "uid": "1",
+    "subUid": [],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 1653839919576
+    },
+    "property": {
+      "brightness": 83,
+      "powerstate": 1
+    },
+    "tag": {},
+    "createAt": 1653759562475
+  },
+  {
+    "id": "16537595591780linght0010010000121",
+    "deviceId": "16537595591780linght0010010000121",
+    "productKey": "xpsYHExTKPFaQMS7",
+    "deviceName": "LINGHT001001",
+    "secret": "diRBkEREDt47MzWF",
+    "uid": "1",
+    "subUid": [],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 1653839919673
+    },
+    "property": {
+      "brightness": 81,
+      "powerstate": 1
+    },
+    "tag": {},
+    "createAt": 1653759559178
+  },
+  {
+    "id": "16537595308820fan000100300000010d",
+    "deviceId": "16537595308820fan000100300000010d",
+    "productKey": "hdX3PCMcFrCYpesJ",
+    "deviceName": "FAN0001003",
+    "secret": "fR3R3i8BYDKWAiDj",
+    "uid": "1",
+    "subUid": [],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false
+    },
+    "property": {},
+    "tag": {},
+    "createAt": 1653759530882
+  },
+  {
+    "id": "16537595248720fan0001002000000101",
+    "deviceId": "16537595248720fan0001002000000101",
+    "productKey": "hdX3PCMcFrCYpesJ",
+    "deviceName": "FAN0001002",
+    "secret": "t3NYS5p7ExYaWKx4",
+    "uid": "1",
+    "subUid": [],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false
+    },
+    "property": {},
+    "tag": {},
+    "createAt": 1653759524872
+  },
+  {
+    "id": "16537595195720fan0001001000000108",
+    "deviceId": "16537595195720fan0001001000000108",
+    "productKey": "hdX3PCMcFrCYpesJ",
+    "deviceName": "FAN0001001",
+    "secret": "KSpeRjXRP8H7tcAn",
+    "uid": "1",
+    "subUid": [],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false
+    },
+    "property": {},
+    "tag": {},
+    "createAt": 1653759519572
+  },
+  {
+    "id": "16537594784840wenshidu0100300013a",
+    "deviceId": "16537594784840wenshidu0100300013a",
+    "productKey": "6kYp6jszrDns2yh4",
+    "deviceName": "WENSHIDU01003",
+    "secret": "DSBbhJW7cGXRWeZA",
+    "uid": "1",
+    "subUid": [],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 1653839926671
+    },
+    "property": {
+      "humidity": 45,
+      "temperature": 123
+    },
+    "tag": {},
+    "createAt": 1653759478484
+  },
+  {
+    "id": "16537594752710wenshidu0100200013d",
+    "deviceId": "16537594752710wenshidu0100200013d",
+    "productKey": "6kYp6jszrDns2yh4",
+    "deviceName": "WENSHIDU01002",
+    "secret": "5bm8pNYcdj7YPMXn",
+    "uid": "1",
+    "subUid": [],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 1653839926777
+    },
+    "property": {
+      "humidity": 6,
+      "temperature": 28
+    },
+    "tag": {},
+    "createAt": 1653759475271
+  },
+  {
+    "id": "16537594707840wenshidu0100100013c",
+    "deviceId": "16537594707840wenshidu0100100013c",
+    "productKey": "6kYp6jszrDns2yh4",
+    "deviceName": "WENSHIDU01001",
+    "secret": "neSfPnhsjCsQiCQx",
+    "uid": "1",
+    "subUid": [],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 1653839927067
+    },
+    "property": {
+      "humidity": 35,
+      "temperature": 392
+    },
+    "tag": {},
+    "createAt": 1653759470784
+  },
+  {
+    "id": "16537591055800menci0001003000012e",
+    "deviceId": "16537591055800menci0001003000012e",
+    "productKey": "PN3EDmkBZDD8whDd",
+    "deviceName": "MENCI0001003",
+    "secret": "2D2k8mmHbi2AMh8G",
+    "uid": "1",
+    "subUid": [],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 1653785231385
+    },
+    "property": {
+      "doorStatus": 1,
+      "power": 70,
+      "rssi": 38
+    },
+    "tag": {},
+    "createAt": 1653759105580
+  },
+  {
+    "id": "16537590838150menci00010020000128",
+    "deviceId": "16537590838150menci00010020000128",
+    "productKey": "PN3EDmkBZDD8whDd",
+    "deviceName": "MENCI0001002",
+    "secret": "AQHQJTQ2iXkncb3C",
+    "uid": "1",
+    "subUid": [],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 1653785231786
+    },
+    "property": {
+      "doorStatus": 1,
+      "power": 99,
+      "rssi": 48
+    },
+    "tag": {},
+    "createAt": 1653759083815
+  },
+  {
+    "id": "16537590780810menci0001001000012b",
+    "deviceId": "16537590780810menci0001001000012b",
+    "productKey": "PN3EDmkBZDD8whDd",
+    "deviceName": "MENCI0001001",
+    "secret": "PwYEKSARBJjD4y6B",
+    "uid": "1",
+    "subUid": [],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 1653785232184
+    },
+    "property": {
+      "doorStatus": 1,
+      "power": 67,
+      "rssi": 54
+    },
+    "tag": {},
+    "createAt": 1653759078092
+  },
+  {
+    "id": "16534030209640test001230100000118",
+    "deviceId": "16534030209640test001230100000118",
+    "productKey": "cGCrkK7Ex4FESAwe",
+    "deviceName": "TEST0012301",
+    "secret": "C8YxCycFFeQDPKX4",
+    "uid": "1",
+    "subUid": [],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 1653730979070
+    },
+    "property": {
+      "DeviceType": "",
+      "powerstate": 1,
+      "rssi": 15
+    },
+    "tag": {},
+    "createAt": 1653403020971
+  },
+  {
+    "id": "16514657683280abe125000010000011f",
+    "deviceId": "16514657683280abe125000010000011f",
+    "productKey": "AWcJnf7ymGSkaz5M",
+    "deviceName": "ABE12500001",
+    "model": "M1",
+    "parentId": "16514626212240aabbccee01000000143",
+    "uid": "1",
+    "subUid": [],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 1653380321483
+    },
+    "property": {
+      "powerstate": "1",
+      "power": "1",
+      "rssi": "1",
+      "switch": "3232",
+      "current": "10000",
+      "electricty": "10"
+    },
+    "tag": {},
+    "createAt": 1651465768328
+  },
+  {
+    "id": "16514627991620aabbccdd1000000014f",
+    "deviceId": "16514627991620aabbccdd1000000014f",
+    "productKey": "hbtgIA0SuVw9lxjB",
+    "deviceName": "AA:BB:CC:DD:10",
+    "model": "GW01",
+    "uid": "1",
+    "subUid": [],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 1653185932725,
+      "offlineTime": 1653187754035
+    },
+    "property": {},
+    "tag": {},
+    "createAt": 1651462799162
+  },
+  {
+    "id": "16514626218250abe124000010000011a",
+    "deviceId": "16514626218250abe124000010000011a",
+    "productKey": "6kYp6jszrDns2yh4",
+    "deviceName": "ABE12400001",
+    "model": "S1",
+    "parentId": "16514626212240aabbccee01000000143",
+    "uid": "1",
+    "subUid": [],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 1653380322090,
+      "offlineTime": 1652593079579
+    },
+    "property": {
+      "humidity": 14,
+      "temperature": 447
+    },
+    "tag": {},
+    "createAt": 1651462621825
+  },
+  {
+    "id": "16514626216250abe1230000200000114",
+    "deviceId": "16514626216250abe1230000200000114",
+    "productKey": "cGCrkK7Ex4FESAwe",
+    "deviceName": "ABE12300002",
+    "model": "S1",
+    "parentId": "16514626212240aabbccee01000000143",
+    "uid": "15620886-b30d-439d-9e5f-13a094c1f1f9",
+    "subUid": [],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 1653380319984,
+      "offlineTime": 1652593079484
+    },
+    "property": {
+      "powerstate": 0,
+      "rssi": 26
+    },
+    "tag": {},
+    "createAt": 1651462621625
+  },
+  {
+    "id": "16514626214280abe1230000100000116",
+    "deviceId": "16514626214280abe1230000100000116",
+    "productKey": "cGCrkK7Ex4FESAwe",
+    "deviceName": "ABE12300001",
+    "model": "S1",
+    "parentId": "16514626212240aabbccee01000000143",
+    "uid": "15620886-b30d-439d-9e5f-13a094c1f1f9",
+    "subUid": [],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 1653380317469,
+      "offlineTime": 1652593079473
+    },
+    "property": {
+      "powerstate": 1,
+      "rssi": 48
+    },
+    "tag": {},
+    "createAt": 1651462621428
+  },
+  {
+    "id": "16514626212240aabbccee01000000143",
+    "deviceId": "16514626212240aabbccee01000000143",
+    "productKey": "N523nWsCiG3CAn6X",
+    "deviceName": "AA:BB:CC:EE:01",
+    "uid": "1",
+    "subUid": [],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 1653380312358,
+      "offlineTime": 1652593079381
+    },
+    "property": {
+      "UnbindAndDelete": "1"
+    },
+    "tag": {},
+    "createAt": 1651462621224
+  },
+  {
+    "id": "16501898583770f4cce4feffbd1bec164",
+    "deviceId": "16501898583770f4cce4feffbd1bec164",
+    "productKey": "PN3EDmkBZDD8whDd",
+    "deviceName": "F4CCE4FEFFBD1BEC",
+    "model": "device",
+    "parentId": "165017126122400cefafcfee61000012b",
+    "uid": "1",
+    "subUid": [],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 1655415536433,
+      "offlineTime": 1652669743574
+    },
+    "property": {
+      "DeviceType": "TY0203@_TZ1800_ho6i0zk9",
+      "power": 12,
+      "doorStatus": 1,
+      "rssi": 42
+    },
+    "tag": {
+      "aligenie": {
+        "id": "aligenie",
+        "name": "天猫精灵接入",
+        "value": "是"
+      }
+    },
+    "createAt": 1650189858377
+  },
+  {
+    "id": "16501806313260000833feffac33bc16c",
+    "deviceId": "16501806313260000833feffac33bc16c",
+    "productKey": "cGCrkK7Ex4FESAwe",
+    "deviceName": "000833FEFFAC33BC",
+    "model": "device",
+    "parentId": "165017126122400cefafcfee61000012b",
+    "uid": "15620886-b30d-439d-9e5f-13a094c1f1f9",
+    "subUid": [
+      "04c6722f-9a6d-40f3-ac9b-cd791b4c8933"
+    ],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 1652602130873,
+      "offlineTime": 1652669743479
+    },
+    "property": {
+      "DeviceType": "S2100-5102@_TZ2000_muw96vx2ppq6zh2k",
+      "powerstate": 1,
+      "rssi": -32
+    },
+    "tag": {
+      "aligenie": {
+        "id": "aligenie",
+        "name": "天猫精灵",
+        "value": "是"
+      },
+      "dueros": {
+        "id": "dueros",
+        "name": "小度",
+        "value": "是"
+      },
+      "duerosOpenUid": {
+        "id": "duerosOpenUid",
+        "name": "小度OpenUid",
+        "value": "0cfd14fc6d1ec120fcd38885df09f33c"
+      }
+    },
+    "createAt": 1650180631326
+  },
+  {
+    "id": "165017126122400cefafcfee61000012b",
+    "deviceId": "165017126122400cefafcfee61000012b",
+    "productKey": "N523nWsCiG3CAn6X",
+    "deviceName": "0CEFAFCFEE61",
+    "subUid": [
+      "04c6722f-9a6d-40f3-ac9b-cd791b4c8933"
+    ],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 1652602115884,
+      "offlineTime": 1652669743471
+    },
+    "property": {
+      "DeviceType": "WIDORA-BIT5"
+    },
+    "tag": {
+      "aligenie": {
+        "id": "aligenie",
+        "name": "天猫精灵",
+        "value": "是"
+      },
+      "dueros": {
+        "id": "dueros",
+        "name": "小度",
+        "value": "是"
+      },
+      "duerosOpenUid": {
+        "id": "duerosOpenUid",
+        "name": "小度OpenUid",
+        "value": "0cfd14fc6d1ec120fcd38885df09f33c"
+      }
+    },
+    "createAt": 1650171261224
+  },
+  {
+    "id": "164785263238900cefafcfeeab0000125",
+    "deviceId": "164785263238900cefafcfeeab0000125",
+    "productKey": "N523nWsCiG3CAn6X",
+    "deviceName": "0CEFAFCFEEAB",
+    "subUid": [
+      "629daa3de5a005209d182876"
+    ],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 1655581924548,
+      "offlineTime": 1655581807987
+    },
+    "property": {
+      "DeviceType": "WIDORA-BIT5"
+    },
+    "tag": {
+      "dueros": {
+        "id": "dueros",
+        "name": "小度",
+        "value": "是"
+      },
+      "duerosOpenUid": {
+        "id": "duerosOpenUid",
+        "name": "小度OpenUid",
+        "value": "b980663dfbcf35126bb5b85031c3413a"
+      }
+    },
+    "group": {},
+    "createAt": 1647852632389
+  },
+  {
+    "id": "16477632226720c2cc9f03008d1500166",
+    "deviceId": "16477632226720c2cc9f03008d1500166",
+    "productKey": "cGCrkK7Ex4FESAwe",
+    "deviceName": "C2CC9F03008D1500",
+    "model": "device",
+    "parentId": "164785263238900cefafcfeeab0000125",
+    "subUid": [
+      "629daa3de5a005209d182876"
+    ],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 1655581925148,
+      "offlineTime": 1655581808150
+    },
+    "property": {
+      "DeviceType": "lumi.plug@LUMI",
+      "powerstate": 0,
+      "rssi": -77
+    },
+    "tag": {
+      "dueros": {
+        "id": "dueros",
+        "name": "小度",
+        "value": "是"
+      },
+      "duerosOpenUid": {
+        "id": "duerosOpenUid",
+        "name": "小度OpenUid",
+        "value": "b980663dfbcf35126bb5b85031c3413a"
+      }
+    },
+    "group": {},
+    "createAt": 1647763222672
+  },
+  {
+    "id": "164776322227201472a803008d150016e",
+    "deviceId": "164776322227201472a803008d150016e",
+    "productKey": "cGCrkK7Ex4FESAwe",
+    "deviceName": "1472A803008D1500",
+    "model": "device",
+    "parentId": "164785263238900cefafcfeeab0000125",
+    "subUid": [
+      "629daa3de5a005209d182876"
+    ],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 1655581925152,
+      "offlineTime": 1655581808148
+    },
+    "property": {
+      "DeviceType": "lumi.plug@LUMI",
+      "powerstate": 1,
+      "rssi": -77
+    },
+    "tag": {
+      "dueros": {
+        "id": "dueros",
+        "name": "小度",
+        "value": "是"
+      },
+      "duerosOpenUid": {
+        "id": "duerosOpenUid",
+        "name": "小度OpenUid",
+        "value": "b980663dfbcf35126bb5b85031c3413a"
+      }
+    },
+    "group": {},
+    "createAt": 1647763222272
+  },
+  {
+    "id": "1647763221972019a89f03008d1500163",
+    "deviceId": "1647763221972019a89f03008d1500163",
+    "productKey": "cGCrkK7Ex4FESAwe",
+    "deviceName": "19A89F03008D1500",
+    "model": "device",
+    "parentId": "164785263238900cefafcfeeab0000125",
+    "subUid": [
+      "629daa3de5a005209d182876"
+    ],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 1655581925157,
+      "offlineTime": 1655581808053
+    },
+    "property": {
+      "DeviceType": "lumi.plug@LUMI",
+      "powerstate": 1,
+      "rssi": -80
+    },
+    "tag": {
+      "dueros": {
+        "id": "dueros",
+        "name": "小度",
+        "value": "是"
+      },
+      "duerosOpenUid": {
+        "id": "duerosOpenUid",
+        "name": "小度OpenUid",
+        "value": "b980663dfbcf35126bb5b85031c3413a"
+      }
+    },
+    "group": {},
+    "createAt": 1647763221972
+  },
+  {
+    "id": "16477632215720c11b1602008d1500160",
+    "deviceId": "16477632215720c11b1602008d1500160",
+    "productKey": "cGCrkK7Ex4FESAwe",
+    "deviceName": "C11B1602008D1500",
+    "model": "device",
+    "parentId": "164785263238900cefafcfeeab0000125",
+    "subUid": [
+      "629daa3de5a005209d182876"
+    ],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 1655581925252,
+      "offlineTime": 1655581808052
+    },
+    "property": {
+      "DeviceType": "lumi.plug@LUMI",
+      "powerstate": 1,
+      "rssi": -78
+    },
+    "tag": {
+      "dueros": {
+        "id": "dueros",
+        "name": "小度",
+        "value": "是"
+      },
+      "duerosOpenUid": {
+        "id": "duerosOpenUid",
+        "name": "小度OpenUid",
+        "value": "b980663dfbcf35126bb5b85031c3413a"
+      }
+    },
+    "group": {},
+    "createAt": 1647763221572
+  },
+  {
+    "id": "164776322117404acb9f03008d1500168",
+    "deviceId": "164776322117404acb9f03008d1500168",
+    "productKey": "cGCrkK7Ex4FESAwe",
+    "deviceName": "4ACB9F03008D1500",
+    "model": "device",
+    "parentId": "164785263238900cefafcfeeab0000125",
+    "subUid": [
+      "629daa3de5a005209d182876"
+    ],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 1655581925255,
+      "offlineTime": 1655581808049
+    },
+    "property": {
+      "DeviceType": "lumi.plug@LUMI",
+      "powerstate": 1,
+      "rssi": -78
+    },
+    "tag": {
+      "dueros": {
+        "id": "dueros",
+        "name": "小度",
+        "value": "是"
+      },
+      "duerosOpenUid": {
+        "id": "duerosOpenUid",
+        "name": "小度OpenUid",
+        "value": "b980663dfbcf35126bb5b85031c3413a"
+      }
+    },
+    "group": {},
+    "createAt": 1647763221174
+  },
+  {
+    "id": "1647690908735019dd9f03008d1500163",
+    "deviceId": "1647690908735019dd9f03008d1500163",
+    "productKey": "cGCrkK7Ex4FESAwe",
+    "deviceName": "19DD9F03008D1500",
+    "model": "device",
+    "parentId": "164785263238900cefafcfeeab0000125",
+    "subUid": [
+      "629daa3de5a005209d182876"
+    ],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 1655581925247,
+      "offlineTime": 1655581808009
+    },
+    "property": {
+      "powerstate": 1,
+      "DeviceType": "lumi.plug@LUMI",
+      "rssi": -78
+    },
+    "tag": {
+      "dueros": {
+        "id": "dueros",
+        "name": "小度",
+        "value": "是"
+      },
+      "duerosOpenUid": {
+        "id": "duerosOpenUid",
+        "name": "小度OpenUid",
+        "value": "b980663dfbcf35126bb5b85031c3413a"
+      }
+    },
+    "group": {},
+    "createAt": 1647690908735
+  },
+  {
+    "id": "16465723457670abd123000020000011c",
+    "deviceId": "16465723457670abd123000020000011c",
+    "productKey": "hdX3PCMcFrCYpesJ",
+    "deviceName": "ABD12300002",
+    "model": "F01",
+    "parentId": "16465226744430aabbccdd22000000143",
+    "uid": "1",
+    "subUid": [],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 1653380311848,
+      "offlineTime": 1653380472842
+    },
+    "property": {
+      "windSpeed": "7",
+      "powerSwitch": "1",
+      "workMode": "5"
+    },
+    "tag": {},
+    "createAt": 1646572345767
+  },
+  {
+    "id": "16465723454670abd1230000100000117",
+    "deviceId": "16465723454670abd1230000100000117",
+    "productKey": "hdX3PCMcFrCYpesJ",
+    "deviceName": "ABD12300001",
+    "model": "F01",
+    "parentId": "16465226744430aabbccdd22000000143",
+    "uid": "1",
+    "subUid": [],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 1653380308883,
+      "offlineTime": 1653380472498
+    },
+    "property": {
+      "windSpeed": "68"
+    },
+    "tag": {},
+    "createAt": 1646572345467
+  },
+  {
+    "id": "16465723451670abc123000030000011a",
+    "deviceId": "16465723451670abc123000030000011a",
+    "productKey": "Rf4QSjbm65X45753",
+    "deviceName": "ABC12300003",
+    "model": "S01",
+    "parentId": "16465226744430aabbccdd22000000143",
+    "uid": "1",
+    "subUid": [],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 1653729780071,
+      "offlineTime": 1653380472221
+    },
+    "property": {
+      "powerstate": 0,
+      "volt": 81
+    },
+    "tag": {},
+    "createAt": 1646572345167
+  },
+  {
+    "id": "16465723448670abc1230000200000115",
+    "deviceId": "16465723448670abc1230000200000115",
+    "productKey": "Rf4QSjbm65X45753",
+    "deviceName": "ABC12300002",
+    "model": "S01",
+    "parentId": "16465226744430aabbccdd22000000143",
+    "uid": "1",
+    "subUid": [],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 1653729780174,
+      "offlineTime": 1653380471930
+    },
+    "property": {
+      "powerstate": 1,
+      "volt": 69
+    },
+    "tag": {},
+    "createAt": 1646572344867
+  },
+  {
+    "id": "16465226744430aabbccdd22000000143",
+    "deviceId": "16465226744430aabbccdd22000000143",
+    "productKey": "hbtgIA0SuVw9lxjB",
+    "deviceName": "AA:BB:CC:DD:22",
+    "uid": "1",
+    "subUid": [],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 1653380299997,
+      "offlineTime": 1653380471302
+    },
+    "property": {},
+    "tag": {},
+    "createAt": 1646522674443
+  },
+  {
+    "id": "168187356997901234567891230000120",
+    "deviceId": "168187356997901234567891230000120",
+    "productKey": "BRD3x4fkKxkaxXFt",
+    "deviceName": "123456789123",
+    "uid": "1",
+    "subUid": [],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 1653380299997,
+      "offlineTime": 1653380471302
+    },
+    "property": {},
+    "tag": {},
+    "createAt": 1646522674443
+  },
+  {
+    "id": "168191541600402017121609130000126",
+    "deviceId": "168191541600402017121609130000126",
+    "productKey": "PwMfpXmp4ZWkGahn",
+    "deviceName": "201712160913",
+    "uid": "1",
+    "parentId": "168187356997901234567891230000120",
+    "subUid": [],
+    "locate":{
+      "longitude": "104.090377",
+      "latitude": "30.604218"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 1653380299997,
+      "offlineTime": 1653380471302
+    },
+    "property": {},
+    "tag": {},
+    "createAt": 1646522674443
+  },
+  {
+    "id": "16891445583920testpump0100000010f",
+    "deviceId": "16891445583920testpump0100000010f",
+    "productKey": "openiitapump01",
+    "deviceName": "testpump01",
+    "model": null,
+    "secret": "8cB3W8NzjP3rFY6W",
+    "parentId": "16891443313530testgateway0100013d",
+    "uid": "1",
+    "subUid": null,
+    "locate": {
+      "longitude": null,
+      "latitude": null
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 0,
+      "offlineTime": 0
+    },
+    "property": null,
+    "tag": null,
+    "group": {},
+    "createAt": 1689144558392
+  },
+  {
+    "id": "16891443313530testgateway0100013d",
+    "deviceId": "16891443313530testgateway0100013d",
+    "productKey": "openiitagateway01",
+    "deviceName": "testgateway01",
+    "model": null,
+    "secret": "bnw2Z6zNxxdBtm6N",
+    "parentId": null,
+    "uid": "1",
+    "subUid": null,
+    "locate": {
+      "longitude": "113.865453",
+      "latitude": "22.583686"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 0,
+      "offlineTime": 0
+    },
+    "property": null,
+    "tag": null,
+    "group": {},
+    "createAt": 1689144331356
+  },
+  {
+    "id": "16895701241450testnbpump010000125",
+    "deviceId": "16895701241450testnbpump010000125",
+    "productKey": "openiitanbpump01",
+    "deviceName": "testnbpump01",
+    "model": null,
+    "secret": "eY45WnZEWRryR2xt",
+    "parentId": null,
+    "uid": "1",
+    "subUid": null,
+    "locate": {
+      "longitude": "113.865453",
+      "latitude": "22.583686"
+    },
+    "state": {
+      "online": false,
+      "onlineTime": 0,
+      "offlineTime": 0
+    },
+    "property": null,
+    "tag": null,
+    "group": {},
+    "createAt": 1689570124148
+  }
+]

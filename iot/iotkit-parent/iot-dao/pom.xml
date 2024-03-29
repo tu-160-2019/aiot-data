@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>iotkit-parent</artifactId>
+        <groupId>cc.iotkit</groupId>
+        <version>0.5.3</version>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>iot-dao</artifactId>
+    <packaging>pom</packaging>
+
+    <description>
+        与数据存取相关内容的模块
+        包含：数据接口定义、数据实体类定义、关系型数据库接口实现、NoSQL数据库接口实现、数据缓存服务
+    </description>
+
+    <modules>
+        <module>iot-data-model</module>
+        <module>iot-data-service</module>
+        <module>iot-data-serviceImpl-cache</module>
+        <module>iot-data-serviceImpl-rdb</module>
+        <module>iot-temporal-service</module>
+        <module>iot-temporal-serviceImpl-td</module>
+        <module>iot-temporal-serviceImpl-es</module>
+        <module>iot-temporal-serviceImpl-iotdb</module>
+    </modules>
+
+</project>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>iot-iita-plugins</artifactId>
+        <groupId>cc.iotkit.plugins</groupId>
+        <version>1.0.1</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>mqtt-plugin</artifactId>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>io.vertx</groupId>
+            <artifactId>vertx-core</artifactId>
+            <version>${vertx.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.vertx</groupId>
+            <artifactId>vertx-mqtt</artifactId>
+            <version>${vertx.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-codec-mqtt</artifactId>
+        </dependency>
+
+    </dependencies>
+
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <plugin.build.mode>dev</plugin.build.mode>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>prod</id>
+            <properties>
+                <plugin.build.mode>prod</plugin.build.mode>
+            </properties>
+        </profile>
+    </profiles>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.gitee.starblues</groupId>
+                <artifactId>spring-brick-maven-packager</artifactId>
+                <version>${spring-brick.version}</version>
+                <configuration>
+                    <mode>${plugin.build.mode}</mode>
+                    <pluginInfo>
+                        <id>mqtt-plugin</id>
+                        <bootstrapClass>cc.iotkit.plugins.mqtt.Application</bootstrapClass>
+                        <version>${project.version}</version>
+                        <provider>iita</provider>
+                        <description>mqtt示例插件</description>
+                        <configFileName>application.yml</configFileName>
+                    </pluginInfo>
+                    <prodConfig>
+                        <packageType>jar</packageType>
+                    </prodConfig>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

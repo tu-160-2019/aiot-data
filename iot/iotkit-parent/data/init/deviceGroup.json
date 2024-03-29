@@ -1,0 +1,22 @@
+[ {
+  "id" : "g3",
+  "name" : "组3",
+  "uid" : "1",
+  "remark" : "2223333",
+  "deviceQty" : 7,
+  "createAt" : 0
+}, {
+  "id" : "g2",
+  "name" : "组2",
+  "uid" : "1",
+  "remark" : "222",
+  "deviceQty" : 12,
+  "createAt" : 0
+}, {
+  "id" : "g1",
+  "name" : "分组1",
+  "uid" : "1",
+  "remark" : "1111",
+  "deviceQty" : 10,
+  "createAt" : 0
+} ]

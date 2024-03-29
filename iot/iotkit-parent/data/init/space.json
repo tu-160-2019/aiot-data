@@ -1,0 +1,100 @@
+[ {
+  "createDept" : null,
+  "createBy" : null,
+  "createTime" : 1708254320774,
+  "updateBy" : null,
+  "updateTime" : 1708254320774,
+  "tenantId" : null,
+  "id" : 1,
+  "homeId" : 1,
+  "name" : "123",
+  "deviceNum" : null
+}, {
+  "createDept" : null,
+  "createBy" : null,
+  "createTime" : 1708254320794,
+  "updateBy" : null,
+  "updateTime" : 1708254320794,
+  "tenantId" : null,
+  "id" : 2,
+  "homeId" : 1,
+  "name" : "123",
+  "deviceNum" : null
+}, {
+  "createDept" : null,
+  "createBy" : null,
+  "createTime" : 1708254320798,
+  "updateBy" : null,
+  "updateTime" : 1708254320798,
+  "tenantId" : null,
+  "id" : 3,
+  "homeId" : 1,
+  "name" : "客厅",
+  "deviceNum" : null
+}, {
+  "createDept" : null,
+  "createBy" : null,
+  "createTime" : 1708254320804,
+  "updateBy" : null,
+  "updateTime" : 1708254320804,
+  "tenantId" : null,
+  "id" : 4,
+  "homeId" : 1,
+  "name" : "卧室",
+  "deviceNum" : null
+}, {
+  "createDept" : null,
+  "createBy" : null,
+  "createTime" : 1708254320809,
+  "updateBy" : null,
+  "updateTime" : 1708254320809,
+  "tenantId" : null,
+  "id" : 5,
+  "homeId" : 1,
+  "name" : "客厅",
+  "deviceNum" : null
+}, {
+  "createDept" : null,
+  "createBy" : null,
+  "createTime" : 1708254320813,
+  "updateBy" : null,
+  "updateTime" : 1708254320813,
+  "tenantId" : null,
+  "id" : 6,
+  "homeId" : 1,
+  "name" : "阳台",
+  "deviceNum" : null
+}, {
+  "createDept" : null,
+  "createBy" : null,
+  "createTime" : 1708254320817,
+  "updateBy" : null,
+  "updateTime" : 1708254320817,
+  "tenantId" : null,
+  "id" : 7,
+  "homeId" : 1,
+  "name" : "厨房",
+  "deviceNum" : null
+}, {
+  "createDept" : null,
+  "createBy" : null,
+  "createTime" : 1708254320824,
+  "updateBy" : null,
+  "updateTime" : 1708254320824,
+  "tenantId" : null,
+  "id" : 8,
+  "homeId" : 1,
+  "name" : "卧室",
+  "deviceNum" : null
+}, {
+  "createDept" : null,
+  "createBy" : null,
+  "createTime" : 1708254320852,
+  "updateBy" : null,
+  "updateTime" : 1708254320852,
+  "tenantId" : null,
+  "id" : 9,
+  "homeId" : 1,
+  "name" : "客厅",
+  "deviceNum" : null
+} ]

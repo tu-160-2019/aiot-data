@@ -1,0 +1,143 @@
+di1h,di1l,di0h,di0l,format,length,unit,read,write,name
+9,0,1,0,XXXXXX.XX,4,kWh,TRUE,FALSE,(当前)正向有功总电能
+9,0,2,0,XXXXXX.XX,4,kWh,TRUE,FALSE,(当前)反向有功总电能
+9,1,1,0,XXXXXX.XX,4,kvarh,TRUE,FALSE,(当前)正向无功总电能
+9,1,2,0,XXXXXX.XX,4,kvarh,TRUE,FALSE,(当前)反向无功总电能
+9,1,3,0,XXXXXX.XX,4,kvarh,TRUE,FALSE,(当前)一象限无功总电能
+9,1,4,0,XXXXXX.XX,4,kvarh,TRUE,FALSE,(当前)四象限无功总电能
+9,1,5,0,XXXXXX.XX,4,kvarh,TRUE,FALSE,(当前)二象限无功总电能
+9,1,6,0,XXXXXX.XX,4,kvarh,TRUE,FALSE,(当前)三象限无功总电能
+9,4,1,0,XXXXXX.XX,4,kWh,TRUE,FALSE,(上月)正向有功总电能
+9,4,2,0,XXXXXX.XX,4,kWh,TRUE,FALSE,(上月)反向有功总电能
+9,5,1,0,XXXXXX.XX,4,kvarh,TRUE,FALSE,(上月)正向无功总电能
+9,5,2,0,XXXXXX.XX,4,kvarh,TRUE,FALSE,(上月)反向无功总电能
+9,5,3,0,XXXXXX.XX,4,kvarh,TRUE,FALSE,(上月)一象限无功总电能
+9,5,4,0,XXXXXX.XX,4,kvarh,TRUE,FALSE,(上月)四象限无功总电能
+9,5,5,0,XXXXXX.XX,4,kvarh,TRUE,FALSE,(上月)二象限无功总电能
+9,5,6,0,XXXXXX.XX,4,kvarh,TRUE,FALSE,(上月)三象限无功总电能
+9,8,1,0,XXXXXX.XX,4,kWh,TRUE,FALSE,(上上月)正向有功总电能
+9,8,2,0,XXXXXX.XX,4,kWh,TRUE,FALSE,(上上月)反向有功总电能
+9,9,1,0,XXXXXX.XX,4,kvarh,TRUE,FALSE,(上上月)正向无功总电能
+9,9,2,0,XXXXXX.XX,4,kvarh,TRUE,FALSE,(上上月)反向无功总电能
+9,9,3,0,XXXXXX.XX,4,kvarh,TRUE,FALSE,(上上月)一象限无功总电能
+9,9,4,0,XXXXXX.XX,4,kvarh,TRUE,FALSE,(上上月)四象限无功总电能
+9,9,5,0,XXXXXX.XX,4,kvarh,TRUE,FALSE,(上上月)二象限无功总电能
+9,9,6,0,XXXXXX.XX,4,kvarh,TRUE,FALSE,(上上月)三象限无功总电能
+A,0,1,0,XX.XXXX,3,kW,TRUE,FALSE,(当前)正向有功总最大需量
+A,0,2,0,XX.XXXX,3,kW,TRUE,FALSE,(当前)反向有功总最大需量
+A,1,1,0,XX.XXXX,3,kvar,TRUE,FALSE,(当前)正向无功总最大需量
+A,1,2,0,XX.XXXX,3,kvar,TRUE,FALSE,(当前)反向无功总最大需量
+A,1,3,0,XX.XXXX,3,kvar,TRUE,FALSE,(当前)一象限无功最大需量
+A,1,4,0,XX.XXXX,3,kvar,TRUE,FALSE,(当前)四象限无功最大需量
+A,1,5,0,XX.XXXX,3,kvar,TRUE,FALSE,(当前)二象限无功最大需量
+A,1,6,0,XX.XXXX,3,kvar,TRUE,FALSE,(当前)三象限无功最大需量
+A,4,1,0,XX.XXXX,3,kW,TRUE,FALSE,(上月)正向有功总最大需量
+A,4,2,0,XX.XXXX,3,kW,TRUE,FALSE,(上月)反向有功总最大需量
+A,5,1,0,XX.XXXX,3,kvar,TRUE,FALSE,(上月)正向无功总最大需量
+A,5,2,0,XX.XXXX,3,kvar,TRUE,FALSE,(上月)反向无功总最大需量
+A,5,3,0,XX.XXXX,3,kvar,TRUE,FALSE,(上月)一象限无功最大需量
+A,5,4,0,XX.XXXX,3,kvar,TRUE,FALSE,(上月)四象限无功最大需量
+A,5,5,0,XX.XXXX,3,kvar,TRUE,FALSE,(上月)二象限无功最大需量
+A,5,6,0,XX.XXXX,3,kvar,TRUE,FALSE,(上月)三象限无功最大需量
+A,8,1,0,XX.XXXX,3,kvar,TRUE,FALSE,(上上月)正向有功总最大需量
+A,8,2,0,XX.XXXX,3,kvar,TRUE,FALSE,(上上月)反向有功总最大需量
+A,9,1,0,XX.XXXX,3,kvar,TRUE,FALSE,(上上月)正向无功总最大需量
+A,9,2,0,XX.XXXX,3,kvar,TRUE,FALSE,(上上月)反向无功总最大需量
+A,9,3,0,XX.XXXX,3,kvar,TRUE,FALSE,(上上月)一象限无功最大需量
+A,9,4,0,XX.XXXX,3,kvar,TRUE,FALSE,(上上月)四象限无功最大需量
+A,9,5,0,XX.XXXX,3,kvar,TRUE,FALSE,(上上月)二象限无功最大需量
+A,9,6,0,XX.XXXX,3,kvar,TRUE,FALSE,(上上月)三象限无功最大需量
+B,0,1,0,MMDDHHmm,4,,TRUE,FALSE,(当前)正向有功总最大需量发生时间
+B,0,2,0,MMDDHHmm,4,,TRUE,FALSE,(当前)反向有功总最大需量发生时间
+B,1,1,0,MMDDHHmm,4,,TRUE,FALSE,(当前)正向无功总最大需量发生时间
+B,1,2,0,MMDDHHmm,4,,TRUE,FALSE,(当前)反向无功总最大需量发生时间
+B,1,3,0,MMDDHHmm,4,,TRUE,FALSE,(当前)一象限无功最大需量发生时间
+B,1,4,0,MMDDHHmm,4,,TRUE,FALSE,(当前)四象限无功最大需量发生时间
+B,1,5,0,MMDDHHmm,4,,TRUE,FALSE,(当前)二象限无功最大需量发生时间
+B,1,6,0,MMDDHHmm,4,,TRUE,FALSE,(当前)三象限无功最大需量发生时间
+B,4,1,0,MMDDHHmm,4,,TRUE,FALSE,(上月)正向有功总最大需量发生时间
+B,4,2,0,MMDDHHmm,4,,TRUE,FALSE,(上月)反向有功总最大需量发生时间
+B,5,1,0,MMDDHHmm,4,,TRUE,FALSE,(上月)正向无功总最大需量发生时间
+B,5,2,0,MMDDHHmm,4,,TRUE,FALSE,(上月)反向无功总最大需量发生时间
+B,5,3,0,MMDDHHmm,4,,TRUE,FALSE,(上月)一象限无功最大需量发生时间
+B,5,4,0,MMDDHHmm,4,,TRUE,FALSE,(上月)四象限无功最大需量发生时间
+B,5,5,0,MMDDHHmm,4,,TRUE,FALSE,(上月)二象限无功最大需量发生时间
+B,5,6,0,MMDDHHmm,4,,TRUE,FALSE,(上月)三象限无功最大需量发生时间
+B,8,1,0,MMDDHHmm,4,,TRUE,FALSE,(上上月)正向有功总最大需量发生时间
+B,8,2,0,MMDDHHmm,4,,TRUE,FALSE,(上上月)反向有功总最大需量发生时间
+B,9,1,0,MMDDHHmm,4,,TRUE,FALSE,(上上月)正向无功总最大需量发生时间
+B,9,2,0,MMDDHHmm,4,,TRUE,FALSE,(上上月)反向无功总最大需量发生时间
+B,9,3,0,MMDDHHmm,4,,TRUE,FALSE,(上上月)一象限无功最大需量发生时间
+B,9,4,0,MMDDHHmm,4,,TRUE,FALSE,(上上月)四象限无功最大需量发生时间
+B,9,5,0,MMDDHHmm,4,,TRUE,FALSE,(上上月)二象限无功最大需量发生时间
+B,9,6,0,MMDDHHmm,4,,TRUE,FALSE,(上上月)三象限无功最大需量发生时间
+B,2,1,0,MMDDHHmm,4,,TRUE,FALSE,最近一次编程时间
+B,2,1,1,MMDDHHmm,4,,TRUE,FALSE,最近一次最大需量清零时间
+B,2,1,2,NNNN,2,,TRUE,FALSE,编程次数
+B,2,1,3,NNNN,2,,TRUE,FALSE,最大需量清零次数
+B,2,1,4,NNNNNN,3,min,TRUE,FALSE,电池工作时间
+B,3,1,0,NNNN,2,,TRUE,FALSE,总断相次数
+B,3,1,1,NNNN,2,,TRUE,FALSE,A 相断相次数
+B,3,1,2,NNNN,2,,TRUE,FALSE,B 相断相次数
+B,3,1,3,NNNN,2,,TRUE,FALSE,C 相断相次数
+B,3,2,0,NNNNNN,3,min,TRUE,FALSE,断相时间累计值
+B,3,2,1,NNNNNN,3,min,TRUE,FALSE,A 断相时间累计值
+B,3,2,2,NNNNNN,3,min,TRUE,FALSE,B 断相时间累计值
+B,3,2,3,NNNNNN,3,min,TRUE,FALSE,C 断相时间累计值
+B,3,3,0,MMDDHHmm,4,,TRUE,FALSE,最近一次断相起始时刻
+B,3,3,1,MMDDHHmm,4,,TRUE,FALSE,A 相最近断相起始时刻
+B,3,3,2,MMDDHHmm,4,,TRUE,FALSE,B 相最近断相起始时刻
+B,3,3,3,MMDDHHmm,4,,TRUE,FALSE,C相最近断相起始时刻
+B,3,4,0,MMDDHHmm,4,,TRUE,FALSE,最近一次断相的结束时刻
+B,3,4,1,MMDDHHmm,4,,TRUE,FALSE,A 相最近一次断相的结束时刻
+B,3,4,2,MMDDHHmm,4,,TRUE,FALSE,B 相最近一次断相的结束时刻
+B,3,4,3,MMDDHHmm,4,,TRUE,FALSE,C 相最近一次断相的结束时刻
+B,6,1,1,XXX,2,V,TRUE,FALSE,A相电压
+B,6,1,2,XXX,2,V,TRUE,FALSE,B相电压
+B,6,1,3,XXX,2,V,TRUE,FALSE,C相电压
+B,6,2,1,XX.XX,2,A,TRUE,FALSE,A相电流
+B,6,2,2,XX.XX,2,A,TRUE,FALSE,B相电流
+B,6,2,3,XX.XX,2,A,TRUE,FALSE,C相电流
+B,6,3,0,XX.XXXX,3,kW,TRUE,FALSE,瞬时有功功率 
+B,6,3,1,XX.XXXX,3,kW,TRUE,FALSE,A相有功功率
+B,6,3,2,XX.XXXX,3,kW,TRUE,FALSE,B相有功功率
+B,6,3,3,XX.XXXX,3,kW,TRUE,FALSE,C相有功功率
+B,6,3,4,XX.XX,2,kW,TRUE,TRUE,正向有功功率上限值
+B,6,3,5,XX.XX,2,kW,TRUE,TRUE,反向有功功率上限值
+B,6,4,0,XX.XX,2,kvarh,TRUE,FALSE,瞬时无功功率
+B,6,4,1,XX.XX,2,kvarh,TRUE,FALSE,A相无功功率
+B,6,4,2,XX.XX,2,kvarh,TRUE,FALSE,B相无功功率
+B,6,4,3,XX.XX,2,kvarh,TRUE,FALSE,C相无功功率
+B,6,5,0,XX.XX,2,kvarh,TRUE,FALSE,总功率因数
+B,6,5,1,XX.XX,3,kvarh,TRUE,FALSE,A 相功率因数
+B,6,5,2,XX.XX,4,kvarh,TRUE,FALSE,B 相功率因数
+B,6,5,3,XX.XX,5,kvarh,TRUE,FALSE,C 相功率因数
+C,0,1,0,YYMMDDWW,4,,TRUE,TRUE,日期及周次
+C,0,1,1,hhmmss,3,,TRUE,TRUE,时间
+C,0,2,0,电表运行状态字,1,,TRUE,TRUE,电表运行状态字
+C,0,2,1,电网状态字,1,,TRUE,TRUE,电网状态字
+C,0,2,2,周休日状态字,1,,TRUE,TRUE,周休日状态字
+C,0,3,0,NNNNNN,3,p/(kWh),TRUE,TRUE,电表常数(有功)
+C,0,3,1,NNNNNN,3,p/(kvarh),TRUE,TRUE,电表常数(无功)
+C,0,3,2,NN...NN,6,,TRUE,TRUE,表号
+C,0,3,3,NN...NN,6,,TRUE,TRUE,用户号
+C,0,3,4,NN...NN,6,,TRUE,TRUE,设备码
+C,1,1,1,XX,1,min,TRUE,TRUE,最大需量周期
+C,1,1,2,XX,1,min,TRUE,TRUE,滑差时间
+C,1,1,3,XX,1,s,TRUE,TRUE,循显时间
+C,1,1,4,XX,1,s,TRUE,TRUE,停显时间
+C,1,1,5,NN,1,,TRUE,TRUE,显示电能小数位数
+C,1,1,6,NN,1,,TRUE,TRUE,显示功率(最大需量)小数位数
+C,1,1,7,DDhh,2,,TRUE,TRUE,自动抄表日期
+C,1,1,8,NN,1,,TRUE,TRUE,负荷代表日
+C,1,1,9,NNNNNN.N,4,kWh,TRUE,TRUE,有功电能起始读数
+C,1,1,A,NNNNNN.N,4,kvarh,TRUE,TRUE,无功电能起始读数
+C,2,1,1,NNNN,2,ms,TRUE,TRUE,输出脉冲宽度
+C,2,1,2,NNNNNNNN,4,,FALSE,TRUE,密码权限及密码
+C,3,1,0,NN,1,,TRUE,TRUE,年时区数
+C,3,1,1,NN,1,,TRUE,TRUE,日时段表数
+C,3,1,2,NN,1,,TRUE,TRUE,日时段(每日切换数)m≤10
+C,3,1,3,NN,1,,TRUE,TRUE,费率数 k≤14
+C,3,1,4,NN,1,,TRUE,TRUE,公共假日数
+C,5,1,0,MMDDhhmm,4,,TRUE,TRUE,负荷记录起始时间
+C,5,1,1,mmmm,2,min,TRUE,TRUE,负荷记录间隔时间

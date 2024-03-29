@@ -1,0 +1,6 @@
+plugin:
+  runMode: prod
+  mainPackage: cc.iotkit.plugin
+
+mqtt:
+  port: 1883

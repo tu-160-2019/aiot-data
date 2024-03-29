@@ -1,0 +1,9 @@
+[
+  {
+    "id": "port",
+    "name": "端口",
+    "type": "number",
+    "value": 1883,
+    "desc": "mqtt端口，默认为1883"
+  }
+]

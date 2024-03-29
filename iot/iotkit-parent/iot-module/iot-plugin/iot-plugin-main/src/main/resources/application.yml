@@ -1,0 +1,10 @@
+# 插件配置
+plugin:
+  # 独立部署模式
+  standalone: false
+  ip: localhost
+  runMode: prod
+  mainPackage: cc.iotkit
+  # 如果配置是 windows 下路径, mac、linux 自行修改
+  pluginPath:
+    - ./data/plugins

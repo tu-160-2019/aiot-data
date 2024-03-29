@@ -1,0 +1,23 @@
+[ {
+  "id" : 516579924885573,
+  "tenantId" : "000000",
+  "userName" : "admin",
+  "status" : "0",
+  "ipaddr" : "127.0.0.1",
+  "loginLocation" : "内网IP",
+  "browser" : "Chrome",
+  "os" : "OSX",
+  "msg" : "user.login.success",
+  "loginTime" : 1708254547722
+}, {
+  "id" : 1665628533390614529,
+  "tenantId" : "000000",
+  "userName" : "admin",
+  "status" : "0",
+  "ipaddr" : "127.0.0.1",
+  "loginLocation" : "内网IP",
+  "browser" : "Chrome",
+  "os" : "Windows 10 or Windows Server 2016",
+  "msg" : "登录成功",
+  "loginTime" : null
+} ]

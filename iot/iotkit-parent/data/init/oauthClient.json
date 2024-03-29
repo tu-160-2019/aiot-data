@@ -1,0 +1,16 @@
+[
+  {
+    "clientId": "iotkit",
+    "name": "奇特物联",
+    "clientSecret": "b86cb53d-c005-48a3-bb02-3c262151b68c",
+    "allowUrl": "*",
+    "createAt": 1652840868485
+  },
+  {
+    "clientId": "dueros",
+    "name": "小度音箱",
+    "clientSecret": "750c67c2-29cb-40c3-bf4d-c0b9bf3eed88",
+    "allowUrl": "*",
+    "createAt": 1652840868485
+  }
+]

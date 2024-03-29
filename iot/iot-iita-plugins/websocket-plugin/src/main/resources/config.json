@@ -1,0 +1,23 @@
+[
+  {
+    "id": "port",
+    "name": "端口",
+    "type": "number",
+    "value": 1662,
+    "desc": "websocket端口，默认为1662"
+  },
+  {
+    "id": "tokenKey",
+    "name": "令牌key",
+    "type": "text",
+    "value": "test_token",
+    "desc": "令牌key"
+  },
+  {
+    "id": "accessToken",
+    "name": "令牌",
+    "type": "text",
+    "value": "123456789",
+    "desc": "令牌"
+  }
+]

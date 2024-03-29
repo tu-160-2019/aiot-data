@@ -1,0 +1,5 @@
+plugin:
+  runMode: prod
+  mainPackage: cc.iotkit.plugin
+
+

@@ -1,0 +1,23 @@
+[ {
+  "id" : "2c10229b-dcb2-439e-b411-5425b49657a1",
+  "name" : "小度设备属性更新推送",
+  "type" : "flow",
+  "listeners" : [ ],
+  "filters" : [ ],
+  "actions" : [ ],
+  "uid" : "1",
+  "state" : "running",
+  "desc" : "开关插座开关状态推送",
+  "createAt" : 1652515471242
+}, {
+  "id" : "2820c218-660e-48ff-a234-c7b6793a5bb8",
+  "name" : "测试场景1",
+  "type" : "scene",
+  "listeners" : [ ],
+  "filters" : [ ],
+  "actions" : [ ],
+  "uid" : "1",
+  "state" : "stopped",
+  "desc" : "test",
+  "createAt" : 1649167998895
+} ]

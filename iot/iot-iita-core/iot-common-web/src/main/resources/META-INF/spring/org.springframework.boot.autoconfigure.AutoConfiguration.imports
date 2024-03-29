@@ -1,0 +1,4 @@
+cc.iotkit.common.web.config.CaptchaConfig
+cc.iotkit.common.web.config.FilterConfig
+#cc.iotkit.common.web.config.I18nConfig
+cc.iotkit.common.web.config.ResourcesConfig

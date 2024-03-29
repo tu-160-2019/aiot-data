@@ -1,0 +1,16 @@
+[
+  {
+    "id": "host",
+    "name": "绑定ip",
+    "type": "text",
+    "value": "127.0.0.1",
+    "desc": "tcp绑定ip，默认为127.0.0.1"
+  },
+  {
+    "id": "port",
+    "name": "端口",
+    "type": "number",
+    "value": 6883,
+    "desc": "tcp端口，默认为6883"
+  }
+]

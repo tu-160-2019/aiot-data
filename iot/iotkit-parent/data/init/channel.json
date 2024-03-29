@@ -1,0 +1,19 @@
+[ {
+  "id" : 1,
+  "code" : "DingTalk",
+  "title" : "钉钉",
+  "icon" : "http://www.baidu.com",
+  "createAt" : 1683816661690
+}, {
+  "id" : 2,
+  "code" : "QyWechat",
+  "title" : "企业微信",
+  "icon" : "http://www.baidu.com",
+  "createAt" : 1683816661690
+}, {
+  "id" : 3,
+  "code" : "Email",
+  "title" : "邮箱",
+  "icon" : "http://www.baidu.com",
+  "createAt" : 1683816661690
+} ]

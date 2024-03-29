@@ -1,0 +1,19 @@
+[ {
+  "id" : 1312312,
+  "channelId" : 3,
+  "title" : "告警邮件配置",
+  "param" : "{\"userName\":\"xxx@163.com\",\"passWord\":\"xxx\",\"host\":\"smtp.163.com\",\"port\":465,\"mailSmtpAuth\":true,\"from\":\"xxxx@163.com\",\"to\":\"xxxx@163.com\"}\t",
+  "createAt" : 1683816661690
+}, {
+  "id" : 1313123,
+  "channelId" : 1,
+  "title" : "告警钉钉配置",
+  "param" : "{\"dingTalkWebhook\":\"xxxxxxxxxxxxxxxx\",\"dingTalkSecret\":\"xxxx\"}",
+  "createAt" : 1683816661690
+}, {
+  "id" : 32141342,
+  "channelId" : 2,
+  "title" : "告警企业微信配置",
+  "param" : "{\"qyWechatWebhook\":\"xxxxxxxxxxxxxxxx\"}",
+  "createAt" : 1683816661690
+} ]

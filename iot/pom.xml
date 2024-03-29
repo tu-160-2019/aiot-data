@@ -5,13 +5,21 @@
 		<version>2.0.0</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>iot</groupId>
 	<artifactId>iot</artifactId>
+	<version>0.5.3</version>
 	<packaging>pom</packaging>
 
 	<modules>
-		<module>video-assist</module>
-		<!--<module>video-28181</module>-->
+		<module>iot-iita-core</module>
+		<module>iot-iita-plugins</module>
+		<module>iotkit-parent</module>
 	</modules>
+
+	<properties>
+		<iot-iita-core-version>1.0.5</iot-iita-core-version>
+	</properties>
 
 
 </project>

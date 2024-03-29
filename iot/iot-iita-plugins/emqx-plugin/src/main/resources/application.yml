@@ -1,0 +1,9 @@
+plugin:
+  runMode: prod
+  mainPackage: cc.iotkit.plugin
+
+emqx:
+  host: 127.0.0.1
+  port: 1883
+  topics: /sys/#
+  authPort: 8104

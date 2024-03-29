@@ -1,0 +1,37 @@
+[ {
+  "createDept" : null,
+  "createBy" : null,
+  "createTime" : null,
+  "updateBy" : null,
+  "updateTime" : null,
+  "id" : 516579003666501,
+  "roleId" : 2,
+  "deptId" : 100
+}, {
+  "createDept" : null,
+  "createBy" : null,
+  "createTime" : null,
+  "updateBy" : null,
+  "updateTime" : null,
+  "id" : 516579003695173,
+  "roleId" : 2,
+  "deptId" : 101
+}, {
+  "createDept" : null,
+  "createBy" : null,
+  "createTime" : null,
+  "updateBy" : null,
+  "updateTime" : null,
+  "id" : 516579003699269,
+  "roleId" : 2,
+  "deptId" : 105
+}, {
+  "createDept" : null,
+  "createBy" : null,
+  "createTime" : null,
+  "updateBy" : null,
+  "updateTime" : null,
+  "id" : 516579003707461,
+  "roleId" : 452767970971717,
+  "deptId" : 452767971254341
+} ]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "port",
+    "name": "端口",
+    "type": "number",
+    "value": 9081,
+    "desc": "http端口，默认为9081"
+  },
+  {
+    "id": "a",
+    "name": "测试参数1",
+    "type": "radio",
+    "value": 0,
+    "desc": "单选参数a",
+    "options": [
+      {
+        "name": "值0",
+        "value": 0
+      },
+      {
+        "name": "值1",
+        "value": 11
+      }
+    ]
+  }
+]

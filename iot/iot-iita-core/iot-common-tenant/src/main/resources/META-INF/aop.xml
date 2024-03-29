@@ -1,0 +1,11 @@
+<aspectj>
+
+    <weaver options="-Xreweavable -Xset:weaveJavaxPackages=true">
+        <include within="org.hibernate.internal.SessionFactoryImpl.SessionBuilderImpl"/>
+    </weaver>
+
+    <aspects>
+        <aspect name="cc.iotkit.common.tenant.aspect.TenantFilterAspect"/>
+    </aspects>
+
+</aspectj>

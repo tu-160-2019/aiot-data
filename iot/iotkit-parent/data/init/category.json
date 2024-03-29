@@ -1,0 +1,49 @@
+[ {
+  "id" : "switch",
+  "name" : "开关",
+  "createAt" : 1647599367057
+}, {
+  "id" : "sensor",
+  "name" : "传感器",
+  "createAt" : 1649743382683
+}, {
+  "id" : "meter",
+  "name" : "表计",
+  "createAt" : 1654237582120
+}, {
+  "id" : "light",
+  "name" : "灯",
+  "createAt" : 1650174762755
+}, {
+  "id" : "gateway",
+  "name" : "网关",
+  "createAt" : 1646637047902
+}, {
+  "id" : "fan",
+  "name" : "风扇",
+  "createAt" : 1646630215889
+}, {
+  "id" : "door",
+  "name" : "门磁",
+  "createAt" : 1650173898298
+}, {
+  "id" : "SmartPlug",
+  "name" : "智能插座",
+  "createAt" : 1645409421118
+}, {
+  "id" : "FreshAir",
+  "name" : "新风",
+  "createAt" : 1681444312184
+}, {
+  "id" : "SmartMeter",
+  "name" : "智能电表",
+  "createAt" : 1681444312184
+}, {
+  "id" : "OpenIitaGateway",
+  "name" : "铱塔智联智能网关",
+  "createAt" : 1688969826383
+}, {
+  "id" : "OpenIitaPump",
+  "name" : "铱塔智联水泵",
+  "createAt" : 1688969826383
+} ]
