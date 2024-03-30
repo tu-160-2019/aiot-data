@@ -9,10 +9,15 @@
     <name>srt-cloud</name>
     <description>新一代数睿通数据中台</description>
 
-    <parent>
+    <!--<parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.6.11</version>
+    </parent>-->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.7.11</version>
     </parent>
 
     <modules>
@@ -22,6 +27,9 @@
         <module>srt-cloud-system</module>
         <module>srt-cloud-gateway</module>
         <module>video</module>
+        <module>iot-iita-core</module>
+        <module>iot-iita-plugins</module>
+        <module>iotkit-parent</module>
     </modules>
 
     <properties>
@@ -32,11 +40,13 @@
         <java.version>1.8</java.version>
         <spring.cloud.version>2021.0.1</spring.cloud.version>
         <spring.cloud.alibaba.version>2021.0.1.0</spring.cloud.alibaba.version>
-        <mybatisplus.version>3.5.1</mybatisplus.version>
+        <mybatisplus.version>3.5.3.1</mybatisplus.version>
         <knife4j.version>3.0.3</knife4j.version>
         <springdoc.version>1.6.8</springdoc.version>
         <captcha.version>1.6.2</captcha.version>
-        <mapstruct.version>1.4.2.Final</mapstruct.version>
+        <!--<mapstruct.version>1.4.2.Final</mapstruct.version>-->
+        <mapstruct.version>1.5.5.Final</mapstruct.version>
+        <mapstruct-plus.version>1.3.1</mapstruct-plus.version>
         <nacos.version>2.1.1</nacos.version>
         <hutool.version>5.8.4</hutool.version>
         <aliyun.oss.version>3.8.0</aliyun.oss.version>
@@ -50,7 +60,6 @@
         <oshi.version>6.2.2</oshi.version>
 
         <mysql-connector-java.version>8.0.22</mysql-connector-java.version>
-        <mysql.version>8.0.22</mysql.version>
         <postgresql.version>42.2.18</postgresql.version>
         <ojdbc8.version>19.3.0.0</ojdbc8.version>
         <sqljdbc6.0.version>6.0</sqljdbc6.0.version>
@@ -68,31 +77,6 @@
         <jsqlparser.version>4.3</jsqlparser.version>
         <druid-starter-version>1.2.18</druid-starter-version>
     </properties>
-
-    <dependencies>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <optional>true</optional>
-        </dependency>
-        <dependency>
-            <groupId>org.mapstruct</groupId>
-            <artifactId>mapstruct</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.mapstruct</groupId>
-            <artifactId>mapstruct-jdk8</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.mapstruct</groupId>
-            <artifactId>mapstruct-processor</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.squareup.okhttp3</groupId>
-            <artifactId>okhttp</artifactId>
-            <version>4.8.1</version>
-        </dependency>
-    </dependencies>
 
     <dependencyManagement>
         <dependencies>
@@ -124,26 +108,55 @@
                 <groupId>com.github.xiaoymin</groupId>
                 <artifactId>knife4j-springdoc-ui</artifactId>
                 <version>${knife4j.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.mapstruct</groupId>
+                        <artifactId>mapstruct</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
             <dependency>
                 <groupId>org.springdoc</groupId>
                 <artifactId>springdoc-openapi-webmvc-core</artifactId>
                 <version>${springdoc.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.mapstruct</groupId>
+                        <artifactId>mapstruct</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
             <dependency>
                 <groupId>org.springdoc</groupId>
                 <artifactId>springdoc-openapi-ui</artifactId>
                 <version>${springdoc.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.mapstruct</groupId>
+                        <artifactId>mapstruct</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
             <dependency>
                 <groupId>org.springdoc</groupId>
                 <artifactId>springdoc-openapi-webflux-ui</artifactId>
                 <version>${springdoc.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.mapstruct</groupId>
+                        <artifactId>mapstruct</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
             <dependency>
                 <groupId>com.github.whvcse</groupId>
                 <artifactId>easy-captcha</artifactId>
                 <version>${captcha.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.linpeilie</groupId>
+                <artifactId>mapstruct-plus-spring-boot-starter</artifactId>
+                <version>${mapstruct-plus.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.mapstruct</groupId>
@@ -159,6 +172,16 @@
                 <groupId>org.mapstruct</groupId>
                 <artifactId>mapstruct-processor</artifactId>
                 <version>${mapstruct.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.18.26</version>
+            </dependency>
+            <dependency>
+                <groupId>com.squareup.okhttp3</groupId>
+                <artifactId>okhttp</artifactId>
+                <version>4.8.1</version>
             </dependency>
             <dependency>
                 <groupId>com.alibaba.nacos</groupId>

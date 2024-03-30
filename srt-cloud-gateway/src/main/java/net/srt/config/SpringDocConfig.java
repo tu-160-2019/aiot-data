@@ -52,8 +52,8 @@ public class SpringDocConfig {
             .description( "SrtCloud")
             .contact(contact)
             .version("1.0")
-            .termsOfService("https://gitee.com/wangmingf83/aiot-data-ui")
+            .termsOfService("https://zrxlh.top")
             .license(new License().name("MIT")
-            .url("https://gitee.com/wangmingf83/aiot-data-ui")));
+            .url("https://zrxlh.top")));
     }
 }

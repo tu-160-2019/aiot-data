@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cc.iotkit.data.dao.SysPostRepository">
+
+    <select id="selectPostListByUserId" resultType="java.lang.Long">
+        SELECT A.id FROM sys_post A
+        LEFT JOIN sys_user_post B ON A.id = B.post_id
+        LEFT JOIN sys_user C ON B.user_id = C.id
+        WHERE C.id = #{userId}
+    </select>
+</mapper>

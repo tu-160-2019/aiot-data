@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cc.iotkit.data.dao.SysUserRepository">
+
+    <select id="selectUserPostGroup" resultType="java.lang.String">
+        SELECT A.post_name FROM sys_post A
+        LEFT JOIN sys_user_post B ON A.id = B.post_id
+        LEFT JOIN sys_user C ON B.user_id = C.id
+        WHERE C.user_name = #{userName}
+        ORDER BY A.post_sort ASC
+    </select>
+
+    <select id="selectUserRoleGroup" resultType="java.lang.String">
+        SELECT A.role_name FROM sys_role A
+        LEFT JOIN sys_user_role B ON A.id = B.role_id
+        LEFT JOIN sys_user C ON B.user_id = C.id
+        WHERE C.user_name = #{userName}
+        ORDER BY A.role_sort ASC
+    </select>
+
+    <sql id="selectAllocatedListCondition">
+        <if test="sysUser.phonenumber!=null and sysUser.phonenumber!=''">
+            AND A.phonenumber LIKE CONCAT('%',#{sysUser.phonenumber}, '%')
+        </if>
+        <if test="sysUser.userName!=null and sysUser.userName!=''">
+            AND A.user_name LIKE CONCAT('%',#{sysUser.userName}, '%')
+        </if>
+        <if test="sysUser.status!=null">
+            AND A.status = #{sysUser.status}
+        </if>
+        <if test="sysUser.deptId!=null">
+            AND A.dept_id = #{sysUser.deptId}
+        </if>
+        <if test="sysUser.roleId!=null">
+            AND C.role_id = #{sysUser.roleId}
+        </if>
+        AND A.del_flag = #{delFlag}
+    </sql>
+
+    <select id="selectAllocatedListCount" resultType="java.lang.Long">
+        SELECT
+        COUNT(1)
+        FROM sys_user A
+        LEFT JOIN sys_dept B ON A.dept_id = B.id
+        LEFT JOIN sys_user_role C ON A.id = C.user_id
+        LEFT JOIN sys_role D ON C.role_id = D.id
+        <where>
+            <include refid="selectAllocatedListCondition"/>
+        </where>
+    </select>
+
+    <select id="selectAllocatedList" resultType="cc.iotkit.data.model.TbSysUser">
+        SELECT
+        A.id,A.dept_id,A.user_name,A.nick_name,A.email,A.phonenumber,A.create_time
+        FROM sys_user A
+        LEFT JOIN sys_dept B ON A.dept_id = B.id
+        LEFT JOIN sys_user_role C ON A.id = C.user_id
+        LEFT JOIN sys_role D ON C.role_id = D.id
+        <where>
+            <include refid="selectAllocatedListCondition"/>
+        </where>
+        LIMIT #{offset}, #{limit}
+    </select>
+
+    <select id="listWithDeptId" resultType="cc.iotkit.data.model.TbSysUser">
+
+        SELECT A.* FROM sys_user A
+        LEFT JOIN sys_dept B ON A.dept_id = B.id
+        <where>
+            <if test="sysUser.id != null">
+                AND A.id = #{sysUser.id}
+            </if>
+            <if test="sysUser.userName != null and sysUser.userName!='' ">
+                AND A.user_name = #{sysUser.userName}
+            </if>
+            <if test="sysUser.status != null and sysUser.status!='' ">
+                AND A.status = #{sysUser.status}
+            </if>
+            <if test="sysUser.phonenumber != null and sysUser.phonenumber!='' ">
+                AND A.phonenumber = #{sysUser.phonenumber}
+            </if>
+            <if test="sysUser.deptId != null and sysUser.deptId.size() > 0 ">
+                AND A.dept_id IN
+                <foreach collection="sysUser.deptId" item="deptId" open="(" separator="," close=")">
+                    #{deptId}
+                </foreach>
+            </if>
+        </where>
+
+    </select>
+
+
+</mapper>

@@ -13,8 +13,14 @@
 		<module>srt-cloud-security</module>
 		<module>srt-cloud-mybatis</module>
         <module>srt-cloud-dbswitch</module>
-		<module>srt-cloud-flink</module>
+        <module>srt-cloud-flink</module>
     </modules>
 
 
+	<dependencies>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+		</dependency>
+	</dependencies>
 </project>

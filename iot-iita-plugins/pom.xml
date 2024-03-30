@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!--<parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.7.11</version>
+        <relativePath/>
+    </parent>-->
+    <parent>
+        <groupId>net.srt</groupId>
+        <artifactId>srt-cloud</artifactId>
+        <version>2.0.0</version>
+        <relativePath />
+    </parent>
+
+    <groupId>cc.iotkit.plugins</groupId>
+    <artifactId>iot-iita-plugins</artifactId>
+    <version>1.0.1</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>mqtt-plugin</module>
+        <module>http-plugin</module>
+        <module>modbus-plugin</module>
+        <module>tcp-plugin</module>
+        <module>DLT645-plugin</module>
+        <module>hydrovalve-plugin</module>
+        <module>emqx-plugin</module>
+        <module>websocket-plugin</module>
+    </modules>
+
+    <properties>
+        <java.version>11</java.version>
+        <iot-iita-core-version>1.0.5</iot-iita-core-version>
+        <spring-boot.version>2.7.11</spring-boot.version>
+        <spring-brick.version>3.1.4</spring-brick.version>
+        <vertx.version>4.2.2</vertx.version>
+    </properties>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>cc.iotkit</groupId>
+            <artifactId>iot-plugin-core</artifactId>
+            <version>${iot-iita-core-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.gitee.starblues</groupId>
+            <artifactId>spring-brick</artifactId>
+            <version>${spring-brick.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.gitee.starblues</groupId>
+            <artifactId>spring-brick-bootstrap</artifactId>
+            <version>${spring-brick.version}</version>
+        </dependency>
+
+        <!-- SpringBoot的依赖配置-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-dependencies</artifactId>
+            <type>pom</type>
+            <scope>import</scope>
+            <version>${spring-boot.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+
+    </dependencies>
+
+</project>

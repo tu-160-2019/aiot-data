@@ -38,7 +38,7 @@ public class SwaggerConfig{
             .contact(contact)
             .version("1.0")
             .license(new License().name("MIT")
-            .url("https://gitee.com/wangmingf83/aiot-data-ui")));
+            .url("https://zrxlh.top")));
 
         openapi.addSecurityItem(new SecurityRequirement().addList("api_key"))
             .components(new Components().addSecuritySchemes("api_key",

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cc.iotkit.data.dao.SysDeptRepository">
+
+    <select id="findByRoleId" resultType="cc.iotkit.data.model.TbSysDept">
+        SELECT A.* FROM sys_dept A
+        LEFT JOIN sys_role_dept B ON A.id = B.dept_id
+        WHERE B.role_id = #{roleId}
+        ORDER BY A.parent_id DESC,A.order_num DESC
+    </select>
+
+</mapper>
