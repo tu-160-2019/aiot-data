@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cc.iotkit.data.mapper.SysRoleMapper">
+
+    <select id="selectRoleListByUserId" resultType="java.lang.Long">
+        SELECT A.id
+        FROM sys_role A
+        LEFT JOIN sys_user_role B ON A.id = B.role_id
+        LEFT JOIN sys_user C ON C.id = B.role_id
+        WHERE C.id = #{userId}
+    </select>
+
+    <sql id="query">
+        SELECT DISTINCT A.id, A.role_name AS roleName, A.role_key AS roleKey, A.role_sort AS roleSort, A.menu_check_strictly AS
+        menuCheckStrictly, A.dept_check_strictly AS deptCheckStrictly, A.status,
+        A.del_flag, A.create_time, A.remark
+        FROM sys_role A
+        LEFT JOIN sys_user_role B ON B.role_id = A.id
+        LEFT JOIN sys_user C ON B.user_id = C.id
+        LEFT JOIN sys_dept D ON C.dept_id = D.id
+    </sql>
+
+    <select id="selectRolePermissionByUserId" resultType="cc.iotkit.data.model.TbSysRole">
+        <include refid="query"/>
+        WHERE A.del_flag = #{delFlag}
+        AND B.user_id = #{userId}
+        ORDER BY A.role_sort ASC,create_time ASC
+    </select>
+    <select id="selectRoleList" resultType="cc.iotkit.data.model.TbSysRole">
+        <include refid="query"/>
+        WHERE A.del_flag = #{delFlag}
+        <if test="role.id!=null">
+            AND A.id = #{role.id}
+        </if>
+        <if test="role.roleName!=null and role.roleName!=''">
+            AND A.role_name LIKE CONCAT('%',#{role.roleName},'%')
+        </if>
+        <if test="role.roleKey!=null and role.roleKey!=''">
+            AND A.role_key LIKE CONCAT('%',#{role.roleKey},'%')
+        </if>
+        <if test="role.status!=null and role.status!=''">
+            AND A.status = #{role.status}
+        </if>
+        ORDER BY A.role_sort ASC,create_time ASC
+    </select>
+    <select id="findByUserId" resultType="cc.iotkit.data.model.TbSysRole">
+        SELECT A.id,A.role_name AS roleName,A.role_key AS roleKey,A.role_sort AS roleSort,A.data_scope AS
+        dataScope,A.status,
+        A.del_flag AS delFlag,A.create_time AS createTime,A.remark
+        FROM sys_role A
+        LEFT JOIN sys_user_role B ON B.role_id = A.id
+        WHERE B.user_id = #{id}
+    </select>
+
+</mapper>

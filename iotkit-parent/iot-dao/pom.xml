@@ -20,9 +20,9 @@
         <module>iot-data-service</module>
         <module>iot-data-serviceImpl-cache</module>
         <!-- jpa 版本  与 mybatis 版本二选一使用即可 -->
-        <module>iot-data-serviceImpl-rdb</module>
+        <!--<module>iot-data-serviceImpl-rdb</module>-->
         <!-- mybatis 版本  与 jpa 版本二选一使用即可 -->
-        <!--<module>iot-data-serviceImpl-mybatis</module>-->
+        <module>iot-data-serviceImpl-mybatis</module>
         <module>iot-temporal-service</module>
         <module>iot-temporal-serviceImpl-td</module>
         <module>iot-temporal-serviceImpl-es</module>

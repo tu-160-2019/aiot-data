@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cc.iotkit.data.mapper.DeviceInfoMapper">
+
+    <select id="findByProductNodeType" resultType="cc.iotkit.data.model.TbDeviceInfo">
+        SELECT A.*
+        FROM device_info A
+        INNER JOIN product B
+        ON B.node_type = ${nodeType} AND A.uid = ${uid} AND A.product_key = B.product_key
+    </select>
+</mapper>
