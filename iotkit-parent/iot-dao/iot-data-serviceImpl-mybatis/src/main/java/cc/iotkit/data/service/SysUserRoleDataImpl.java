@@ -5,7 +5,7 @@ import cc.iotkit.data.mapper.IJPACommData;
 
 import cc.iotkit.data.model.TbSysUserRole;
 import cc.iotkit.data.system.ISysUserRoleData;
-import cc.iotkit.data.util.PredicateBuilder;
+
 import cc.iotkit.model.system.SysUserRole;
 
 import lombok.RequiredArgsConstructor;

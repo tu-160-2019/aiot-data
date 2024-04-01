@@ -14,8 +14,7 @@ import cc.iotkit.data.model.TbSysUser;
 import cc.iotkit.data.system.ISysDeptData;
 import cc.iotkit.data.system.ISysRoleData;
 import cc.iotkit.data.system.ISysUserData;
-import cc.iotkit.data.util.PageBuilder;
-import cc.iotkit.data.util.PredicateBuilder;
+
 import cc.iotkit.model.system.SysDept;
 import cc.iotkit.model.system.SysRole;
 import cc.iotkit.model.system.SysUser;

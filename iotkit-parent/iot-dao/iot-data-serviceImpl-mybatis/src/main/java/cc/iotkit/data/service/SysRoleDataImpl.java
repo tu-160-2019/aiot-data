@@ -8,8 +8,6 @@ import cc.iotkit.data.mapper.IJPACommData;
 
 import cc.iotkit.data.model.TbSysRole;
 import cc.iotkit.data.system.ISysRoleData;
-import cc.iotkit.data.util.PageBuilder;
-import cc.iotkit.data.util.PredicateBuilder;
 import cc.iotkit.model.system.SysRole;
 
 import lombok.RequiredArgsConstructor;

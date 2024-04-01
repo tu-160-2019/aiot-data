@@ -23,34 +23,31 @@ public class SpaceDataImpl implements ISpaceData, IJPACommData<Space, Long, TbSp
     private SpaceService spaceService;
 
 
-    @Override
     public SpaceService getBaseRepository() {
         return spaceService;
     }
 
-    @Override
+
     public Class getJpaRepositoryClass() {
         return TbSpace.class;
     }
 
-    @Override
+
     public Class getTClass() {
         return Space.class;
     }
 
-    @Override
     public List<Space> findByHomeId(Long homeId) {
         List<TbSpace> spaceList = spaceService.findByHomeId(homeId);
         return MapstructUtils.convert(spaceList, Space.class);
     }
 
-    @Override
+
     public List<Space> findByUid(String uid) {
         List<TbSpace> spaceList = spaceService.findByUid(uid);
         return MapstructUtils.convert(spaceList, Space.class);
     }
 
-    @Override
     public Paging<Space> findByUid(String uid, int page, int size) {
         Page<TbSpace> tbSpacePage = spaceService.findByUid(uid, page, size);
         Paging<Space> paging = new Paging<>();
@@ -59,13 +56,11 @@ public class SpaceDataImpl implements ISpaceData, IJPACommData<Space, Long, TbSp
         return paging;
     }
 
-    @Override
     public List<Space> findByUidOrderByCreateAtDesc(String uid) {
         List<TbSpace> spaceList = spaceService.findByUidOrderByCreateAtDesc(uid);
         return MapstructUtils.convert(spaceList, Space.class);
     }
 
-    @Override
     public List<Space> findByUidAndHomeIdOrderByCreateAtDesc(String uid, String homeId) {
         List<TbSpace> spaceList = spaceService.findByUidAndHomeIdOrderByCreateAtDesc(uid, homeId);
         return MapstructUtils.convert(spaceList, Space.class);

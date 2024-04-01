@@ -7,14 +7,11 @@ import cc.iotkit.common.utils.StringUtils;
 import cc.iotkit.data.mapper.IJPACommData;
 import cc.iotkit.data.manager.IAlertRecordData;
 import cc.iotkit.data.model.TbAlertRecord;
-import cc.iotkit.data.util.PageBuilder;
-import cc.iotkit.data.util.PredicateBuilder;
 import cc.iotkit.model.alert.AlertRecord;
-import cc.iotkit.model.system.SysLoginInfo;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
+
 import org.springframework.stereotype.Service;
 
 @Primary

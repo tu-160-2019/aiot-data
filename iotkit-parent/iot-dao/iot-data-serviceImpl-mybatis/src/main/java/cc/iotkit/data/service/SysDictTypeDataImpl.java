@@ -7,8 +7,6 @@ import cc.iotkit.common.utils.StringUtils;
 import cc.iotkit.data.mapper.IJPACommData;
 import cc.iotkit.data.model.TbSysDictType;
 import cc.iotkit.data.system.ISysDictTypeData;
-import cc.iotkit.data.util.PageBuilder;
-import cc.iotkit.data.util.PredicateBuilder;
 import cc.iotkit.model.system.SysDictType;
 
 import lombok.RequiredArgsConstructor;

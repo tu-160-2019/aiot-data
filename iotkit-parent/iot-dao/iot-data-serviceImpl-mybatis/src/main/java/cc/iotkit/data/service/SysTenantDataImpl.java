@@ -6,7 +6,7 @@ import cc.iotkit.data.mapper.IJPACommData;
 
 import cc.iotkit.data.model.TbSysTenant;
 import cc.iotkit.data.system.ISysTenantData;
-import cc.iotkit.data.util.PredicateBuilder;
+
 import cc.iotkit.model.system.SysTenant;
 
 import lombok.RequiredArgsConstructor;
@@ -14,13 +14,10 @@ import org.springframework.context.annotation.Primary;
 
 import org.springframework.stereotype.Service;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.annotation.Primary;
-import org.springframework.stereotype.Service;
 
-import java.util.List;
-import java.util.Objects;
+import org.springframework.beans.factory.annotation.Qualifier;
+
+
 import java.util.List;
 import java.util.Objects;
 

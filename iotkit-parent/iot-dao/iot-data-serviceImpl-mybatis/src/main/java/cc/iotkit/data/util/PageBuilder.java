@@ -5,7 +5,6 @@ import cc.iotkit.common.api.PageRequestEmpty;
 import cc.iotkit.common.api.Paging;
 import cc.iotkit.common.utils.MapstructUtils;
 import cn.hutool.core.collection.CollUtil;
-import com.querydsl.core.QueryResults;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
@@ -73,8 +72,7 @@ public class PageBuilder {
     return org.springframework.data.domain.PageRequest.of(page, size);
   }
 
-  public static <T> Paging<T> queryResults2Page(QueryResults queryResults, Class clz) {
-    return new Paging<>(queryResults.getTotal(), MapstructUtils.convert(queryResults.getResults(), clz));
-
-  }
+//  public static <T> Paging<T> queryResults2Page(QueryResults queryResults, Class clz) {
+//    return new Paging<>(queryResults.getTotal(), MapstructUtils.convert(queryResults.getResults(), clz));
+//  }
 }

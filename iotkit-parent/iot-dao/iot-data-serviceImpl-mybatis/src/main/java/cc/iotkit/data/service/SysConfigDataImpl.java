@@ -10,8 +10,6 @@ import cc.iotkit.data.mapper.IJPACommData;
 
 import cc.iotkit.data.model.TbSysConfig;
 import cc.iotkit.data.system.ISysConfigData;
-import cc.iotkit.data.util.PageBuilder;
-import cc.iotkit.data.util.PredicateBuilder;
 import cc.iotkit.model.system.SysConfig;
 
 import lombok.RequiredArgsConstructor;

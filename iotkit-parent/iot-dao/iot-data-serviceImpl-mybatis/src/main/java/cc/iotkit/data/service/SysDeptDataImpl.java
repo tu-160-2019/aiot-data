@@ -6,7 +6,6 @@ import cc.iotkit.common.utils.StringUtils;
 import cc.iotkit.data.mapper.IJPACommData;
 import cc.iotkit.data.model.TbSysDept;
 import cc.iotkit.data.system.ISysDeptData;
-import cc.iotkit.data.util.PredicateBuilder;
 import cc.iotkit.model.system.SysDept;
 import cn.hutool.core.util.ObjectUtil;
 

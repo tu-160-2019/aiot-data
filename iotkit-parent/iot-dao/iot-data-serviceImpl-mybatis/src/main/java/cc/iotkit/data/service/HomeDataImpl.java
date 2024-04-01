@@ -6,7 +6,6 @@ import cc.iotkit.common.utils.MapstructUtils;
 import cc.iotkit.data.mapper.IJPACommData;
 import cc.iotkit.data.manager.IHomeData;
 import cc.iotkit.data.model.TbHome;
-import cc.iotkit.data.util.PredicateBuilder;
 import cc.iotkit.model.space.Home;
 
 import lombok.RequiredArgsConstructor;
