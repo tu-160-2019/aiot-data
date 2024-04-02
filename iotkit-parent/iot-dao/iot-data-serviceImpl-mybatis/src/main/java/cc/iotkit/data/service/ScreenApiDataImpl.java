@@ -20,7 +20,8 @@ import java.util.List;
  */
 @Primary
 @Service
-public class ScreenApiDataImpl implements IScreenApiData,IJPACommData<ScreenApi,Long, TbScreenApi> {
+public class ScreenApiDataImpl implements IScreenApiData,IJPACommData<ScreenApi,Long> {
+//public class ScreenApiDataImpl implements IScreenApiData,IJPACommData<ScreenApi,Long, TbScreenApi> {
 
     @Autowired
     private ScreenApiService screenApiService;

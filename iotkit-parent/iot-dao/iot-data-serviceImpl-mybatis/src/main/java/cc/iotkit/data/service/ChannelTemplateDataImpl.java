@@ -22,7 +22,8 @@ import java.util.stream.Collectors;
  **/
 @Primary
 @Service
-public class ChannelTemplateDataImpl implements IChannelTemplateData, IJPACommData<ChannelTemplate, Long, TbChannelTemplate> {
+public class ChannelTemplateDataImpl implements IChannelTemplateData, IJPACommData<ChannelTemplate, Long> {
+//public class ChannelTemplateDataImpl implements IChannelTemplateData, IJPACommData<ChannelTemplate, Long, TbChannelTemplate> {
 
     @Resource
     private ChannelTemplateService channelTemplateService;

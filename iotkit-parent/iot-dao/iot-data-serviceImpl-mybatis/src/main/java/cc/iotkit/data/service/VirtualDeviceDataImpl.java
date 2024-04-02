@@ -45,7 +45,8 @@ import java.util.stream.Collectors;
 @Primary
 @Service
 @RequiredArgsConstructor
-public class VirtualDeviceDataImpl implements IVirtualDeviceData, IJPACommData<VirtualDevice, String, TbVirtualDevice> {
+public class VirtualDeviceDataImpl implements IVirtualDeviceData, IJPACommData<VirtualDevice, String> {
+//public class VirtualDeviceDataImpl implements IVirtualDeviceData, IJPACommData<VirtualDevice, String, TbVirtualDevice> {
 
     private final VirtualDeviceService virtualDeviceService;
 

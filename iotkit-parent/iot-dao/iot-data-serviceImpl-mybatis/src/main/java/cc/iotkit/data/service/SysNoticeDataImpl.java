@@ -28,7 +28,8 @@ import javax.annotation.Resource;
 @Primary
 @Service
 @RequiredArgsConstructor
-public class SysNoticeDataImpl implements ISysNoticeData, IJPACommData<SysNotice, Long, TbSysNotice> {
+public class SysNoticeDataImpl implements ISysNoticeData, IJPACommData<SysNotice, Long> {
+//public class SysNoticeDataImpl implements ISysNoticeData, IJPACommData<SysNotice, Long, TbSysNotice> {
 
     @Resource
     @Qualifier("DBSysNoticeServiceImpl")

@@ -5,6 +5,10 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 
 import cc.iotkit.data.mapper.AlertRecordMapper;
 import cc.iotkit.data.model.TbAlertRecord;
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Service;
 
+@Service
+@Primary
 public class AlertRecordServiceImpl extends ServiceImpl<AlertRecordMapper, TbAlertRecord> implements AlertRecordService {
 }

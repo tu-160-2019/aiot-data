@@ -25,7 +25,8 @@ import java.util.stream.Collectors;
 @Primary
 @Service
 @RequiredArgsConstructor
-public class IOtaPackageDataImpl implements IOtaPackageData, IJPACommData<OtaPackage, Long, TbOtaPackage> {
+public class IOtaPackageDataImpl implements IOtaPackageData, IJPACommData<OtaPackage, Long> {
+//public class IOtaPackageDataImpl implements IOtaPackageData, IJPACommData<OtaPackage, Long, TbOtaPackage> {
 
     private final OtaPackageService otaPackageService;
 

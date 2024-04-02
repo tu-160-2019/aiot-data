@@ -30,7 +30,8 @@ import java.util.Objects;
 @Primary
 @Service
 @RequiredArgsConstructor
-public class SysConfigDataImpl implements ISysConfigData, IJPACommData<SysConfig, Long, TbSysConfig> {
+public class SysConfigDataImpl implements ISysConfigData, IJPACommData<SysConfig, Long> {
+//public class SysConfigDataImpl implements ISysConfigData, IJPACommData<SysConfig, Long, TbSysConfig> {
 
     @Qualifier("DBSysConfigServiceImpl")
     private final SysConfigService baseService;

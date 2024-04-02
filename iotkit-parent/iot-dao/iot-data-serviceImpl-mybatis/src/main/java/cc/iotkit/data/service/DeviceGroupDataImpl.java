@@ -16,7 +16,8 @@ import java.util.UUID;
 
 @Primary
 @Service
-public class DeviceGroupDataImpl implements IDeviceGroupData, IJPACommData<DeviceGroup, String, TbDeviceGroup> {
+public class DeviceGroupDataImpl implements IDeviceGroupData, IJPACommData<DeviceGroup, String> {
+//public class DeviceGroupDataImpl implements IDeviceGroupData, IJPACommData<DeviceGroup, String, TbDeviceGroup> {
 
     @Autowired
     private DeviceGroupService deviceGroupService;

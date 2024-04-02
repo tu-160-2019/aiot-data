@@ -32,7 +32,8 @@ import java.util.Objects;
 @Primary
 @Service
 @RequiredArgsConstructor
-public class SysDictTypeDataImpl implements ISysDictTypeData, IJPACommData<SysDictType, Long, TbSysDictType> {
+public class SysDictTypeDataImpl implements ISysDictTypeData, IJPACommData<SysDictType, Long> {
+//public class SysDictTypeDataImpl implements ISysDictTypeData, IJPACommData<SysDictType, Long, TbSysDictType> {
 
     @Resource
     @Qualifier("DBSysDictTypeServiceImpl")

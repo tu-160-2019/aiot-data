@@ -8,6 +8,9 @@
         SELECT A.*
         FROM device_info A
         INNER JOIN product B
-        ON B.node_type = ${nodeType} AND A.uid = ${uid} AND A.product_key = B.product_key
+        ON B.node_type = ${nodeType} AND A.product_key = B.product_key
+        <if test="uid != null and uid != ''">
+            AND A.uid = #{uid}
+        </if>
     </select>
 </mapper>

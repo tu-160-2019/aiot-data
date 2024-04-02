@@ -29,7 +29,8 @@ import java.util.stream.Collectors;
 
 @Primary
 @Service
-public class CategoryDataImpl implements ICategoryData, IJPACommData<Category, String, TbCategory> {
+public class CategoryDataImpl implements ICategoryData, IJPACommData<Category, String> {
+//public class CategoryDataImpl implements ICategoryData, IJPACommData<Category, String, TbCategory> {
 
     @Autowired
     private CategoryService categoryService;

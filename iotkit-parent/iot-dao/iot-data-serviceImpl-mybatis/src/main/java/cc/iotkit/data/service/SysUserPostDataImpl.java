@@ -25,7 +25,8 @@ import java.util.List;
 @Primary
 @Service
 @RequiredArgsConstructor
-public class SysUserPostDataImpl implements ISysUserPostData, IJPACommData<SysUserPost, Long, TbSysUserPost> {
+public class SysUserPostDataImpl implements ISysUserPostData, IJPACommData<SysUserPost, Long> {
+//public class SysUserPostDataImpl implements ISysUserPostData, IJPACommData<SysUserPost, Long, TbSysUserPost> {
 
     private final SysUserPostService sysUserPostService;
 

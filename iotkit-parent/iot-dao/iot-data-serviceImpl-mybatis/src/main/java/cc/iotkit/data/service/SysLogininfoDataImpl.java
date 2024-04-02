@@ -29,7 +29,8 @@ import java.util.List;
 @Primary
 @Service
 @RequiredArgsConstructor
-public class SysLogininfoDataImpl implements ISysLogininforData, IJPACommData<SysLoginInfo, Long, TbSysLogininfor> {
+public class SysLogininfoDataImpl implements ISysLogininforData, IJPACommData<SysLoginInfo, Long> {
+//public class SysLogininfoDataImpl implements ISysLogininforData, IJPACommData<SysLoginInfo, Long, TbSysLogininfor> {
 
     @Autowired
     private final SysLogininfoService sysLoginInfoService;

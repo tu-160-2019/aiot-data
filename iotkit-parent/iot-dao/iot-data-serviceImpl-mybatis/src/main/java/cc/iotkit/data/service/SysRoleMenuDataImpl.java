@@ -25,7 +25,8 @@ import java.util.Objects;
 @Primary
 @Service
 @RequiredArgsConstructor
-public class SysRoleMenuDataImpl implements ISysRoleMenuData, IJPACommData<SysRoleMenu, Long, TbSysRoleMenu> {
+public class SysRoleMenuDataImpl implements ISysRoleMenuData, IJPACommData<SysRoleMenu, Long> {
+//public class SysRoleMenuDataImpl implements ISysRoleMenuData, IJPACommData<SysRoleMenu, Long, TbSysRoleMenu> {
 
 
     private final SysRoleMenuService sysRoleMenuService;

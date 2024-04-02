@@ -29,7 +29,8 @@ import java.util.List;
 @Primary
 @Service
 @RequiredArgsConstructor
-public class SysOperLogDataImpl implements ISysOperLogData, IJPACommData<SysOperLog, Long, TbSysOperLog> {
+public class SysOperLogDataImpl implements ISysOperLogData, IJPACommData<SysOperLog, Long> {
+//public class SysOperLogDataImpl implements ISysOperLogData, IJPACommData<SysOperLog, Long, TbSysOperLog> {
 
     @Resource
     @Qualifier("DBSysOperLogServiceImpl")

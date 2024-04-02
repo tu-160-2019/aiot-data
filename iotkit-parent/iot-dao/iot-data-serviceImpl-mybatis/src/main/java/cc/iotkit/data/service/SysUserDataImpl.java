@@ -42,7 +42,8 @@ import java.util.stream.Collectors;
 @Primary
 @Service
 @RequiredArgsConstructor
-public class SysUserDataImpl implements ISysUserData, IJPACommData<SysUser, Long, TbSysUser> {
+public class SysUserDataImpl implements ISysUserData, IJPACommData<SysUser, Long> {
+//public class SysUserDataImpl implements ISysUserData, IJPACommData<SysUser, Long, TbSysUser> {
 
     @Qualifier("DBSysUserServiceImpl")
     private final SysUserService sysUserService;

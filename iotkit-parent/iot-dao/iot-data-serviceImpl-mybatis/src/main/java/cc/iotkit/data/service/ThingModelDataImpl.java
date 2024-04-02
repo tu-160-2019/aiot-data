@@ -33,7 +33,8 @@ import org.springframework.stereotype.Service;
 @Primary
 @Service
 @RequiredArgsConstructor
-public class ThingModelDataImpl implements IThingModelData, IJPACommData<ThingModel, Long, TbThingModel> {
+public class ThingModelDataImpl implements IThingModelData, IJPACommData<ThingModel, Long> {
+//public class ThingModelDataImpl implements IThingModelData, IJPACommData<ThingModel, Long, TbThingModel> {
 
     @Qualifier("DBThingModelServiceImpl")
     private ThingModelService thingModelService;

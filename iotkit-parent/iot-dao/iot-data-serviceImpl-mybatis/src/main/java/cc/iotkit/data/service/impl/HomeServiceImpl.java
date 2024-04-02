@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
+@Service("DBHomeServiceImpl")
 @Primary
 public class HomeServiceImpl extends ServiceImpl<HomeMapper, TbHome> implements HomeService {
     @Override

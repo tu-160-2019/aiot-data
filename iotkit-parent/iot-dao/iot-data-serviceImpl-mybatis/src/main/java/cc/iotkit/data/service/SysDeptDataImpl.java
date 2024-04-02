@@ -29,7 +29,8 @@ import java.util.stream.StreamSupport;
 @Primary
 @Service
 @RequiredArgsConstructor
-public class SysDeptDataImpl implements ISysDeptData, IJPACommData<SysDept, Long, TbSysDept> {
+public class SysDeptDataImpl implements ISysDeptData, IJPACommData<SysDept, Long> {
+//public class SysDeptDataImpl implements ISysDeptData, IJPACommData<SysDept, Long, TbSysDept> {
 
     @Resource
     @Qualifier("DBSysDeptServiceImpl")

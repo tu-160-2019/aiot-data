@@ -14,7 +14,8 @@ import org.springframework.stereotype.Service;
 
 @Primary
 @Service
-public class PluginInstanceDataImpl implements IPluginInstanceData, IJPACommData<PluginInstance, Long, TbPluginInstance> {
+public class PluginInstanceDataImpl implements IPluginInstanceData, IJPACommData<PluginInstance, Long> {
+//public class PluginInstanceDataImpl implements IPluginInstanceData, IJPACommData<PluginInstance, Long, TbPluginInstance> {
 
     @Autowired
     private PluginInstanceService pluginInstanceService;

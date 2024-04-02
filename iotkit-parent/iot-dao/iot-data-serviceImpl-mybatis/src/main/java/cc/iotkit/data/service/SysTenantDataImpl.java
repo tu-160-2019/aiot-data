@@ -24,7 +24,8 @@ import java.util.Objects;
 @Primary
 @Service
 @RequiredArgsConstructor
-public class SysTenantDataImpl implements ISysTenantData, IJPACommData<SysTenant, Long, TbSysTenant> {
+public class SysTenantDataImpl implements ISysTenantData, IJPACommData<SysTenant, Long> {
+//public class SysTenantDataImpl implements ISysTenantData, IJPACommData<SysTenant, Long, TbSysTenant> {
 
     @Qualifier("DBSysTenantServiceImpl")
     private final SysTenantService sysTenantService;

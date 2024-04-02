@@ -20,7 +20,8 @@ import org.springframework.stereotype.Service;
 @Primary
 @Service
 @RequiredArgsConstructor
-public class SysOssConfigDataImpl implements ISysOssConfigData, IJPACommData<SysOssConfig, Long, TbSysOssConfig> {
+public class SysOssConfigDataImpl implements ISysOssConfigData, IJPACommData<SysOssConfig, Long> {
+//public class SysOssConfigDataImpl implements ISysOssConfigData, IJPACommData<SysOssConfig, Long, TbSysOssConfig> {
 
     @Qualifier("DBSysOssConfigServiceImpl")
     private final SysOssConfigService sysOssConfigService;

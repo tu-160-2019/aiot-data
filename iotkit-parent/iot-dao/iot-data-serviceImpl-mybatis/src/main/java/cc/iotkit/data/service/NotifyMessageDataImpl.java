@@ -18,7 +18,8 @@ import javax.annotation.Resource;
  */
 @Primary
 @Service
-public class NotifyMessageDataImpl implements INotifyMessageData, IJPACommData<NotifyMessage, Long, TbNotifyMessage> {
+public class NotifyMessageDataImpl implements INotifyMessageData, IJPACommData<NotifyMessage, Long> {
+//public class NotifyMessageDataImpl implements INotifyMessageData, IJPACommData<NotifyMessage, Long, TbNotifyMessage> {
 
     @Resource
     private NotifyMessageService notifyMessageService;

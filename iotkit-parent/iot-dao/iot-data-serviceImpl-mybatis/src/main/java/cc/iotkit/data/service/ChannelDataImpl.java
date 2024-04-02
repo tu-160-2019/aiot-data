@@ -17,7 +17,8 @@ import javax.annotation.Resource;
  **/
 @Primary
 @Service
-public class ChannelDataImpl implements IChannelData, IJPACommData<Channel, Long, TbChannel> {
+public class ChannelDataImpl implements IChannelData, IJPACommData<Channel, Long> {
+//public class ChannelDataImpl implements IChannelData, IJPACommData<Channel, Long, TbChannel> {
 
     @Resource
     private ChannelService channelService;

@@ -32,7 +32,8 @@ import java.util.Objects;
 @Primary
 @Service
 @RequiredArgsConstructor
-public class SysPostDataImpl implements ISysPostData, IJPACommData<SysPost, Long, TbSysPost> {
+public class SysPostDataImpl implements ISysPostData, IJPACommData<SysPost, Long> {
+//public class SysPostDataImpl implements ISysPostData, IJPACommData<SysPost, Long, TbSysPost> {
 
     @Qualifier("DBSysPostServiceImpl")
     private final SysPostService sysPostService;

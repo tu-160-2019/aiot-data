@@ -16,7 +16,8 @@ import org.springframework.stereotype.Service;
 
 @Primary
 @Service
-public class AlertRecordDataImpl implements IAlertRecordData, IJPACommData<AlertRecord, Long, TbAlertRecord> {
+public class AlertRecordDataImpl implements IAlertRecordData, IJPACommData<AlertRecord, Long> {
+//public class AlertRecordDataImpl implements IAlertRecordData, IJPACommData<AlertRecord, Long, TbAlertRecord> {
 
     @Autowired
     private AlertRecordService alertRecordService;

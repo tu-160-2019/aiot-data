@@ -7,7 +7,7 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
-@Service
+@Service("DBSysAppServiceImpl")
 @Primary
 public class SysAppServiceImpl extends ServiceImpl<SysAppMapper, TbSysApp> implements SysAppService {
 

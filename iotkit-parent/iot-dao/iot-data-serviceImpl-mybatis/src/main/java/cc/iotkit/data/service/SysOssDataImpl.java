@@ -22,7 +22,8 @@ import javax.annotation.Resource;
 @Primary
 @Service
 @RequiredArgsConstructor
-public class SysOssDataImpl implements ISysOssData, IJPACommData<SysOss, Long, TbSysOss> {
+public class SysOssDataImpl implements ISysOssData, IJPACommData<SysOss, Long> {
+//public class SysOssDataImpl implements ISysOssData, IJPACommData<SysOss, Long, TbSysOss> {
 
     @Resource
     @Qualifier("DBSysOssServiceImpl")

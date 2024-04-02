@@ -29,7 +29,8 @@ import java.util.List;
 @Primary
 @Service
 @RequiredArgsConstructor
-public class SysDictDataImpl implements ISysDictData, IJPACommData<SysDictData, Long, TbSysDictData> {
+public class SysDictDataImpl implements ISysDictData, IJPACommData<SysDictData, Long> {
+//public class SysDictDataImpl implements ISysDictData, IJPACommData<SysDictData, Long, TbSysDictData> {
 
     @Resource
     @Qualifier("DBSysDictDataServiceImpl")

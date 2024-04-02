@@ -31,7 +31,8 @@ import java.util.List;
 @Primary
 @Service
 @RequiredArgsConstructor
-public class UserInfoDataImpl implements IUserInfoData, IJPACommData<UserInfo, Long, TbUserInfo> {
+public class UserInfoDataImpl implements IUserInfoData, IJPACommData<UserInfo, Long> {
+//public class UserInfoDataImpl implements IUserInfoData, IJPACommData<UserInfo, Long, TbUserInfo> {
 
     @Autowired
     private UserInfoService userInfoService;

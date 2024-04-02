@@ -14,15 +14,17 @@ import org.springframework.context.annotation.Primary;
 
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.List;
 import java.util.Objects;
 
 @Primary
 @Service
 @RequiredArgsConstructor
-public class HomeDataImpl implements IHomeData, IJPACommData<Home, Long, TbHome> {
+public class HomeDataImpl implements IHomeData, IJPACommData<Home, Long> {
+//public class HomeDataImpl implements IHomeData, IJPACommData<Home, Long, TbHome> {
 
-    @Autowired
+    @Resource(name = "DBHomeServiceImpl")
     private HomeService homeService;
 
     @Override

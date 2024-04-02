@@ -36,7 +36,8 @@ import java.util.stream.Collectors;
 @Primary
 @Service
 @RequiredArgsConstructor
-public class DeviceInfoDataImpl implements IDeviceInfoData, IJPACommData<DeviceInfo, String, TbDeviceInfo> {
+public class DeviceInfoDataImpl implements IDeviceInfoData, IJPACommData<DeviceInfo, String> {
+//public class DeviceInfoDataImpl implements IDeviceInfoData, IJPACommData<DeviceInfo, String, TbDeviceInfo> {
 
 
     private final DeviceInfoService deviceInfoService;
@@ -271,7 +272,7 @@ public class DeviceInfoDataImpl implements IDeviceInfoData, IJPACommData<DeviceI
             args.add(productKey);
         }
 
-        if (online) {
+        if (online != null && online) {
             sql += "and a.state=? ";
             args.add("online");
         } else {

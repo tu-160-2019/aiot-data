@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
+@Service("DBSpaceServiceImpl")
 @Primary
 public class SpaceServiceImpl extends ServiceImpl<SpaceMapper, TbSpace> implements SpaceService {
 

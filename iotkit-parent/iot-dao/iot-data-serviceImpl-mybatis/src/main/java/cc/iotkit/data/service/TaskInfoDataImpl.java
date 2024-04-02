@@ -45,7 +45,8 @@ import java.util.stream.Collectors;
 @Primary
 @Service
 @RequiredArgsConstructor
-public class TaskInfoDataImpl implements ITaskInfoData, IJPACommData<TaskInfo, String, TbTaskInfo> {
+public class TaskInfoDataImpl implements ITaskInfoData, IJPACommData<TaskInfo, String> {
+//public class TaskInfoDataImpl implements ITaskInfoData, IJPACommData<TaskInfo, String, TbTaskInfo> {
 
     @Resource
     private TaskInfoService taskInfoService;

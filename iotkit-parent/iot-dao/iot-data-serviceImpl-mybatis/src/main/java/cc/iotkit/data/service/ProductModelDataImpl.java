@@ -17,7 +17,8 @@ import java.util.UUID;
 
 @Primary
 @Service
-public class ProductModelDataImpl implements IProductModelData, IJPACommData<ProductModel, String, TbProductModel> {
+public class ProductModelDataImpl implements IProductModelData, IJPACommData<ProductModel, String> {
+//public class ProductModelDataImpl implements IProductModelData, IJPACommData<ProductModel, String, TbProductModel> {
 
     @Autowired
     private ProductModelService productModelService;

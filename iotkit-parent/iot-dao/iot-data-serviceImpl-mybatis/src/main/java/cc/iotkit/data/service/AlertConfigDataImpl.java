@@ -15,7 +15,8 @@ import org.springframework.stereotype.Service;
 
 @Primary
 @Service
-public class AlertConfigDataImpl implements IAlertConfigData, IJPACommData<AlertConfig, Long, TbAlertConfig> {
+public class AlertConfigDataImpl implements IAlertConfigData, IJPACommData<AlertConfig, Long> {
+//public class AlertConfigDataImpl implements IAlertConfigData, IJPACommData<AlertConfig, Long, TbAlertConfig> {
 
     @Autowired
     private AlertConfigService alertConfigService;

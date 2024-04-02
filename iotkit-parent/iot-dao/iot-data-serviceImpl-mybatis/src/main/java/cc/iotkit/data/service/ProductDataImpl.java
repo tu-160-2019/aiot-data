@@ -18,7 +18,8 @@ import java.util.List;
 
 @Primary
 @Service
-public class ProductDataImpl implements IProductData, IJPACommData<Product, Long, TbProduct> {
+public class ProductDataImpl implements IProductData, IJPACommData<Product, Long> {
+//public class ProductDataImpl implements IProductData, IJPACommData<Product, Long, TbProduct> {
 
     @Resource
     @Qualifier("DBProductServiceImpl")
@@ -41,12 +42,12 @@ public class ProductDataImpl implements IProductData, IJPACommData<Product, Long
 
     @Override
     public List<Product> findByCategory(String category) {
-        return MapstructUtils.convert(productService.findByCategory(category), Product.class);
+        return productService.findByCategory(category);
     }
 
     @Override
     public Product findByProductKey(String productKey) {
-        return MapstructUtils.convert(productService.findByProductKey(productKey), Product.class);
+        return productService.findByProductKey(productKey);
     }
 
     @Override

@@ -21,19 +21,22 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Qualifier;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 @Primary
 @Service
-public class SpaceDeviceDataImpl implements ISpaceDeviceData, IJPACommData<SpaceDevice, Long, TbSpaceDevice> {
+public class SpaceDeviceDataImpl implements ISpaceDeviceData, IJPACommData<SpaceDevice, Long> {
+//public class SpaceDeviceDataImpl implements ISpaceDeviceData, IJPACommData<SpaceDevice, Long, TbSpaceDevice> {
 
+    @Resource
     @Qualifier("DBSpaceDeviceServiceImpl")
-    private SpaceDeviceService spaceDeviceService;
+    private SpaceDeviceService dbspaceDeviceService;
 
 
     @Override
     public SpaceDeviceService getBaseRepository() {
-        return spaceDeviceService;
+        return dbspaceDeviceService;
     }
 
     @Override
@@ -49,27 +52,27 @@ public class SpaceDeviceDataImpl implements ISpaceDeviceData, IJPACommData<Space
 
     @Override
     public List<SpaceDevice> findByHomeIdAndCollect(Long homeId, boolean collect) {
-        return spaceDeviceService.findByHomeIdAndCollect(homeId, collect);
+        return dbspaceDeviceService.findByHomeIdAndCollect(homeId, collect);
     }
 
     @Override
     public List<SpaceDevice> findByHomeId(Long homeId) {
-        return spaceDeviceService.findByHomeId(homeId);
+        return dbspaceDeviceService.findByHomeId(homeId);
     }
 
     @Override
     public List<SpaceDevice> findBySpaceId(Long spaceId) {
-        return spaceDeviceService.findBySpaceId(spaceId);
+        return dbspaceDeviceService.findBySpaceId(spaceId);
     }
 
     @Override
     public SpaceDevice findByDeviceId(String deviceId) {
-        return spaceDeviceService.findByDeviceId(deviceId);
+        return dbspaceDeviceService.findByDeviceId(deviceId);
     }
 
     @Override
     public void deleteAllBySpaceId(Long spaceId) {
-        spaceDeviceService.deleteAllBySpaceId(spaceId);
+        dbspaceDeviceService.deleteAllBySpaceId(spaceId);
     }
 
 }

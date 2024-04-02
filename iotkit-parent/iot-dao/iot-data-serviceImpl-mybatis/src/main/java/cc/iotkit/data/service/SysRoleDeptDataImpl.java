@@ -26,7 +26,8 @@ import java.util.List;
 @Primary
 @Service
 @RequiredArgsConstructor
-public class SysRoleDeptDataImpl implements ISysRoleDeptData, IJPACommData<SysRoleDept, Long, TbSysRoleDept> {
+public class SysRoleDeptDataImpl implements ISysRoleDeptData, IJPACommData<SysRoleDept, Long> {
+//public class SysRoleDeptDataImpl implements ISysRoleDeptData, IJPACommData<SysRoleDept, Long, TbSysRoleDept> {
 
 
     @Autowired

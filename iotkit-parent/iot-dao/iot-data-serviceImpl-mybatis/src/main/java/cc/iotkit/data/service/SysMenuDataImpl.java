@@ -37,7 +37,8 @@ import java.util.stream.Collectors;
 @Primary
 @Service
 @RequiredArgsConstructor
-public class SysMenuDataImpl implements ISysMenuData, IJPACommData<SysMenu, Long, TbSysMenu> {
+public class SysMenuDataImpl implements ISysMenuData, IJPACommData<SysMenu, Long> {
+//public class SysMenuDataImpl implements ISysMenuData, IJPACommData<SysMenu, Long, TbSysMenu> {
 
     @Qualifier("DBSysMenuServiceImpl")
     private final SysMenuService sysMenuService;

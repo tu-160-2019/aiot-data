@@ -9,6 +9,7 @@ import org.springframework.data.annotation.LastModifiedBy;
 import org.springframework.data.annotation.LastModifiedDate;
 
 import java.util.Date;
+import java.io.Serializable;
 
 /**
  * Entity基类
@@ -16,7 +17,7 @@ import java.util.Date;
  * @author Lion Li
  */
 @Data
-public class BaseEntity {
+public class BaseEntity implements Serializable {
 
     /**
      * 创建部门

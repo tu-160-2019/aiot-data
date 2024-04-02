@@ -9,9 +9,12 @@ import cc.iotkit.model.system.SysApp;
 import cn.hutool.core.util.ObjectUtil;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Primary;
 
 import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
 
 /**
  * 数据实现接口
@@ -22,8 +25,11 @@ import org.springframework.stereotype.Service;
 @Primary
 @Service
 @RequiredArgsConstructor
-public class SysAppDataImpl implements ISysAppData, IJPACommData<SysApp, Long, TbSysApp> {
+public class SysAppDataImpl implements ISysAppData, IJPACommData<SysApp, Long> {
+//public class SysAppDataImpl implements ISysAppData, IJPACommData<SysApp, Long, TbSysApp> {
 
+    @Resource()
+    @Qualifier("DBSysAppServiceImpl")
     private final SysAppService baseService;
 
 //    @Override

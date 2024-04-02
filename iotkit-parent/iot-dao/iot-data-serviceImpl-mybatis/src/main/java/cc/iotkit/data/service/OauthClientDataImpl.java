@@ -25,7 +25,8 @@ import java.util.UUID;
 
 @Primary
 @Service
-public class OauthClientDataImpl implements IOauthClientData, IJPACommData<OauthClient, String, TbOauthClient> {
+public class OauthClientDataImpl implements IOauthClientData, IJPACommData<OauthClient, String> {
+//public class OauthClientDataImpl implements IOauthClientData, IJPACommData<OauthClient, String, TbOauthClient> {
 
     @Autowired
     private OauthClientService oauthClientService;

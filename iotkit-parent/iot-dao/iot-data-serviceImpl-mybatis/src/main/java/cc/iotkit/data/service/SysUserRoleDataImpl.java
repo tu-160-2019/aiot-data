@@ -30,7 +30,8 @@ import java.util.List;
 @Primary
 @Service
 @RequiredArgsConstructor
-public class SysUserRoleDataImpl implements ISysUserRoleData, IJPACommData<SysUserRole, Long, TbSysUserRole> {
+public class SysUserRoleDataImpl implements ISysUserRoleData, IJPACommData<SysUserRole, Long> {
+//public class SysUserRoleDataImpl implements ISysUserRoleData, IJPACommData<SysUserRole, Long, TbSysUserRole> {
 
     private final SysUserRoleService sysUserRoleService;
 

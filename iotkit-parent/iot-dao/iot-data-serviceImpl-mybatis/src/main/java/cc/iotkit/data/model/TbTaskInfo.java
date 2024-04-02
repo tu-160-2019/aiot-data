@@ -50,7 +50,7 @@ public class TbTaskInfo {
     /**
      * 描述
      */
-    @TableField("`desc`")
+    @TableField("desc")
     @ApiModelProperty(value = "描述")
     private String desc;
 

@@ -35,7 +35,8 @@ import java.util.stream.Collectors;
 
 @Primary
 @Service
-public class RuleInfoDataImpl implements IRuleInfoData, IJPACommData<RuleInfo, String, TbRuleInfo> {
+public class RuleInfoDataImpl implements IRuleInfoData, IJPACommData<RuleInfo, String> {
+//public class RuleInfoDataImpl implements IRuleInfoData, IJPACommData<RuleInfo, String, TbRuleInfo> {
 
     @Autowired
     private RuleInfoService ruleInfoService;

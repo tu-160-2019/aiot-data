@@ -21,7 +21,8 @@ import java.util.List;
 @Primary
 @Service
 @RequiredArgsConstructor
-public class ScreenDataImpl implements IScreenData,IJPACommData<Screen,Long, TbScreen> {
+public class ScreenDataImpl implements IScreenData,IJPACommData<Screen,Long> {
+//public class ScreenDataImpl implements IScreenData,IJPACommData<Screen,Long, TbScreen> {
 
     @Resource
     @Qualifier("DBScreenServiceImpl")

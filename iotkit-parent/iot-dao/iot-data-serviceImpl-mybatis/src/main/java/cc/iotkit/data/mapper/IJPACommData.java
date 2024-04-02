@@ -27,7 +27,8 @@ import java.io.Serializable;
  * @Version: V1.0
  * @Description: 基础数据操作接口
  */
-public interface IJPACommData<T extends Id<ID>, ID extends Serializable, E> extends ICommonData<T, ID> {
+public interface IJPACommData<T extends Id<ID>, ID> extends ICommonData<T, ID> {
+//public interface IJPACommData<T extends Id<ID>, ID extends Serializable, E> extends ICommonData<T, ID> {
 
 
     IService getBaseRepository();
@@ -38,7 +39,7 @@ public interface IJPACommData<T extends Id<ID>, ID extends Serializable, E> exte
 
     @Override
     default T findById(ID id) {
-        return (T) MapstructUtils.convert(Optional.of(getBaseRepository().getById(id)).orElse(null), getTClass());
+        return (T) MapstructUtils.convert(Optional.of(getBaseRepository().getById((Serializable) id)).orElse(null), getTClass());
     }
 
     @Override
@@ -51,7 +52,7 @@ public interface IJPACommData<T extends Id<ID>, ID extends Serializable, E> exte
     default T save(T data) {
         ID id = data.getId();
         Object tbData = MapstructUtils.convert(data, getJpaRepositoryClass());
-        Optional byId = id == null ? Optional.empty() : Optional.of(getBaseRepository().getById(id));
+        Optional byId = id == null ? Optional.empty() : Optional.of(getBaseRepository().getById((Serializable) id));
         if (byId.isPresent()) {
             Object dbObj = byId.get();
             //只更新不为空的字段
@@ -71,7 +72,8 @@ public interface IJPACommData<T extends Id<ID>, ID extends Serializable, E> exte
             }
         }
 
-        getBaseRepository().saveOrUpdate(MapstructUtils.convert(tbData, getJpaRepositoryClass()));
+//        getBaseRepository().saveOrUpdate(MapstructUtils.convert(tbData, getJpaRepositoryClass()));
+        getBaseRepository().saveOrUpdate(tbData);
         return (T) MapstructUtils.convert(tbData, getTClass());
     }
 
@@ -102,8 +104,12 @@ public interface IJPACommData<T extends Id<ID>, ID extends Serializable, E> exte
 
     @Override
     default Paging<T> findAll(PageRequest<T> pageRequest) {
-        Page<E> rowPage = new Page<>(pageRequest.getPageNum(), pageRequest.getPageSize());
-        Page<E> paged = (Page<E>) getBaseRepository().getBaseMapper().selectPage(rowPage, new LambdaQueryWrapper<E>());
+//        Page<E> rowPage = new Page<>(pageRequest.getPageNum(), pageRequest.getPageSize());
+//        Page<E> paged = (Page<E>) getBaseRepository().getBaseMapper().selectPage(rowPage, new LambdaQueryWrapper<E>());
+//        return new Paging<>(paged.getTotal(), MapstructUtils.convert(paged.getRecords(), getTClass()));
+
+        Page rowPage = new Page(pageRequest.getPageNum(), pageRequest.getPageSize());
+        Page paged = (Page) getBaseRepository().getBaseMapper().selectPage(rowPage, new LambdaQueryWrapper<>());
         return new Paging<>(paged.getTotal(), MapstructUtils.convert(paged.getRecords(), getTClass()));
     }
 
@@ -112,7 +118,9 @@ public interface IJPACommData<T extends Id<ID>, ID extends Serializable, E> exte
      */
     @Override
     default List<T> findAllByCondition(T data) {
-        List all = getBaseRepository().list(new LambdaQueryWrapper<>());
+//        List all = getBaseRepository().list(new LambdaQueryWrapper<>());
+        Object convert =  MapstructUtils.convert(data, getJpaRepositoryClass());
+        List all = getBaseRepository().list(new LambdaQueryWrapper<>(convert));
         return MapstructUtils.convert(all, getTClass());
     }
 
@@ -121,7 +129,8 @@ public interface IJPACommData<T extends Id<ID>, ID extends Serializable, E> exte
      */
     @Override
     default T findOneByCondition(T data) {
-        E convert = (E) MapstructUtils.convert(data, getJpaRepositoryClass());
+//        E convert = (E) MapstructUtils.convert(data, getJpaRepositoryClass());
+        Object convert =  MapstructUtils.convert(data, getJpaRepositoryClass());
         Object one = getBaseRepository().getOne(new LambdaQueryWrapper<>(convert));
         if (Objects.isNull(one)) {
             return null;

@@ -36,7 +36,8 @@ import java.util.Objects;
 @Primary
 @Service
 @RequiredArgsConstructor
-public class SysRoleDataImpl implements ISysRoleData, IJPACommData<SysRole, Long, TbSysRole> {
+public class SysRoleDataImpl implements ISysRoleData, IJPACommData<SysRole, Long> {
+//public class SysRoleDataImpl implements ISysRoleData, IJPACommData<SysRole, Long, TbSysRole> {
 
     @Qualifier("DBSysRoleServiceImpl")
     private final SysRoleService sysRoleService;

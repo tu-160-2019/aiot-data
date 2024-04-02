@@ -18,7 +18,8 @@ import javax.annotation.Resource;
  */
 @Primary
 @Service
-public class IOtaDeviceDataImpl implements IOtaDeviceData, IJPACommData<OtaDevice, Long, TbOtaDevice> {
+public class IOtaDeviceDataImpl implements IOtaDeviceData, IJPACommData<OtaDevice, Long> {
+//public class IOtaDeviceDataImpl implements IOtaDeviceData, IJPACommData<OtaDevice, Long, TbOtaDevice> {
 
     @Resource
     private OtaDeviceService otaDeviceService;

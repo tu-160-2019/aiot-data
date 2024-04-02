@@ -24,7 +24,8 @@ import java.util.UUID;
 
 @Primary
 @Service
-public class DeviceConfigDataImpl implements IDeviceConfigData, IJPACommData<DeviceConfig, String, TbDeviceConfig> {
+public class DeviceConfigDataImpl implements IDeviceConfigData, IJPACommData<DeviceConfig, String> {
+//public class DeviceConfigDataImpl implements IDeviceConfigData, IJPACommData<DeviceConfig, String, TbDeviceConfig> {
 
     @Autowired
     private DeviceConfigService deviceConfigService;

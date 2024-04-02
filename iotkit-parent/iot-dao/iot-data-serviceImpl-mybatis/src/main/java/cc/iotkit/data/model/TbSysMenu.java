@@ -28,7 +28,7 @@ public class TbSysMenu extends BaseEntity {
     /**
      * 菜单ID
      */
-    @TableId(value = "id", type = IdType.ASSIGN_ID)
+    @TableId(value = "menu_id", type = IdType.ASSIGN_ID)
     @TableField("menu_id")
     @ApiModelProperty(value = "菜单ID")
     private Long id;

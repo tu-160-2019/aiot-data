@@ -23,7 +23,8 @@ import org.springframework.stereotype.Service;
 @Primary
 @Service
 @RequiredArgsConstructor
-public class SysTenantPackageDataImpl implements ISysTenantPackageData, IJPACommData<SysTenantPackage, Long, TbSysTenantPackage> {
+public class SysTenantPackageDataImpl implements ISysTenantPackageData, IJPACommData<SysTenantPackage, Long> {
+//public class SysTenantPackageDataImpl implements ISysTenantPackageData, IJPACommData<SysTenantPackage, Long, TbSysTenantPackage> {
 
     @Resource
     @Qualifier("DBSysTenantPackageServiceImpl")
