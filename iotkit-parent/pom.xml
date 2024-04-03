@@ -30,8 +30,8 @@
         <module>iot-module</module>
         <module>iot-starter</module>
         <module>iot-test-tool</module>
-        <module>iot-starter-mybatis</module>
         <module>iot-cloud</module>
+        <module>iot-mybatis</module>
     </modules>
 
     <properties>
@@ -319,6 +319,12 @@
             <dependency>
                 <groupId>cc.iotkit</groupId>
                 <artifactId>iot-data-serviceImpl-rdb</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>cc.iotkit</groupId>
+                <artifactId>iot-data-serviceImpl-mybatis</artifactId>
                 <version>${project.version}</version>
             </dependency>
 

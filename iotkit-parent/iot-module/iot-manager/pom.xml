@@ -59,9 +59,14 @@
             <artifactId>iot-temporal-service</artifactId>
         </dependency>
 
-        <dependency>
+        <!--<dependency>
             <groupId>cc.iotkit</groupId>
             <artifactId>iot-data-serviceImpl-rdb</artifactId>
+        </dependency>-->
+
+        <dependency>
+            <groupId>cc.iotkit</groupId>
+            <artifactId>iot-data-serviceImpl-mybatis</artifactId>
         </dependency>
 
         <dependency>

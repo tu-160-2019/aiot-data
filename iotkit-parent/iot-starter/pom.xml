@@ -76,6 +76,11 @@
             <artifactId>iot-data-serviceImpl-rdb</artifactId>
         </dependency>
 
+        <!--<dependency>
+            <groupId>cc.iotkit</groupId>
+            <artifactId>iot-data-serviceImpl-mybatis</artifactId>
+        </dependency>-->
+
         <!--打开注释 启用es数据库-->
         <dependency>
             <groupId>cc.iotkit</groupId>

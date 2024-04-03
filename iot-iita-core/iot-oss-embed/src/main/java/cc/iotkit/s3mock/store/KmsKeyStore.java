@@ -18,8 +18,6 @@ package cc.iotkit.s3mock.store;
 
 import static java.util.regex.Pattern.compile;
 
-import cc.iotkit.s3mock.S3MockApplication;
-
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;

@@ -9,6 +9,8 @@
  */
 package cc.iotkit.data.manager;
 
+import cc.iotkit.common.api.Paging;
+import cc.iotkit.common.utils.MapstructUtils;
 import cc.iotkit.data.ICommonData;
 import cc.iotkit.model.space.Space;
 
@@ -18,4 +20,11 @@ public interface ISpaceData extends ICommonData<Space,Long> {
 
     List<Space> findByHomeId(Long homeId);
 
+//    List<Space> findByUidOrderByCreateAtDesc(String uid);
+
+//    List<Space> findByUidAndHomeIdOrderByCreateAtDesc(String uid, String homeId);
+
+//    public List<Space> findByUid(String uid);
+
+//    public Paging<Space> findByUid(String uid, int page, int size);
 }

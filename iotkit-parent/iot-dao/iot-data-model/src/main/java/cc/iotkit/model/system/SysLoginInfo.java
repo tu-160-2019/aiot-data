@@ -13,7 +13,7 @@ import java.util.Date;
  * @date 2023-02-07
  */
 @Data
-public class SysLoginInfo implements Id<Long>,Serializable {
+public class SysLoginInfo implements Id<Long>, Serializable {
     private static final long serialVersionUID = 1L;
 
     /**

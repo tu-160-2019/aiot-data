@@ -1,6 +1,6 @@
 
 server:
-  port: 8086
+  port: 18086
 
 spring:
   servlet:
@@ -11,40 +11,7 @@ spring:
 
   #注： 切换数据库时需要将项目根目录中的.init文件删除再重启
   # <<=======内置H2数据库连接设置开始==========
-  jpa:
-    show-sql: false
-    hibernate:
-      ddl-auto: update
-    properties:
-      hibernate:
-        format_sql: true
-  datasource:
-    type: com.zaxxer.hikari.HikariDataSource
-    driverClassName: org.h2.Driver
-    url: jdbc:h2:./data/iotkit;MODE=MySQL
-    username: sa
-    password: 123456
-    hikari:
-      connection-timeout: 5000
-      idle-timeout: 30000 # 经过idle-timeout时间如果连接还处于空闲状态, 该连接会被回收
-      min-idle: 5 # 池中维护的最小空闲连接数, 默认为 10 个
-      max-pool-size: 16 # 池中最大连接数, 包括闲置和使用中的连接, 默认为 10 个
-      max-lifetime: 60000 # 如果一个连接超过了时长，且没有被使用, 连接会被回收
-      is-auto-commit: true
-    # 内置h2 web console设置
-    platform: h2
-  h2:
-    console:
-      enabled: true
-      path: /h2
-      settings:
-        web-allow-others: true
-  #=======内置H2数据库连接设置结束==========>>
-
-  # <<==========mysql配置开始==============
 #  jpa:
-#    database: MySQL
-#    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
 #    show-sql: false
 #    hibernate:
 #      ddl-auto: update
@@ -53,10 +20,9 @@ spring:
 #        format_sql: true
 #  datasource:
 #    type: com.zaxxer.hikari.HikariDataSource
-#    driverClassName: com.mysql.cj.jdbc.Driver
-#    # jdbc 所有参数配置参考 https://lionli.blog.csdn.net/article/details/122018562
-#    url: jdbc:mysql://127.0.0.1:3306/iotkit?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false
-#    username: root
+#    driverClassName: org.h2.Driver
+#    url: jdbc:h2:./data/iotkit;MODE=MySQL
+#    username: sa
 #    password: 123456
 #    hikari:
 #      connection-timeout: 5000
@@ -65,6 +31,40 @@ spring:
 #      max-pool-size: 16 # 池中最大连接数, 包括闲置和使用中的连接, 默认为 10 个
 #      max-lifetime: 60000 # 如果一个连接超过了时长，且没有被使用, 连接会被回收
 #      is-auto-commit: true
+#    # 内置h2 web console设置
+#    platform: h2
+#  h2:
+#    console:
+#      enabled: true
+#      path: /h2
+#      settings:
+#        web-allow-others: true
+  #=======内置H2数据库连接设置结束==========>>
+
+  # <<==========mysql配置开始==============
+  jpa:
+    database: MySQL
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driverClassName: com.mysql.cj.jdbc.Driver
+    # jdbc 所有参数配置参考 https://lionli.blog.csdn.net/article/details/122018562
+    url: jdbc:mysql://127.0.0.1:3306/iotkit?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false
+    username: root
+    password: 123456
+    hikari:
+      connection-timeout: 5000
+      idle-timeout: 30000 # 经过idle-timeout时间如果连接还处于空闲状态, 该连接会被回收
+      min-idle: 5 # 池中维护的最小空闲连接数, 默认为 10 个
+      max-pool-size: 16 # 池中最大连接数, 包括闲置和使用中的连接, 默认为 10 个
+      max-lifetime: 60000 # 如果一个连接超过了时长，且没有被使用, 连接会被回收
+      is-auto-commit: true
   # ============mysql配置结束============>>
 
   #<<================es时序数据配置开始===============
@@ -185,6 +185,10 @@ websocket:
   enabled: true
   path: /websocket
   allowedOrigins: '*'
+
+#init:
+#  data:
+#    flag: false
 
 # 插件配置
 plugin:
