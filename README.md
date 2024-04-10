@@ -13,9 +13,25 @@ AIOT人工智能物联网平台是一站式物联网开发基础平台，帮助�
 ## AI平台介绍
   系统包含了缺陷检测、烟火检测、安全帽检测、车流检测、车辆检测、入侵检测、车牌检测、花检测、动物检测、口罩检测、人流检测等等AI模型。并且支持训练、标注等功能。
 
+## 大屏设计及报表
+  系统支持自定义报表、大屏设计功能，全拖拽式实现，满足不同自定义演示需求。
+
 #### 软件架构说明
   本系统采用springboot、spring cloud、vertx、redis、H2、mysql、elasticsearch、TDEngine、RocketMq、flink、hadoop、kafka、Vue3、Mybatis-Plus、minio、k8s等框架和第三方软件，中间件采用模块化无侵入集成非常容易扩展和替换。
 
+
+#### 系统部分截图
+![输入图片说明](images/iot1.jpg)
+
+![输入图片说明](images/data1.jpg)
+
+![输入图片说明](images/data2.jpg)
+
+![输入图片说明](images/AI1.jpg)
+
+![输入图片说明](images/screen1.jpg)
+
+![输入图片说明](images/screen2.jpg)
 
 
 #### 安装教程
