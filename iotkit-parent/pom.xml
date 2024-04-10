@@ -30,6 +30,8 @@
         <module>iot-module</module>
         <module>iot-test-tool</module>
         <module>iot-cloud</module>
+        <module>iot-mybatis</module>
+        <module>iot-starter</module>
     </modules>
 
     <properties>

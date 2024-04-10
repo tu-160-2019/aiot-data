@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>iotkit-parent</artifactId>
+        <groupId>cc.iotkit</groupId>
+        <version>0.5.3</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>iot-mybatis</artifactId>
+    <packaging>jar</packaging>
+    <dependencies>
+
+        <dependency>
+            <groupId>io.vertx</groupId>
+            <artifactId>vertx-core</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>io.vertx</groupId>
+            <artifactId>vertx-web-client</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>jakarta.xml.bind</groupId>
+            <artifactId>jakarta.xml.bind-api</artifactId>
+            <version>4.0.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>cc.iotkit</groupId>
+            <artifactId>iot-common-tenant</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>cc.iotkit</groupId>
+            <artifactId>iot-rule-engine</artifactId>
+        </dependency>
+
+        <!--内置vertx消息总线-->
+        <dependency>
+            <groupId>cc.iotkit</groupId>
+            <artifactId>iot-message-event-bus</artifactId>
+        </dependency>
+
+        <!--打开注释使用rocketmq消息总线-->
+        <!--        <dependency>-->
+        <!--            <groupId>cc.iotkit</groupId>-->
+        <!--            <artifactId>iot-message-rocketmq</artifactId>-->
+        <!--        </dependency>-->
+
+        <dependency>
+            <groupId>cc.iotkit</groupId>
+            <artifactId>iot-plugin-main</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>cc.iotkit</groupId>
+            <artifactId>iot-manager</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>cc.iotkit</groupId>
+            <artifactId>iot-system</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>cc.iotkit</groupId>
+            <artifactId>iot-openapi</artifactId>
+        </dependency>
+
+        <!--<dependency>
+            <groupId>cc.iotkit</groupId>
+            <artifactId>iot-data-serviceImpl-rdb</artifactId>
+        </dependency>-->
+
+        <dependency>
+            <groupId>cc.iotkit</groupId>
+            <artifactId>iot-data-serviceImpl-mybatis</artifactId>
+        </dependency>
+
+        <!--打开注释 启用es数据库-->
+        <dependency>
+            <groupId>cc.iotkit</groupId>
+            <artifactId>iot-temporal-serviceImpl-es</artifactId>
+        </dependency>
+
+        <!--打开注释 启用timescale数据库-->
+        <!--        <dependency>-->
+        <!--            <groupId>cc.iotkit</groupId>-->
+        <!--            <artifactId>iot-temporal-serviceImpl-ts</artifactId>-->
+        <!--        </dependency>-->
+
+        <!--打开注释 启用tdengine数据库-->
+        <!--        <dependency>-->
+        <!--            <groupId>cc.iotkit</groupId>-->
+        <!--            <artifactId>iot-temporal-serviceImpl-td</artifactId>-->
+        <!--        </dependency>-->
+
+        <!--内置oss-->
+        <!--<dependency>
+            <groupId>cc.iotkit</groupId>
+            <artifactId>iot-oss-embed</artifactId>
+        </dependency>-->
+
+        <!--====================第三方库===================-->
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-logging</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.apache.logging.log4j</groupId>
+                    <artifactId>log4j-to-slf4j</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>com.gitee.starblues</groupId>
+            <artifactId>spring-brick</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <dependency>
+            <groupId>it.ozimov</groupId>
+            <artifactId>embedded-redis</artifactId>
+            <exclusions>
+                <exclusion>
+                    <artifactId>slf4j-simple</artifactId>
+                    <groupId>org.slf4j</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>org.elasticsearch</groupId>
+            <artifactId>elasticsearch</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.elasticsearch.plugin</groupId>
+            <artifactId>transport-netty4-client</artifactId>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.0</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${spring-boot.version}</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <configuration>
+                    <appendAssemblyId>false</appendAssemblyId>
+                    <archive>
+                        <manifest>
+                            <mainClass>cc.iotkit.IotMybatisApplication</mainClass>
+                        </manifest>
+                    </archive>
+                    <descriptors>
+                        <descriptor>
+                            ${project.parent.basedir}/iot-starter/src/main/resources/assemblies/standalone-package.xml
+                        </descriptor>
+                    </descriptors>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>make-assembly</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+
+</project>
