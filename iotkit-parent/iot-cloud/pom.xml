@@ -8,6 +8,10 @@
     <artifactId>iot-cloud</artifactId>
     <packaging>jar</packaging>
 
+    <properties>
+<!--        <mybatisplus.version>3.5.5</mybatisplus.version>-->
+<!--        <mysql-connector-java.version>8.0.22</mysql-connector-java.version>-->
+    </properties>
     <dependencies>
         <!--<dependency>
             <groupId>net.srt</groupId>
@@ -28,10 +32,30 @@
         <dependency>
             <groupId>cc.iotkit</groupId>
             <artifactId>iot-common-excel</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>cc.iotkit</groupId>
+                    <artifactId>iot-common-satoken</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>cn.dev33</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>cc.iotkit</groupId>
             <artifactId>iot-common-log</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>cc.iotkit</groupId>
+                    <artifactId>iot-common-satoken</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>cn.dev33</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>cc.iotkit</groupId>
@@ -71,20 +95,20 @@
             <artifactId>iot-data-serviceImpl-mybatis</artifactId>
         </dependency>
         <!--打开注释 启用es数据库-->
-        <dependency>
+        <!--<dependency>
             <groupId>cc.iotkit</groupId>
             <artifactId>iot-temporal-serviceImpl-es</artifactId>
-        </dependency>
+        </dependency>-->
         <!--打开注释 启用timescale数据库-->
         <!--<dependency>
             <groupId>cc.iotkit</groupId>
             <artifactId>iot-temporal-serviceImpl-ts</artifactId>
         </dependency>-->
         <!--打开注释 启用tdengine数据库-->
-        <!--<dependency>
+        <dependency>
             <groupId>cc.iotkit</groupId>
             <artifactId>iot-temporal-serviceImpl-td</artifactId>
-        </dependency>-->
+        </dependency>
         <!--内置oss-->
         <!--<dependency>
             <groupId>cc.iotkit</groupId>
@@ -146,6 +170,10 @@
         <dependency>
             <groupId>org.springframework.integration</groupId>
             <artifactId>spring-integration-mqtt</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.github.linpeilie</groupId>
+            <artifactId>mapstruct-plus-spring-boot-starter</artifactId>
         </dependency>
         <dependency>
             <groupId>com.github.xiaoymin</groupId>
@@ -236,6 +264,35 @@
     <build>
         <!--<finalName>${project.artifactId}</finalName>-->
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>${java.version}</source> <!-- depending on your project -->
+                    <target>${java.version}</target> <!-- depending on your project -->
+                    <encoding>utf8</encoding>
+                    <annotationProcessorPaths>
+                        <path>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                            <version>${lombok.version}</version>
+                        </path>
+                        <path>
+                            <groupId>io.github.linpeilie</groupId>
+                            <artifactId>mapstruct-plus-processor</artifactId>
+                            <version>${mapstruct-plus.version}</version>
+                        </path>
+                        <path>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok-mapstruct-binding</artifactId>
+                            <version>0.2.0</version>
+                        </path>
+                        <!-- other annotation processors -->
+                    </annotationProcessorPaths>
+                </configuration>
+            </plugin>
+
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>appassembler-maven-plugin</artifactId>

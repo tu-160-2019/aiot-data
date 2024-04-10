@@ -65,7 +65,7 @@ public class ProductModelDataImpl implements IProductModelData, IJPACommData<Pro
             data.setId(UUID.randomUUID().toString());
         }
         data.setModifyAt(System.currentTimeMillis());
-        productModelService.save(MapstructUtils.convert(data, TbProductModel.class));
+        productModelService.saveOrUpdate(MapstructUtils.convert(data, TbProductModel.class));
         return null;
     }
 

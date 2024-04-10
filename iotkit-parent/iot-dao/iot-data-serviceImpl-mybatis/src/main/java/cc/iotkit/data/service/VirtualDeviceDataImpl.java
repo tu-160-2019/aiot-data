@@ -127,7 +127,7 @@ public class VirtualDeviceDataImpl implements IVirtualDeviceData, IJPACommData<V
             data.setState(VirtualDevice.STATE_STOPPED);
             data.setCreateAt(System.currentTimeMillis());
         }
-        virtualDeviceService.save(MapstructUtils.convert(data, TbVirtualDevice.class));
+        virtualDeviceService.saveOrUpdate(MapstructUtils.convert(data, TbVirtualDevice.class));
 
         //删除旧的添加新的关联设备记录
         virtualDeviceMappingService.deleteByVirtualId(data.getId());

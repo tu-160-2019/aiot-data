@@ -43,10 +43,12 @@ public class ResponseResultHandler implements ResponseBodyAdvice<Object> {
             GlobalExceptionHandler.RequestResult requestResult = (GlobalExceptionHandler.RequestResult) body;
             return new Response(requestResult.getCode(), requestResult.getMessage(),
                     "", IdUtil.simpleUUID());
-        } else if (body instanceof SaResult) {
+        }
+        else if (body instanceof SaResult) {
             SaResult result = (SaResult) body;
             return new Response(result.getCode(), result.getMsg(), result.getData(), IdUtil.simpleUUID());
-        } else if (body instanceof Map) {
+        }
+        else if (body instanceof Map) {
             Map map = (Map) body;
             //spring mvc内部异常
             if (map.containsKey("timestamp") && map.containsKey("status") && map.containsKey("error")) {

@@ -110,7 +110,7 @@ public class RuleInfoDataImpl implements IRuleInfoData, IJPACommData<RuleInfo, S
             data.setId(UUID.randomUUID().toString());
             data.setCreateAt(System.currentTimeMillis());
         }
-        ruleInfoService.save(from(data));
+        ruleInfoService.saveOrUpdate(from(data));
         return data;
     }
 

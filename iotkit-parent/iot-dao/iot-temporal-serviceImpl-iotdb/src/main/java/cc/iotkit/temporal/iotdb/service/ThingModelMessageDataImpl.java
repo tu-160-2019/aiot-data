@@ -34,6 +34,11 @@ public class ThingModelMessageDataImpl implements IThingModelMessageData {
     }
 
     @Override
+    public Paging<ThingModelMessage> findByTypeAndDeviceIds(List<String> deviceIds, String type, String identifier, int page, int size) {
+        return new Paging<>();
+    }
+
+    @Override
     public void add(ThingModelMessage msg) {
     }
 

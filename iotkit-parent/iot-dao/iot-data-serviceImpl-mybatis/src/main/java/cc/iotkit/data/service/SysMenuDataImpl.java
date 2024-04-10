@@ -72,7 +72,7 @@ public class SysMenuDataImpl implements ISysMenuData, IJPACommData<SysMenu, Long
 
     @Override
     public SysMenu save(SysMenu data) {
-        sysMenuService.save(MapstructUtils.convert(data, TbSysMenu.class));
+        sysMenuService.saveOrUpdate(MapstructUtils.convert(data, TbSysMenu.class));
         return data;
     }
 

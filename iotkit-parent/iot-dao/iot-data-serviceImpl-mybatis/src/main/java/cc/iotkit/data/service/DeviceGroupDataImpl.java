@@ -53,7 +53,7 @@ public class DeviceGroupDataImpl implements IDeviceGroupData, IJPACommData<Devic
         if (StringUtils.isBlank(data.getId())) {
             data.setId(UUID.randomUUID().toString());
         }
-        deviceGroupService.save(MapstructUtils.convert(data, TbDeviceGroup.class));
+        deviceGroupService.saveOrUpdate(MapstructUtils.convert(data, TbDeviceGroup.class));
         return data;
     }
 

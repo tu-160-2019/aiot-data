@@ -100,10 +100,10 @@
         <!--        </dependency>-->
 
         <!--内置oss-->
-        <dependency>
+        <!--<dependency>
             <groupId>cc.iotkit</groupId>
             <artifactId>iot-oss-embed</artifactId>
-        </dependency>
+        </dependency>-->
 
         <!--====================第三方库===================-->
 
@@ -197,7 +197,7 @@
                     <appendAssemblyId>false</appendAssemblyId>
                     <archive>
                         <manifest>
-                            <mainClass>cc.iotkit.Application</mainClass>
+                            <mainClass>cc.iotkit.IotMybatisApplication</mainClass>
                         </manifest>
                     </archive>
                     <descriptors>

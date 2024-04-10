@@ -364,9 +364,9 @@ public class DeviceInfoDataImpl implements IDeviceInfoData, IJPACommData<DeviceI
         if (deviceTag != null) {
             deviceTag.setName(tag.getName());
             deviceTag.setValue(tag.getValue());
-            deviceTagService.save(deviceTag);
+            deviceTagService.saveOrUpdate(deviceTag);
         } else {
-            deviceTagService.save(
+            deviceTagService.saveOrUpdate(
                     TbDeviceTag.builder()
                             .id(UUID.randomUUID().toString())
                             .code(tag.getId())
@@ -425,7 +425,7 @@ public class DeviceInfoDataImpl implements IDeviceInfoData, IJPACommData<DeviceI
     @Transactional
     public void addToGroup(String deviceId, DeviceInfo.Group group) {
         String groupId = UUID.randomUUID().toString();
-        deviceGroupMappingService.save(new TbDeviceGroupMapping(groupId, deviceId, group.getId()));
+        deviceGroupMappingService.saveOrUpdate(new TbDeviceGroupMapping(groupId, deviceId, group.getId()));
 
         //更新设备数量
         updateGroupDeviceCount(groupId);
@@ -436,7 +436,7 @@ public class DeviceInfoDataImpl implements IDeviceInfoData, IJPACommData<DeviceI
         TbDeviceGroup deviceGroup = deviceGroupService.getById(groupId);
         if (deviceGroup != null) {
             deviceGroup.setDeviceQty((int) countByGroupId(groupId));
-            deviceGroupService.save(deviceGroup);
+            deviceGroupService.saveOrUpdate(deviceGroup);
         }
     }
 
@@ -512,7 +512,7 @@ public class DeviceInfoDataImpl implements IDeviceInfoData, IJPACommData<DeviceI
                     .eq(TbDeviceGroupMapping::getDeviceId, data.getDeviceId()).eq(TbDeviceGroupMapping::getGroupId, id));
             if (mapping == null) {
                 //保存设备分组与设备对应关系
-                deviceGroupMappingService.save(new TbDeviceGroupMapping(
+                deviceGroupMappingService.saveOrUpdate(new TbDeviceGroupMapping(
                         UUID.randomUUID().toString(),
                         data.getDeviceId(),
                         id

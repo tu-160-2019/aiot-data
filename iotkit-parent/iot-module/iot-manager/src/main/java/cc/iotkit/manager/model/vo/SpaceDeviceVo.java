@@ -14,6 +14,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -84,6 +85,11 @@ public class SpaceDeviceVo {
      * 品类名
      */
     private String categoryName;
+
+    /**
+     * 创建时间
+     */
+    private Date createTime;
 
     /**
      * 是否收藏

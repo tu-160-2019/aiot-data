@@ -61,7 +61,7 @@ public class TbVirtualDevice {
      * 触发方式执行方式
      */
     @ApiModelProperty(value = "触发方式执行方式")
-    @TableField("trigger")
+    @TableField("'trigger'")
     private String trigger;
 
     /**

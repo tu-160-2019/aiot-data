@@ -62,7 +62,7 @@ public class CategoryDataImpl implements ICategoryData, IJPACommData<Category, S
 
     @Override
     public Category save(Category data) {
-        categoryService.save(MapstructUtils.convert(data, TbCategory.class));
+        categoryService.saveOrUpdate(MapstructUtils.convert(data, TbCategory.class));
 
         TbCategory td = categoryService.getOne(new LambdaQueryWrapper<TbCategory>()
                 .eq(TbCategory::getName, data.getName()));

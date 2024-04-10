@@ -10,6 +10,7 @@ import cc.iotkit.data.model.TbPluginInfo;
 import cc.iotkit.model.plugin.PluginInfo;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.core.toolkit.ObjectUtils;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
@@ -52,8 +53,8 @@ public class PluginInfoDataImpl implements IPluginInfoData, IJPACommData<PluginI
     @Override
     public Paging<PluginInfo> findAll(PageRequest<PluginInfo> pageRequest) {
         LambdaQueryWrapper<TbPluginInfo> wrapper = new LambdaQueryWrapper<TbPluginInfo>();
-        wrapper.eq(TbPluginInfo::getType, pageRequest.getData().getType());
-        wrapper.eq(TbPluginInfo::getState, pageRequest.getData().getState());
+        wrapper.eq(!ObjectUtils.isEmpty(pageRequest.getData().getType()), TbPluginInfo::getType, pageRequest.getData().getType())
+                .eq(!ObjectUtils.isEmpty(pageRequest.getData().getState()), TbPluginInfo::getState, pageRequest.getData().getState());
 
         Page<TbPluginInfo> rowPage = new Page<>(pageRequest.getPageNum(), pageRequest.getPageSize());
         Page<TbPluginInfo> page = pluginInfoService.page(rowPage, wrapper);

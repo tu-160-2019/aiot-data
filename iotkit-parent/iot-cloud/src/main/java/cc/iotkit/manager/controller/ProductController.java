@@ -12,8 +12,8 @@ package cc.iotkit.manager.controller;
 import cc.iotkit.common.api.PageRequest;
 import cc.iotkit.common.api.Paging;
 import cc.iotkit.common.api.Request;
-import cc.iotkit.common.log.annotation.Log;
-import cc.iotkit.common.log.enums.BusinessType;
+//import cc.iotkit.common.log.annotation.Log;
+//import cc.iotkit.common.log.enums.BusinessType;
 import cc.iotkit.common.validate.AddGroup;
 import cc.iotkit.common.validate.EditGroup;
 import cc.iotkit.manager.dto.bo.category.CategoryBo;
@@ -59,7 +59,7 @@ public class ProductController {
     @ApiOperation("新建")
     @SaCheckPermission("iot:product:add")
     @PostMapping(value = "/add")
-    @Log(title = "产品", businessType = BusinessType.INSERT)
+//    @Log(title = "产品", businessType = BusinessType.INSERT)
     public ProductVo create(@Validated(AddGroup.class) @RequestBody Request<ProductBo> request) {
         return productService.addEntity(request.getData());
     }
@@ -67,7 +67,7 @@ public class ProductController {
     @ApiOperation(value = "编辑产品")
     @SaCheckPermission("iot:product:edit")
     @PostMapping("/edit")
-    @Log(title = "产品", businessType = BusinessType.UPDATE)
+//    @Log(title = "产品", businessType = BusinessType.UPDATE)
     public boolean edit(@Validated(EditGroup.class) @RequestBody Request<ProductBo> request) {
         return productService.updateEntity(request.getData());
     }
@@ -103,7 +103,7 @@ public class ProductController {
     @ApiOperation("删除物模型")
     @SaCheckPermission("iot:thingModel:remove")
     @PostMapping("/thingModel/delete")
-    @Log(title = "物模型", businessType = BusinessType.DELETE)
+//    @Log(title = "物模型", businessType = BusinessType.DELETE)
     public boolean deleteThingModel(@Validated @RequestBody Request<Long> id) {
         return productService.deleteThingModel(id.getData());
     }

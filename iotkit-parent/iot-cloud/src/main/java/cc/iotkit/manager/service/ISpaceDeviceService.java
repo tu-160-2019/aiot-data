@@ -1,5 +1,7 @@
 package cc.iotkit.manager.service;
 
+import cc.iotkit.common.api.Paging;
+import cc.iotkit.common.thing.ThingModelMessage;
 import cc.iotkit.model.space.SpaceDevice;
 
 import java.util.List;
@@ -23,4 +25,8 @@ public interface ISpaceDeviceService {
     void deleteById (Long id);
 
     SpaceDevice findById (Long id);
+
+    Paging<ThingModelMessage> findByTypeAndDeviceIds(List<String> deviceIds, String type,
+                                                     String identifier,
+                                                     int page, int size);
 }

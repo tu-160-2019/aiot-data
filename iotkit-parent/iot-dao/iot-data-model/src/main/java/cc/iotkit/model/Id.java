@@ -9,9 +9,7 @@
  */
 package cc.iotkit.model;
 
-import java.io.Serializable;
-
-public interface Id<T> extends Serializable {
+public interface Id<T> {
 
     T getId();
 

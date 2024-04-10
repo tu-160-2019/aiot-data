@@ -6,6 +6,7 @@ import cc.iotkit.common.enums.ErrCode;
 import cc.iotkit.common.exception.BizException;
 import cc.iotkit.common.oss.core.OssClient;
 import cc.iotkit.common.oss.factory.OssFactory;
+import cc.iotkit.common.oss.entity.UploadResult;
 import cc.iotkit.common.utils.StringUtils;
 import cc.iotkit.data.manager.IDeviceInfoData;
 import cc.iotkit.data.manager.IDeviceOtaDetailData;
@@ -30,7 +31,6 @@ import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
-import cc.iotkit.common.oss.entity.UploadResult;
 
 import java.io.BufferedInputStream;
 import java.io.File;

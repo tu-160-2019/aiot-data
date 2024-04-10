@@ -63,7 +63,7 @@ public class OauthClientDataImpl implements IOauthClientData, IJPACommData<Oauth
             data.setId(UUID.randomUUID().toString());
             data.setCreateAt(System.currentTimeMillis());
         }
-        oauthClientService.save(MapstructUtils.convert(data, TbOauthClient.class));
+        oauthClientService.saveOrUpdate(MapstructUtils.convert(data, TbOauthClient.class));
         return data;
     }
 

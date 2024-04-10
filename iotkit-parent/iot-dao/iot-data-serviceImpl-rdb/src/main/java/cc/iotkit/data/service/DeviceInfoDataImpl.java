@@ -4,7 +4,6 @@ import cc.iotkit.common.api.PageRequest;
 import cc.iotkit.common.api.Paging;
 import cc.iotkit.common.utils.MapstructUtils;
 import cc.iotkit.common.utils.ReflectUtil;
-import cc.iotkit.common.utils.StreamUtils;
 import cc.iotkit.data.dao.*;
 import cc.iotkit.data.manager.ICategoryData;
 import cc.iotkit.data.manager.IDeviceInfoData;
@@ -17,10 +16,7 @@ import cc.iotkit.model.device.message.DevicePropertyCache;
 import cc.iotkit.model.product.Category;
 import cc.iotkit.model.product.Product;
 import cc.iotkit.model.stats.DataItem;
-import cc.iotkit.model.system.SysDept;
-import cc.iotkit.model.system.SysUser;
 import cn.hutool.core.util.ObjectUtil;
-import com.querydsl.core.types.Expression;
 import com.querydsl.core.types.Predicate;
 import com.querydsl.core.types.Projections;
 import com.querydsl.jpa.impl.JPAQuery;
@@ -41,8 +37,6 @@ import static cc.iotkit.data.model.QTbDeviceGroupMapping.tbDeviceGroupMapping;
 import static cc.iotkit.data.model.QTbDeviceInfo.tbDeviceInfo;
 import static cc.iotkit.data.model.QTbDeviceSubUser.tbDeviceSubUser;
 import static cc.iotkit.data.model.QTbProduct.tbProduct;
-import static cc.iotkit.data.model.QTbSysDept.tbSysDept;
-import static cc.iotkit.data.model.QTbSysUser.tbSysUser;
 
 @Primary
 @Service
@@ -485,8 +479,10 @@ public class DeviceInfoDataImpl implements IDeviceInfoData, IJPACommData<DeviceI
     }
 
     private List<DeviceInfo> buildQuery(Predicate predicate) {
-        List<TbDeviceInfo> devices = jpaQueryFactory.select(Projections.bean(TbDeviceInfo.class,
-                tbDeviceInfo.deviceId, tbDeviceInfo.deviceName, tbDeviceInfo.state ))
+        List<TbDeviceInfo> devices = jpaQueryFactory.select(Projections.bean(TbDeviceInfo.class,tbDeviceInfo.uid,
+                tbDeviceInfo.deviceId, tbDeviceInfo.productKey,tbDeviceInfo.deviceName, tbDeviceInfo.state,tbDeviceInfo.createAt,
+                tbDeviceInfo.id,tbDeviceInfo.onlineTime,tbDeviceInfo.parentId,tbDeviceInfo.latitude,tbDeviceInfo.longitude,tbDeviceInfo.model,
+                tbDeviceInfo.offlineTime,tbDeviceInfo.secret))
                 .from(tbDeviceInfo)
                 .where(predicate).fetch();
         return MapstructUtils.convert(devices, DeviceInfo.class);
@@ -495,7 +491,8 @@ public class DeviceInfoDataImpl implements IDeviceInfoData, IJPACommData<DeviceI
     private Predicate buildQueryCondition(DeviceInfo device) {
         return PredicateBuilder.instance()
                 .and(ObjectUtil.isNotNull(device.getId()), () -> tbDeviceInfo.id.eq(device.getId()))
-                .and(ObjectUtil.isNotNull(device.getState().isOnline()), () -> tbDeviceInfo.state.eq(device.getState().isOnline() ? "online" : "offline"))
+                .and(ObjectUtil.isNotNull(device.getDeviceName()), () -> tbDeviceInfo.deviceName.eq(device.getDeviceName()))
+                .and(ObjectUtil.isNotNull(device.getState()), () -> tbDeviceInfo.state.eq(device.getState().isOnline() ? "online" : "offline"))
                 .build();
     }
 

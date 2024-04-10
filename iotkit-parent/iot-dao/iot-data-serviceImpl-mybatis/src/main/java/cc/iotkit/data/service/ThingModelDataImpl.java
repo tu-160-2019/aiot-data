@@ -36,12 +36,13 @@ import org.springframework.stereotype.Service;
 public class ThingModelDataImpl implements IThingModelData, IJPACommData<ThingModel, Long> {
 //public class ThingModelDataImpl implements IThingModelData, IJPACommData<ThingModel, Long, TbThingModel> {
 
+    @Resource
     @Qualifier("DBThingModelServiceImpl")
-    private ThingModelService thingModelService;
+    private ThingModelService dbThingModelServiceImpl;
 
     @Override
     public ThingModelService getBaseRepository() {
-        return thingModelService;
+        return dbThingModelServiceImpl;
     }
 
     @Override
@@ -56,7 +57,7 @@ public class ThingModelDataImpl implements IThingModelData, IJPACommData<ThingMo
 
     @Override
     public ThingModel findById(Long id) {
-        TbThingModel tbThingModel = thingModelService.findById(id);
+        TbThingModel tbThingModel = dbThingModelServiceImpl.findById(id);
         ThingModel thingModel = MapstructUtils.convert(tbThingModel, ThingModel.class);
         if (tbThingModel != null && thingModel != null) {
             thingModel.setModel(JsonUtils.parseObject(tbThingModel.getModel(), ThingModel.Model.class));
@@ -69,18 +70,18 @@ public class ThingModelDataImpl implements IThingModelData, IJPACommData<ThingMo
         TbThingModel tbThingModel = MapstructUtils.convert(data, TbThingModel.class);
         Assert.notNull(tbThingModel, "ThingModel is null.");
         tbThingModel.setModel(JsonUtils.toJsonString(data.getModel()));
-        thingModelService.save(tbThingModel);
+        dbThingModelServiceImpl.saveOrUpdate(tbThingModel);
         return data;
     }
 
     @Override
     public void deleteById(Long id) {
-        thingModelService.removeById(id);
+        dbThingModelServiceImpl.removeById(id);
     }
 
     @Override
     public ThingModel findByProductKey(String productKey) {
-        TbThingModel tbThingModel = thingModelService.findByProductKey(productKey);
+        TbThingModel tbThingModel = dbThingModelServiceImpl.findByProductKey(productKey);
         ThingModel thingModel = MapstructUtils.convert(tbThingModel, ThingModel.class);
         if (tbThingModel != null && thingModel != null) {
             thingModel.setModel(JsonUtils.parseObject(tbThingModel.getModel(), ThingModel.Model.class));

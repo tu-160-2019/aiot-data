@@ -52,13 +52,13 @@
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
-            <version>${mybatisplus.version}</version>
+            <!--<version>${mybatisplus.version}</version>-->
             <!--<version>3.5.3.1</version>-->
         </dependency>
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-extension</artifactId>
-            <version>${mybatisplus.version}</version>
+            <!--<version>${mybatisplus.version}</version>-->
         </dependency>
         <!--<dependency>
             <groupId>javax.validation</groupId>
@@ -80,12 +80,12 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>${mysql-connector-java.version}</version>
+            <!--<version>${mysql-connector-java.version}</version>-->
         </dependency>
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
-            <version>${postgresql.version}</version>
+            <!--<version>${postgresql.version}</version>-->
         </dependency>
         <dependency>
             <groupId>commons-io</groupId>

@@ -43,12 +43,25 @@
         <beanutils.version>1.9.3</beanutils.version>
         <lang3.version>3.7</lang3.version>
         <hutool.version>5.8.18</hutool.version>
+        <mybatisplus.version>3.5.5</mybatisplus.version>
+        <mysql-connector-java.version>8.0.22</mysql-connector-java.version>
         <mapstruct-plus.version>1.3.1</mapstruct-plus.version>
         <spring-brick.version>3.1.4</spring-brick.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql-connector-java.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.postgresql</groupId>
+                <artifactId>postgresql</artifactId>
+                <version>${postgresql.version}</version>
+            </dependency>
+
             <!-- SpringBoot的依赖配置-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
@@ -62,6 +75,18 @@
                 <groupId>io.github.linpeilie</groupId>
                 <artifactId>mapstruct-plus-spring-boot-starter</artifactId>
                 <version>${mapstruct-plus.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatisplus.version}</version>
+                <!--<version>3.5.3.1</version>-->
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-extension</artifactId>
+                <version>${mybatisplus.version}</version>
             </dependency>
 
             <dependency>

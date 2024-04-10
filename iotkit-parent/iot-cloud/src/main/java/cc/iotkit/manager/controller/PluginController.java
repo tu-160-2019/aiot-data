@@ -3,8 +3,8 @@ package cc.iotkit.manager.controller;
 import cc.iotkit.common.api.PageRequest;
 import cc.iotkit.common.api.Paging;
 import cc.iotkit.common.api.Request;
-import cc.iotkit.common.log.annotation.Log;
-import cc.iotkit.common.log.enums.BusinessType;
+//import cc.iotkit.common.log.annotation.Log;
+//import cc.iotkit.common.log.enums.BusinessType;
 import cc.iotkit.common.validate.AddGroup;
 import cc.iotkit.common.validate.EditGroup;
 import cc.iotkit.common.validate.QueryGroup;
@@ -44,7 +44,7 @@ public class PluginController {
     @ApiOperation("添加插件")
     @SaCheckPermission("iot:plugin:add")
     @PostMapping(value = "/add")
-    @Log(title = "插件", businessType = BusinessType.INSERT)
+//    @Log(title = "插件", businessType = BusinessType.INSERT)
     public void add(@Validated(AddGroup.class) @RequestBody Request<PluginInfoBo> request) {
         pluginService.addPlugin(request.getData());
     }
@@ -52,7 +52,7 @@ public class PluginController {
     @ApiOperation(value = "修改插件")
     @SaCheckPermission("iot:plugin:edit")
     @PostMapping("/edit")
-    @Log(title = "插件", businessType = BusinessType.UPDATE)
+//    @Log(title = "插件", businessType = BusinessType.UPDATE)
     public void edit(@Validated(EditGroup.class) @RequestBody Request<PluginInfoBo> request) {
         pluginService.modifyPlugin(request.getData());
     }
@@ -67,7 +67,7 @@ public class PluginController {
     @ApiOperation(value = "删除插件")
     @SaCheckPermission("iot:plugin:delete")
     @PostMapping("/delete")
-    @Log(title = "插件", businessType = BusinessType.DELETE)
+//    @Log(title = "插件", businessType = BusinessType.DELETE)
     public void delete(@Validated(EditGroup.class) @RequestBody Request<Long> request) {
         pluginService.deletePlugin(request.getData());
     }

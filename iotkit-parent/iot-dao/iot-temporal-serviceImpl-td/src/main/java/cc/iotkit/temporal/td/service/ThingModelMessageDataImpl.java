@@ -73,6 +73,46 @@ public class ThingModelMessageDataImpl implements IThingModelMessageData {
     }
 
     @Override
+    public Paging<ThingModelMessage> findByTypeAndDeviceIds(List<String> deviceIds, String type,
+                                                             String identifier,
+                                                             int page, int size) {
+        String sql = "select time,mid,product_key,device_name,type,identifier,code,data,report_time " +
+                "from thing_model_message where type=? %s order by time desc limit %d offset %d";
+
+        //构建动态条件
+        List<Object> args = new ArrayList<>();
+        args.add(type);
+        StringBuilder sbCond = new StringBuilder();
+        if (deviceIds.size()>0) {
+            sbCond.append(" and deviceIds in (?) ");
+            args.add(String.join(",",deviceIds));
+        }
+        if (StringUtils.isNotBlank(identifier)) {
+            sbCond.append("and identifier=? ");
+            args.add(identifier);
+        }
+
+        sql = String.format(sql, sbCond.toString(), size, (page - 1) * size);
+        List<TbThingModelMessage> ruleLogs = tdTemplate.query(sql,
+                new BeanPropertyRowMapper<>(TbThingModelMessage.class),
+                args.toArray()
+        );
+
+        sql = String.format("select count(*) from thing_model_message where type=? %s",
+                sbCond.toString());
+        List<Long> counts = tdTemplate.queryForList(sql, Long.class, args.toArray());
+        long count = !counts.isEmpty() ? counts.get(0) : 0;
+
+        return new Paging<>(count, ruleLogs.stream().map(r ->
+                new ThingModelMessage(r.getTime().toString(), r.getMid(),
+                        r.getDeviceId(), r.getProductKey(), r.getDeviceName(),
+                        r.getUid(), r.getType(), r.getIdentifier(), r.getCode(),
+                        JsonUtils.parseObject(r.getData(), Map.class),
+                        r.getTime(), r.getReportTime()))
+                .collect(Collectors.toList()));
+    }
+
+    @Override
     public List<TimeData> getDeviceMessageStatsWithUid(String uid, long start, long end) {
         String sql = "select time,count(*) as data from(" +
                 "select TIMETRUNCATE(time,1h) as time from thing_model_message " +

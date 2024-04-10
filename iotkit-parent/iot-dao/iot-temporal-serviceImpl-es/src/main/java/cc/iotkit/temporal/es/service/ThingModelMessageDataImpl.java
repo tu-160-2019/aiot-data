@@ -68,6 +68,27 @@ public class ThingModelMessageDataImpl implements IThingModelMessageData {
     }
 
     @Override
+    public Paging<ThingModelMessage> findByTypeAndDeviceIds(List<String> deviceIds, String type,
+                                                             String identifier,
+                                                             int page, int size) {
+        BoolQueryBuilder builder = QueryBuilders.boolQuery();
+        builder.must(QueryBuilders.termQuery("type", type));
+        if (deviceIds.size()>0) {
+            builder.must(QueryBuilders.termsQuery("deviceId", deviceIds));
+        }
+        if (StringUtils.isNotBlank(identifier)) {
+            builder.must(QueryBuilders.matchPhraseQuery("identifier", identifier));
+        }
+        NativeSearchQuery query = new NativeSearchQueryBuilder().withQuery(builder)
+                .withPageable(PageRequest.of(page - 1, size, Sort.by(Sort.Order.desc("time"))))
+                .build();
+        SearchHits<DocThingModelMessage> result = template.search(query, DocThingModelMessage.class);
+        return new Paging<>(result.getTotalHits(), result.getSearchHits().stream()
+                .map(m -> MapstructUtils.convert(m.getContent(), ThingModelMessage.class))
+                .collect(Collectors.toList()));
+    }
+
+    @Override
     public List<TimeData> getDeviceMessageStatsWithUid(String uid, long start, long end) {
         BoolQueryBuilder queryBuilder = QueryBuilders.boolQuery()
                 .must(QueryBuilders.rangeQuery("time")

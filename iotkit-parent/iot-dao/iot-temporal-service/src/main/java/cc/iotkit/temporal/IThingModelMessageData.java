@@ -38,6 +38,18 @@ public interface IThingModelMessageData {
      */
     List<TimeData> getDeviceMessageStatsWithUid(String uid, long start, long end);
 
+    /**
+     * 查询指定设备集类型并按时间倒序
+     *
+     * @param deviceIds   设备ids
+     * @param type       消息类型
+     * @param identifier 标识符
+     * @param page       页码
+     * @param size       页大小
+     */
+    Paging<ThingModelMessage> findByTypeAndDeviceIds(List<String> deviceIds, String type,
+                                                      String identifier, int page, int size);
+
     void add(ThingModelMessage msg);
 
     long count();

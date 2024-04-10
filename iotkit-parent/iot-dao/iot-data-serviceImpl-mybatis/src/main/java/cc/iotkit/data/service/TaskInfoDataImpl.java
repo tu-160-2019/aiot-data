@@ -104,7 +104,7 @@ public class TaskInfoDataImpl implements ITaskInfoData, IJPACommData<TaskInfo, S
             data.setId(UUID.randomUUID().toString());
             data.setCreateAt(System.currentTimeMillis());
         }
-        taskInfoService.save(to(data));
+        taskInfoService.saveOrUpdate(to(data));
         return data;
     }
 

@@ -60,7 +60,7 @@ public class SysConfigDataImpl implements ISysConfigData, IJPACommData<SysConfig
 
     @Override
     public SysConfig save(SysConfig data) {
-        baseService.save(MapstructUtils.convert(data, TbSysConfig.class));
+        baseService.saveOrUpdate(MapstructUtils.convert(data, TbSysConfig.class));
         return data;
     }
 

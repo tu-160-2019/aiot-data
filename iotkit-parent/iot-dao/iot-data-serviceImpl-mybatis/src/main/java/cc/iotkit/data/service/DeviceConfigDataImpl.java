@@ -61,7 +61,7 @@ public class DeviceConfigDataImpl implements IDeviceConfigData, IJPACommData<Dev
         if (StringUtils.isBlank(data.getId())) {
             data.setId(UUID.randomUUID().toString());
         }
-        deviceConfigService.save(MapstructUtils.convert(data, TbDeviceConfig.class));
+        deviceConfigService.saveOrUpdate(MapstructUtils.convert(data, TbDeviceConfig.class));
         return data;
     }
 

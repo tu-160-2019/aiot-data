@@ -69,7 +69,7 @@ public class ProductDataImpl implements IProductData, IJPACommData<Product, Long
 
     @Override
     public Product save(Product data) {
-        productService.save(MapstructUtils.convert(data, TbProduct.class));
+        productService.saveOrUpdate(MapstructUtils.convert(data, TbProduct.class));
         return data;
     }
 

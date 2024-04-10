@@ -9,6 +9,8 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import java.io.Serializable;
+
+
 @ApiModel(value = "DeviceConfigVo")
 @Data
 @ExcelIgnoreUnannotated
