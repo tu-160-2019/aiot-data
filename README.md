@@ -22,16 +22,22 @@ AIOT人工智能物联网平台是一站式物联网开发基础平台，帮助�
 
 #### 系统部分截图
 ![输入图片说明](images/iot1.jpg)
+  物联网功能
 
 ![输入图片说明](images/data1.jpg)
+  数据平台功能
 
 ![输入图片说明](images/data2.jpg)
+  数据平台功能
 
 ![输入图片说明](images/AI1.jpg)
+  AI功能
 
 ![输入图片说明](images/screen1.jpg)
+  大屏设计功能
 
 ![输入图片说明](images/screen2.jpg)
+  大屏设计功能
 
 
 #### 安装教程
