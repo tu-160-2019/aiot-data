@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="net.srt.dao.DataFileDao">
+
+    <resultMap type="net.srt.entity.DataFileEntity" id="dataFileMap">
+        <result property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="fileCategoryId" column="file_category_id"/>
+        <result property="type" column="type"/>
+        <result property="fileUrl" column="file_url"/>
+        <result property="description" column="description"/>
+        <result property="size" column="size"/>
+        <result property="version" column="version"/>
+        <result property="projectId" column="project_id"/>
+        <result property="orgId" column="org_id"/>
+        <result property="deleted" column="deleted"/>
+        <result property="creator" column="creator"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updater" column="updater"/>
+        <result property="updateTime" column="update_time"/>
+    </resultMap>
+
+    <select id="getResourceList" resultType="net.srt.entity.DataFileEntity">
+        <choose>
+            <when test="queryApply!=null and queryApply==1">
+                SELECT
+                DISTINCT df.*
+                FROM
+                data_file df
+                INNER JOIN data_assets_resource_mount darm ON df.id = darm.mount_id
+                INNER JOIN data_market_resource_apply dmra ON dmra.resource_mount_id=darm.id
+                WHERE
+                darm.mount_type=3
+                AND darm.resource_id=#{resourceId}
+                AND dmra.apply_user_id=#{userId}
+                AND apply_start_time<![CDATA[<=]]>now() AND apply_end_time<![CDATA[>=]]>now()
+                AND dmra.status=1 AND dmra.if_auth=1
+                AND df.deleted=0
+            </when>
+            <otherwise>
+                SELECT
+                df.*
+                FROM
+                data_file df
+                INNER JOIN data_assets_resource_mount darm ON df.id = darm.mount_id
+                WHERE
+                darm.mount_type=3
+                AND darm.resource_id=#{resourceId}
+                AND df.deleted=0
+            </otherwise>
+        </choose>
+        <if test="name != null and name.trim() != ''">
+            AND df.name LIKE "%"#{name}"%"
+        </if>
+        <if test="type != null and type.trim() != ''">
+            AND df.type = #{type}
+        </if>
+        ORDER BY df.create_time DESC,df.id DESC
+    </select>
+
+</mapper>

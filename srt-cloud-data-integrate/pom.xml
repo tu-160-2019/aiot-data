@@ -1,148 +1,48 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>iotkit-parent</artifactId>
-        <groupId>cc.iotkit</groupId>
-        <version>0.5.3</version>
+        <groupId>net.srt</groupId>
+        <artifactId>srt-cloud</artifactId>
+        <version>2.0.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>iot-cloud</artifactId>
+    <artifactId>srt-cloud-data-integrate</artifactId>
     <packaging>jar</packaging>
 
-    <properties>
-<!--        <mybatisplus.version>3.5.5</mybatisplus.version>-->
-<!--        <mysql-connector-java.version>8.0.22</mysql-connector-java.version>-->
-    </properties>
     <dependencies>
-        <!--<dependency>
+        <dependency>
             <groupId>net.srt</groupId>
             <artifactId>srt-cloud-api</artifactId>
             <version>2.0.0</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-starter-logging</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>-->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-openfeign-core</artifactId>
         </dependency>
-        <!-- iot -->
-        <dependency>
-            <groupId>cc.iotkit</groupId>
-            <artifactId>iot-common-excel</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>cc.iotkit</groupId>
-                    <artifactId>iot-common-satoken</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>cn.dev33</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>cc.iotkit</groupId>
-            <artifactId>iot-common-log</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>cc.iotkit</groupId>
-                    <artifactId>iot-common-satoken</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>cn.dev33</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>cc.iotkit</groupId>
-            <artifactId>iot-common-oss</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>cc.iotkit</groupId>
-            <artifactId>iot-common-websocket</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>cc.iotkit</groupId>
-            <artifactId>iot-virtual-device</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-starter-logging</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <!--内置vertx消息总线-->
-        <dependency>
-            <groupId>cc.iotkit</groupId>
-            <artifactId>iot-message-event-bus</artifactId>
-        </dependency>
-        <!--打开注释使用rocketmq消息总线-->
-        <!--<dependency>
-            <groupId>cc.iotkit</groupId>
-            <artifactId>iot-message-rocketmq</artifactId>
-        </dependency>-->
-
-        <!--<dependency>
-            <groupId>cc.iotkit</groupId>
-            <artifactId>iot-data-serviceImpl-rdb</artifactId>
-        </dependency>-->
-        <dependency>
-            <groupId>cc.iotkit</groupId>
-            <artifactId>iot-data-serviceImpl-mybatis</artifactId>
-        </dependency>
-        <!--打开注释 启用es数据库-->
-        <!--<dependency>
-            <groupId>cc.iotkit</groupId>
-            <artifactId>iot-temporal-serviceImpl-es</artifactId>
-        </dependency>-->
-        <!--打开注释 启用timescale数据库-->
-        <!--<dependency>
-            <groupId>cc.iotkit</groupId>
-            <artifactId>iot-temporal-serviceImpl-ts</artifactId>
-        </dependency>-->
-        <!--打开注释 启用tdengine数据库-->
-        <dependency>
-            <groupId>cc.iotkit</groupId>
-            <artifactId>iot-temporal-serviceImpl-td</artifactId>
-        </dependency>
-        <!--内置oss-->
-        <!--<dependency>
-            <groupId>cc.iotkit</groupId>
-            <artifactId>iot-oss-embed</artifactId>
-        </dependency>-->
-
         <!--使用log42j-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-log4j2</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-mail</artifactId>
+            <groupId>net.srt</groupId>
+            <artifactId>srt-cloud-mybatis</artifactId>
+            <version>2.0.0</version>
         </dependency>
-        <!--<dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+        <dependency>
+            <groupId>net.srt</groupId>
+            <artifactId>srt-cloud-dbswitch</artifactId>
+            <version>2.0.0</version>
             <exclusions>
                 <exclusion>
-                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>jsqlparser</artifactId>
+                    <groupId>com.github.jsqlparser</groupId>
+                </exclusion>
+                <exclusion>
                     <artifactId>spring-boot-starter-logging</artifactId>
+                    <groupId>org.springframework.boot</groupId>
                 </exclusion>
             </exclusions>
-        </dependency>-->
+        </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-bootstrap</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-starter-logging</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
@@ -151,6 +51,14 @@
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.github.xiaoymin</groupId>
+            <artifactId>knife4j-springdoc-ui</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.quartz-scheduler</groupId>
+            <artifactId>quartz</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -168,131 +76,23 @@
             <version>2.6.11</version>
         </dependency>
         <dependency>
-            <groupId>org.springframework.integration</groupId>
-            <artifactId>spring-integration-mqtt</artifactId>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct</artifactId>
         </dependency>
         <dependency>
-            <groupId>io.github.linpeilie</groupId>
-            <artifactId>mapstruct-plus-spring-boot-starter</artifactId>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct-jdk8</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.github.xiaoymin</groupId>
-            <artifactId>knife4j-springdoc-ui</artifactId>
-        </dependency>
-        <!-- plugin manager -->
-        <dependency>
-            <groupId>com.gitee.starblues</groupId>
-            <artifactId>spring-brick</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-starter-web</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <!-- 嵌入式 es -->
-        <dependency>
-            <groupId>org.elasticsearch</groupId>
-            <artifactId>elasticsearch</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.elasticsearch.plugin</groupId>
-            <artifactId>transport-netty4-client</artifactId>
-        </dependency>
-        <!-- 嵌入式 redis -->
-        <dependency>
-            <groupId>it.ozimov</groupId>
-            <artifactId>embedded-redis</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.slf4j</groupId>
-                    <artifactId>slf4j-simple</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <optional>true</optional>
-        </dependency>
-        <dependency>
-            <groupId>io.vertx</groupId>
-            <artifactId>vertx-core</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>io.vertx</groupId>
-            <artifactId>vertx-web-client</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>io.vertx</groupId>
-            <artifactId>vertx-web-proxy</artifactId>
-        </dependency>
-        <!--mqtt-->
-        <dependency>
-            <groupId>io.vertx</groupId>
-            <artifactId>vertx-mqtt</artifactId>
-        </dependency>
-        <!--kafka-->
-        <dependency>
-            <groupId>io.vertx</groupId>
-            <artifactId>vertx-kafka-client</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>com.squareup.okhttp3</groupId>
-            <artifactId>okhttp</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>jakarta.xml.bind</groupId>
-            <artifactId>jakarta.xml.bind-api</artifactId>
-            <version>4.0.1</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.quartz-scheduler</groupId>
-            <artifactId>quartz</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>com.zaxxer</groupId>
-                    <artifactId>HikariCP-java7</artifactId>
-                </exclusion>
-            </exclusions>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct-processor</artifactId>
         </dependency>
     </dependencies>
 
     <build>
         <!--<finalName>${project.artifactId}</finalName>-->
+        <!--生成可执行文件 linux，win系统，win首次执行需要先 app.bat install-->
         <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
-                <configuration>
-                    <source>${java.version}</source> <!-- depending on your project -->
-                    <target>${java.version}</target> <!-- depending on your project -->
-                    <encoding>utf8</encoding>
-                    <annotationProcessorPaths>
-                        <path>
-                            <groupId>org.projectlombok</groupId>
-                            <artifactId>lombok</artifactId>
-                            <version>${lombok.version}</version>
-                        </path>
-                        <path>
-                            <groupId>io.github.linpeilie</groupId>
-                            <artifactId>mapstruct-plus-processor</artifactId>
-                            <version>${mapstruct-plus.version}</version>
-                        </path>
-                        <path>
-                            <groupId>org.projectlombok</groupId>
-                            <artifactId>lombok-mapstruct-binding</artifactId>
-                            <version>0.2.0</version>
-                        </path>
-                        <!-- other annotation processors -->
-                    </annotationProcessorPaths>
-                </configuration>
-            </plugin>
-
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>appassembler-maven-plugin</artifactId>
@@ -329,7 +129,7 @@
                     <daemons>
                         <daemon>
                             <id>${project.artifactId}</id>
-                            <mainClass>cc.iotkit.IotApplication</mainClass>
+                            <mainClass>net.srt.DataIntegrateApplication</mainClass>
                             <platforms>
                                 <platform>jsw</platform>
                             </platforms>
@@ -374,7 +174,7 @@
                                     <extraArgument>-server</extraArgument>
                                     <extraArgument>-Dfile.encoding=utf-8</extraArgument>
                                     <extraArgument>-Xms128m</extraArgument>
-                                    <extraArgument>-Xmx2048m</extraArgument>
+                                    <extraArgument>-Xmx1024m</extraArgument>
                                     <extraArgument>-XX:+PrintGCDetails</extraArgument><!--输出GC的详细日志-->
                                     <extraArgument>-XX:+PrintGCDateStamps</extraArgument><!--输出GC的时间戳-->
                                     <extraArgument>-Xloggc:logs/gc.log</extraArgument><!--日志文件的输出路径-->
@@ -384,14 +184,14 @@
                     </daemons>
                     <programs>
                         <program>
-                            <mainClass>cc.iotkit.IotApplication</mainClass>
+                            <mainClass>net.srt.DataIntegrateApplication</mainClass>
                             <id>${project.artifactId}</id>
                         </program>
                     </programs>
                 </configuration>
             </plugin>
 
-            <!--<plugin>
+           <!-- <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>-->
@@ -413,9 +213,9 @@
                     <plugin>
                         <artifactId>maven-assembly-plugin</artifactId>
                         <configuration>
-                            <outputDirectory>../../target/win</outputDirectory>
+                            <outputDirectory>../target/win</outputDirectory>
                             <descriptors>
-                                <descriptor>${project.parent.parent.basedir}/assembly/assembly-win.xml</descriptor>
+                                <descriptor>${project.parent.basedir}/assembly/assembly-win.xml</descriptor>
                             </descriptors>
                         </configuration>
                         <executions>
@@ -438,9 +238,9 @@
                     <plugin>
                         <artifactId>maven-assembly-plugin</artifactId>
                         <configuration>
-                            <outputDirectory>../../target/linux</outputDirectory>
+                            <outputDirectory>../target/linux</outputDirectory>
                             <descriptors>
-                                <descriptor>${project.parent.parent.basedir}/assembly/assembly-linux.xml</descriptor>
+                                <descriptor>${project.parent.basedir}/assembly/assembly-linux.xml</descriptor>
                             </descriptors>
                         </configuration>
                         <executions>
@@ -466,10 +266,10 @@
                     <plugin>
                         <artifactId>maven-assembly-plugin</artifactId>
                         <configuration>
-                            <outputDirectory>../../target</outputDirectory>
+                            <outputDirectory>../target</outputDirectory>
                             <descriptors>
-                                <descriptor>${project.parent.parent.basedir}/assembly/assembly-win.xml</descriptor>
-                                <descriptor>${project.parent.parent.basedir}/assembly/assembly-linux.xml</descriptor>
+                                <descriptor>${project.parent.basedir}/assembly/assembly-win.xml</descriptor>
+                                <descriptor>${project.parent.basedir}/assembly/assembly-linux.xml</descriptor>
                             </descriptors>
                         </configuration>
                         <executions>
@@ -486,5 +286,4 @@
             </build>
         </profile>
     </profiles>
-
 </project>

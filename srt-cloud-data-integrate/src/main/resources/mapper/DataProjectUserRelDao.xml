@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="net.srt.dao.DataProjectUserRelDao">
+
+    <resultMap type="net.srt.entity.DataProjectUserRelEntity" id="dataProjectUserRelMap">
+        <result property="id" column="id"/>
+        <result property="dataProjectId" column="data_project_id"/>
+        <result property="userId" column="user_id"/>
+        <result property="version" column="version"/>
+        <result property="deleted" column="deleted"/>
+        <result property="creator" column="creator"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updater" column="updater"/>
+        <result property="updateTime" column="update_time"/>
+    </resultMap>
+
+    <select id="getByProjectIdAndUserId" resultType="net.srt.entity.DataProjectUserRelEntity">
+        SELECT * FROM data_project_user_rel WHERE data_project_id=#{projectId} AND user_id=#{userId}
+    </select>
+
+</mapper>

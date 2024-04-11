@@ -1,0 +1,4 @@
+auth:
+  ignore_urls:
+    - /test
+    - /api/**

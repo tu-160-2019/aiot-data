@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="net.srt.dao.DataProjectDao">
+
+    <select id="listProjects" resultType="net.srt.entity.DataProjectEntity">
+        SELECT dp.* FROM data_project_user_rel dpur JOIN data_project dp ON dpur.data_project_id=dp.id
+        WHERE dpur.user_id=#{userId} AND dp.status=1 AND dp.deleted=0
+    </select>
+
+</mapper>

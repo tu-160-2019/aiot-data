@@ -26,6 +26,7 @@
         <module>srt-cloud-module</module>
         <module>srt-cloud-system</module>
         <module>srt-cloud-gateway</module>
+        <module>srt-cloud-data-integrate</module>
         <module>video</module>
         <module>iot-iita-core</module>
         <module>iot-iita-plugins</module>
@@ -257,6 +258,19 @@
             <releases>
                 <enabled>true</enabled>
             </releases>
+        </repository>
+        <repository>
+            <id>spring-milestones</id>
+            <name>Spring Milestones</name>
+            <url>https://repo.spring.io/libs-milestone</url>
+        </repository>
+        <repository>
+            <id>central</id>
+            <url>https://repo.maven.apache.org/maven2</url>
+        </repository>
+        <repository>
+            <id>oss-public</id>
+            <url>https://oss.sonatype.org/content/repositories/public</url>
         </repository>
     </repositories>
     <pluginRepositories>
