@@ -22,19 +22,29 @@ AIOT人工智能物联网平台是一站式物联网开发基础平台，帮助�
 
 #### 系统准备说明
 1、数据库脚本在db目录下
+
 2、部署需要放到nacos的相关配置文件在 deploy 目录下
+
 3、对于一些代码拉不下来的情况，在对应的工程上有相应的jar包，手动安装即可。
+
 如：DmJdbcDriver18.jar 不存在
+
 在 srt-cloud-framework\srt-cloud-dbswitch\lib 目录下可以找到
+
 执行 mvn install:install-file -DgroupId=com.dameng -DartifactId=dm-jdbc -Dversion=1.0.0 -Dpackaging=jar -Dfile=DmJdbcDriver18.jar 安装
+
 4、系统默认账号密码：admin/Aa@123456
 
 
 #### 系统启动说明
 1、导入idea
+
 2、启动 GatewayApplication
+
 3、启动 SystemApplication
+
 4、启动 DataIntegrateApplication
+
 5、启动 IotApplication
 
 
