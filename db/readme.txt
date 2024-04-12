@@ -7,7 +7,7 @@ sys_menu
 sys_role_menu
 sys_dict_data
 sys_dict_type
-data_layer
-data_project
+data_layer    在data_layer.sql补充脚本中
+data_project  在data_layer.sql补充脚本中
 
 这些表必须要有数据系统才能正常启动
