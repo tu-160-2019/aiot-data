@@ -31,6 +31,8 @@
         <module>iot-iita-core</module>
         <module>iot-iita-plugins</module>
         <module>iotkit-parent</module>
+        <module>large-dataroom</module>
+        <module>large-dataset</module>
     </modules>
 
     <properties>

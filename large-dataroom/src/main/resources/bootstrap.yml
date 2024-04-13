@@ -1,0 +1,54 @@
+server:
+  port: 8345
+  servlet:
+    context-path: /bigScreenServer
+
+spring:
+  mvc:
+    servlet:
+      load-on-startup: 1
+  application:
+    name: dataroom
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${nacos_host:127.0.0.1}:${nacos_port:8848}
+        # 命名空间，默认：public
+        namespace: ${nacos_namespace:}
+        service: ${spring.application.name}
+      config:
+        server-addr: ${spring.cloud.nacos.discovery.server-addr}
+        namespace: ${spring.cloud.nacos.discovery.namespace}
+        file-extension: yaml
+        # 指定配置
+        extension-configs:
+          - data-id: dataroom-datasource.yaml
+            refresh: true
+  servlet:
+    multipart:
+      max-request-size: 100MB
+      max-file-size: 1024MB
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+    deserialization:
+      # 当实体中没有属性的setter方法时是否抛出异常
+      FAIL_ON_UNKNOWN_PROPERTIES: false
+      # 字符串转允许List，否则导致 @RequestBody List<T> list 类型无法解析
+      ACCEPT_SINGLE_VALUE_AS_ARRAY: true
+
+logging:
+  # 只有配置了日志文件，才能被监控收集
+  file:
+    name: logs/${spring.application.name}.log
+#  endpoints config
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
