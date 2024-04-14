@@ -123,7 +123,7 @@
 					<daemons>
 						<daemon>
 							<id>${project.artifactId}</id>
-							<mainClass>net.srt.SystemApplication</mainClass>
+							<mainClass>com.ai.AiApplication</mainClass>
 							<platforms>
 								<platform>jsw</platform>
 							</platforms>
@@ -178,7 +178,7 @@
 					</daemons>
 					<programs>
 						<program>
-							<mainClass>net.srt.SystemApplication</mainClass>
+							<mainClass>com.ai.AiApplication</mainClass>
 							<id>${project.artifactId}</id>
 						</program>
 					</programs>
