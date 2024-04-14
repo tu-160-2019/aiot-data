@@ -33,6 +33,7 @@
         <module>iotkit-parent</module>
         <module>large-dataroom</module>
         <module>large-dataset</module>
+        <module>ai-monitor</module>
     </modules>
 
     <properties>

@@ -1,0 +1,50 @@
+server:
+  port: 8092
+
+spring:
+  mvc:
+    servlet:
+      load-on-startup: 1
+  application:
+    name: ai-monitor
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${nacos_host:127.0.0.1}:${nacos_port:8848}
+        # 命名空间，默认：public
+        namespace: ${nacos_namespace:}
+        service: ${spring.application.name}
+      config:
+        server-addr: ${spring.cloud.nacos.discovery.server-addr}
+        namespace: ${spring.cloud.nacos.discovery.namespace}
+        file-extension: yaml
+        # 指定配置
+        extension-configs:
+          - data-id: datasource.yaml
+            refresh: true
+  servlet:
+    multipart:
+      max-request-size: 100MB
+      max-file-size: 1024MB
+
+ai:
+  file:
+    domain: http://175.178.39.232:19300
+    path: /bigdata/deploy/ai/uploadPath
+    prefix: /statics
+
+logging:
+  # 只有配置了日志文件，才能被监控收集
+  file:
+    name: logs/${spring.application.name}.log
+#  endpoints config
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
