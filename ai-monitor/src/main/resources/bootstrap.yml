@@ -40,11 +40,16 @@ feign:
   okhttp:
     enabled: true
 
+# 注意，此处的domain、path及prefix需要与datasource配置文件中的配置保持一致
 ai:
   file:
-    domain: http://175.178.39.232:19300
-    path: /bigdata/deploy/ai/uploadPath
-    prefix: /statics
+    domain: http://localhost:8083/sys
+    # 本地上传路径
+    path: /bigdata/deploy/aiot-data/upload
+    # 配置访问前缀
+    prefix:
+  model:
+    path: /bigdata/code/aiot-data/ai-monitor/src/main/resources/model
 
 logging:
   # 只有配置了日志文件，才能被监控收集

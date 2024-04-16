@@ -4,6 +4,7 @@ import com.ai.detection.service.AiService;
 import com.ai.util.Onnx;
 import com.ai.util.Output;
 import com.ai.model.YoloV7;
+import lombok.AllArgsConstructor;
 import net.srt.framework.common.utils.file.FileUtils;
 import org.opencv.core.Mat;
 import org.opencv.imgcodecs.Imgcodecs;
@@ -16,11 +17,14 @@ import com.ai.model.*;
 import com.ai.config.AiConfig;
 
 @Service
+@AllArgsConstructor
 public class AiServiceImpl implements AiService {
 
     static String model_path = "";
 
     static String test_img = "";
+
+    AiConfig aiConfig;
 
     static String[] names = {
             "person", "bicycle", "car", "motorcycle", "airplane", "bus", "train",
@@ -38,15 +42,15 @@ public class AiServiceImpl implements AiService {
 
     @Override
     public String yolo7(String filepath) {
-//        model_path = ClassLoader.getSystemResource("model/yolov7-tiny.onnx").getPath();
-        model_path = "/bigdata/deploy/thinglinks/model/yolov7-tiny.onnx";
-        test_img = AiConfig.localFilePath + "/" + filepath.replace(AiConfig.domain + AiConfig.prefix + "/", "");
-        String[] tmp = test_img.split("\\.");
-        String savePath = tmp[0] + "1." + tmp[1];
+        model_path = ClassLoader.getSystemResource("model/yolov7-tiny.onnx").getPath();
 
-        String name = FileUtils.getName(filepath);
-        name = name.split("\\.")[0] + "1." + name.split("\\.")[1];
-        String resultfile = filepath.replace(FileUtils.getName(filepath), name);
+        // 将url替换为真实存储路径
+        // 注意，只在使用本地存储时后面的upload才有效，如果不是，此句需要修改
+        test_img = aiConfig.getPath() + "/" + filepath.replace(aiConfig.getDomain() + aiConfig.getPrefix() + "/upload/", "");
+        String extendname = FileUtils.getFileExtendFullName(filepath.getBytes());
+        String savePath = test_img.replace(extendname, "1" + extendname);
+
+        String resultfile = filepath.replace(extendname, "1" + extendname);
         try {
             // 全局new一次即可，千万不要每次使用都new。可以使用@Bean，或者在spring项目启动时初始化一次即可
             Onnx onnx = new YoloV7(names, model_path, false);
@@ -67,7 +71,7 @@ public class AiServiceImpl implements AiService {
 
     public String yolo5(String filepath) {
         model_path = ClassLoader.getSystemResource("model/helmet_1_25200_n.onnx").getPath();
-        test_img = AiConfig.localFilePath + "/" + filepath.replace(AiConfig.domain + AiConfig.prefix + "/", "");
+        test_img = aiConfig.getPath() + "/" + filepath.replace(aiConfig.getDomain() + aiConfig.getPrefix() + "/", "");
         String[] tmp = test_img.split("\\.");
         String savePath = tmp[0] + "1." + tmp[1];
 
@@ -94,7 +98,7 @@ public class AiServiceImpl implements AiService {
 
     public String yolo8(String filepath) {
         model_path = ClassLoader.getSystemResource("model/yolov8s.onnx").getPath();
-        test_img = AiConfig.localFilePath + "/" + filepath.replace(AiConfig.domain + AiConfig.prefix + "/", "");
+        test_img = aiConfig.getPath() + "/" + filepath.replace(aiConfig.getDomain() + aiConfig.getPrefix() + "/", "");
         String[] tmp = test_img.split("\\.");
         String savePath = tmp[0] + "1." + tmp[1];
 

@@ -1,25 +1,25 @@
 package com.ai.config;
 
+import lombok.Data;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Component;
 
-@Configuration
+@Data
+@Component
 public class AiConfig {
     @Value("${ai.model.path:/bigdata/uplaod}")
-    public static String modelPath;
-
-    @Value("${ai.file.prefix}")
-    public static String localFilePrefix;
+    private String modelPath;
 
     @Value("${ai.file.domain}")
-    public static String domain;
+    private String domain;
 
     @Value("${ai.file.prefix}")
-    public static String prefix;
+    private String prefix;
 
     /**
-     * 上传文件存储在本地的根路径
+     * 上传文件存储在本地的路径
      */
     @Value("${ai.file.path}")
-    public static String localFilePath;
+    private String path;
 }
