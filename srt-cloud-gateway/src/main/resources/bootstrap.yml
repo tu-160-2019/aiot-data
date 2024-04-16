@@ -79,6 +79,34 @@ spring:
             - Path=/video-assist/**
           filters:
             - StripPrefix=1
+        - id: iot-cloud
+          uri: lb://iot-cloud
+          order: 10
+          predicates:
+            - Path=/iot/**
+          filters:
+            - StripPrefix=1
+        - id: supply-chain
+          uri: lb://srt-cloud-supply-chain
+          order: 11
+          predicates:
+            - Path=/supply-chain/**
+          filters:
+            - StripPrefix=1
+        - id: dataroom
+          uri: lb://dataroom
+          order: 12
+          predicates:
+            - Path=/dataroom/**
+          filters:
+            - StripPrefix=1
+        - id: ai-monitor
+          uri: lb://ai-monitor
+          order: 13
+          predicates:
+            - Path=/aidet/**
+          filters:
+            - StripPrefix=1
         - id: openapi
           uri: http://localhost:${server.port}
           predicates:

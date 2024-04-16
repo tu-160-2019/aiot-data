@@ -10,7 +10,8 @@
  Target Server Type    : MySQL
  Target Server Version : 80036
  File Encoding         : 65001
- Date: 10/04/2024 22:12:45
+
+ Date: 16/04/2024 18:00:44
 */
 
 SET NAMES utf8mb4;
@@ -21,24 +22,24 @@ SET FOREIGN_KEY_CHECKS = 0;
 -- ----------------------------
 DROP TABLE IF EXISTS `sys_menu`;
 CREATE TABLE `sys_menu`  (
-  `id` bigint(0) NOT NULL AUTO_INCREMENT COMMENT 'id',
-  `pid` bigint(0) NULL DEFAULT NULL COMMENT '上级ID，一级菜单为0',
-  `name` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '菜单名称',
-  `url` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '菜单URL',
-  `authority` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '授权标识(多个用逗号分隔，如：sys:menu:list,sys:menu:save)',
-  `type` tinyint(0) NULL DEFAULT NULL COMMENT '类型   0：菜单   1：按钮   2：接口',
-  `open_style` tinyint(0) NULL DEFAULT NULL COMMENT '打开方式   0：内部   1：外部',
-  `icon` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '菜单图标',
-  `sort` int(0) NULL DEFAULT NULL COMMENT '排序',
-  `version` int(0) NULL DEFAULT NULL COMMENT '版本号',
-  `deleted` tinyint(0) NULL DEFAULT NULL COMMENT '删除标识  0：正常   1：已删除',
-  `creator` bigint(0) NULL DEFAULT NULL COMMENT '创建者',
-  `create_time` datetime(0) NULL DEFAULT NULL COMMENT '创建时间',
-  `updater` bigint(0) NULL DEFAULT NULL COMMENT '更新者',
-  `update_time` datetime(0) NULL DEFAULT NULL COMMENT '更新时间',
-  PRIMARY KEY (`id`) USING BTREE,
-  INDEX `idx_pid`(`pid`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 249 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = '菜单管理' ROW_FORMAT = DYNAMIC;
+                             `id` bigint(0) NOT NULL AUTO_INCREMENT COMMENT 'id',
+                             `pid` bigint(0) NULL DEFAULT NULL COMMENT '上级ID，一级菜单为0',
+                             `name` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '菜单名称',
+                             `url` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '菜单URL',
+                             `authority` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '授权标识(多个用逗号分隔，如：sys:menu:list,sys:menu:save)',
+                             `type` tinyint(0) NULL DEFAULT NULL COMMENT '类型   0：菜单   1：按钮   2：接口',
+                             `open_style` tinyint(0) NULL DEFAULT NULL COMMENT '打开方式   0：内部   1：外部',
+                             `icon` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '菜单图标',
+                             `sort` int(0) NULL DEFAULT NULL COMMENT '排序',
+                             `version` int(0) NULL DEFAULT NULL COMMENT '版本号',
+                             `deleted` tinyint(0) NULL DEFAULT NULL COMMENT '删除标识  0：正常   1：已删除',
+                             `creator` bigint(0) NULL DEFAULT NULL COMMENT '创建者',
+                             `create_time` datetime(0) NULL DEFAULT NULL COMMENT '创建时间',
+                             `updater` bigint(0) NULL DEFAULT NULL COMMENT '更新者',
+                             `update_time` datetime(0) NULL DEFAULT NULL COMMENT '更新时间',
+                             PRIMARY KEY (`id`) USING BTREE,
+                             INDEX `idx_pid`(`pid`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 252 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = '菜单管理' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of sys_menu
@@ -269,5 +270,8 @@ INSERT INTO `sys_menu` VALUES (245, 232, '告警列表', 'iot/alarm/list', '', 0
 INSERT INTO `sys_menu` VALUES (246, 232, '告警配置', 'iot/alarm/config', '', 0, 0, 'icon-setting-fill', 2, 0, 0, 10000, '2024-04-07 21:49:09', 10000, '2024-04-07 21:49:09');
 INSERT INTO `sys_menu` VALUES (247, 233, '租户管理', '', '', 0, 0, 'icon-unorderedlist', 1, 0, 0, 10000, '2024-04-07 21:50:36', 10000, '2024-04-07 21:50:36');
 INSERT INTO `sys_menu` VALUES (248, 233, '租户套餐管理', '', '', 0, 0, 'icon-pic-right', 2, 0, 0, 10000, '2024-04-07 21:51:40', 10000, '2024-04-07 21:51:40');
+INSERT INTO `sys_menu` VALUES (249, 204, '数据导入', 'supply-chain/import-files/index', '', 0, 0, '', 4, 0, 0, 10000, '2024-04-11 16:50:32', 10000, '2024-04-11 16:51:44');
+INSERT INTO `sys_menu` VALUES (250, 226, '安全帽检测', 'ai/detection/helmet', 'aidet:yolo7', 0, 0, 'icon-validCode', 1, 0, 0, 10000, '2024-04-15 16:04:06', 10000, '2024-04-15 21:01:45');
+INSERT INTO `sys_menu` VALUES (251, 226, '图像检测', 'ai/detection/people', 'aidet:yolo8', 0, 0, 'icon-theme', 2, 0, 0, 10000, '2024-04-16 16:49:56', 10000, '2024-04-16 16:50:50');
 
 SET FOREIGN_KEY_CHECKS = 1;

@@ -29,6 +29,17 @@ spring:
       max-request-size: 100MB
       max-file-size: 1024MB
 
+# feign 配置
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 600000
+        readTimeout: 600000
+        loggerLevel: basic
+  okhttp:
+    enabled: true
+
 logging:
   # 只有配置了日志文件，才能被监控收集
   file:

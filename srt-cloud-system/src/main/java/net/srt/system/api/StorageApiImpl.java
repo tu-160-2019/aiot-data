@@ -36,6 +36,7 @@ public class StorageApiImpl implements StorageApi {
         StorageDTO storage = new StorageDTO();
         storage.setUrl(url);
         storage.setSize(file.getSize());
+        storage.setPath(path);
 
         return Result.ok(storage);
     }

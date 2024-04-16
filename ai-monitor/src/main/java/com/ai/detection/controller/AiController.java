@@ -27,34 +27,17 @@ public class AiController {
 
     private final StorageApi storageApi;
 
-    @PreAuthorize("hasAuthority('aidet:yolo5')")
-    @PostMapping("/yolo5")
-    public Result<Map> yoloV5(MultipartFile file) {
-        try{
-            Result<StorageDTO> fileResult = storageApi.upload(file);
-            String dec = aiService.yolo5(fileResult.getData().getUrl());
-
-            Map result = new HashedMap();
-            result.put("origin", fileResult.getData().getUrl());
-            result.put("result", dec);
-
-            return Result.ok(result);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-
     @PreAuthorize("hasAuthority('aidet:yolo7')")
     @PostMapping("/yolo7")
     public Result<Map> yolo7(MultipartFile file) {
         try{
             Result<StorageDTO> fileResult = storageApi.upload(file);
-            String dec = aiService.yolo7(fileResult.getData().getUrl());
+            String resultUrl = aiService.yolo7(fileResult.getData().getUrl());
+            String originUrl = fileResult.getData().getUrl();
 
             Map result = new HashedMap();
-            result.put("origin", fileResult.getData().getUrl());
-            result.put("result", dec);
+            result.put("origin", originUrl);
+            result.put("result", resultUrl);
 
             return Result.ok(result);
         } catch (Exception e) {
@@ -68,11 +51,12 @@ public class AiController {
     public Result<Map> yolo8(MultipartFile file) {
         try {
             Result<StorageDTO> fileResult = storageApi.upload(file);
-            String dec = aiService.yolo8(fileResult.getData().getUrl());
+            String resultUrl = aiService.yolo8(fileResult.getData().getUrl());
+            String originUrl = fileResult.getData().getUrl();
 
             Map result = new HashedMap();
-            result.put("origin", fileResult.getData().getUrl());
-            result.put("result", dec);
+            result.put("origin", originUrl);
+            result.put("result", resultUrl);
 
             return Result.ok(result);
         } catch (Exception e) {

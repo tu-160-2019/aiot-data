@@ -65,4 +65,4 @@ storage:
     prefix:
   local:
     # 本地上传路径
-    path: /bigdata/deploy/ant-data/upload
+    path: /bigdata/deploy/aiot-data/upload
