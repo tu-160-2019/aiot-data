@@ -16,6 +16,7 @@ import net.srt.framework.common.utils.Result;
 import com.ai.detection.service.AiService;
 import net.srt.api.module.system.StorageApi;
 
+import javax.annotation.Resource;
 import java.util.Map;
 
 @AllArgsConstructor
@@ -24,10 +25,9 @@ public class AiController {
     @Autowired
     AiService aiService;
 
-    @Autowired
-    private StorageApi storageApi;
+    private final StorageApi storageApi;
 
-    @PreAuthorize("hasAuthority('ai:yolo5')")
+    @PreAuthorize("hasAuthority('aidet:yolo5')")
     @PostMapping("/yolo5")
     public Result<Map> yoloV5(MultipartFile file) {
         try{
@@ -45,7 +45,7 @@ public class AiController {
         return null;
     }
 
-    @PreAuthorize("hasAuthority('ai:yolo7')")
+    @PreAuthorize("hasAuthority('aidet:yolo7')")
     @PostMapping("/yolo7")
     public Result<Map> yolo7(MultipartFile file) {
         try{
@@ -63,7 +63,7 @@ public class AiController {
         return null;
     }
 
-    @PreAuthorize("hasAuthority('ai:yolo8')")
+    @PreAuthorize("hasAuthority('aidet:yolo8')")
     @PostMapping("/yolo8")
     public Result<Map> yolo8(MultipartFile file) {
         try {
