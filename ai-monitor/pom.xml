@@ -11,6 +11,10 @@
 
     <artifactId>ai-monitor</artifactId>
 
+    <properties>
+        <djl.version>0.27.0</djl.version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>net.srt</groupId>
@@ -27,7 +31,7 @@
             <artifactId>srt-cloud-security</artifactId>
             <version>2.0.0</version>
         </dependency>
-        <dependency>
+        <!--<dependency>
             <groupId>net.srt</groupId>
             <artifactId>srt-cloud-dbswitch</artifactId>
             <version>2.0.0</version>
@@ -41,7 +45,7 @@
                     <groupId>org.springframework.boot</groupId>
                 </exclusion>
             </exclusions>
-        </dependency>
+        </dependency>-->
         <!--使用log42j-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -87,6 +91,7 @@
             <artifactId>mapstruct</artifactId>
         </dependency>
 
+        <!-- 服务器端推理引擎 -->
         <dependency>
             <groupId>com.microsoft.onnxruntime</groupId>
             <artifactId>onnxruntime</artifactId>
@@ -96,6 +101,33 @@
             <groupId>org.openpnp</groupId>
             <artifactId>opencv</artifactId>
             <version>4.7.0-0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>ai.djl</groupId>
+            <artifactId>api</artifactId>
+            <version>${djl.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>ai.djl</groupId>
+            <artifactId>basicdataset</artifactId>
+            <version>${djl.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>ai.djl</groupId>
+            <artifactId>model-zoo</artifactId>
+            <version>${djl.version}</version>
+        </dependency>
+        <!-- Pytorch -->
+        <dependency>
+            <groupId>ai.djl.pytorch</groupId>
+            <artifactId>pytorch-engine</artifactId>
+            <version>${djl.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>ai.djl.pytorch</groupId>
+            <artifactId>pytorch-model-zoo</artifactId>
+            <version>${djl.version}</version>
         </dependency>
     </dependencies>
 
@@ -191,7 +223,7 @@
                                     <extraArgument>-Xloggc:logs/gc.log</extraArgument><!--日志文件的输出路径-->
                                 </extraArguments>
                             </jvmSettings>
-                        </daemon>A
+                        </daemon>
                     </daemons>
                     <programs>
                         <program>
