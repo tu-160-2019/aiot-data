@@ -139,7 +139,7 @@
                     <daemons>
                         <daemon>
                             <id>${project.artifactId}</id>
-                            <mainClass>net.srt.DataAssetsApplication</mainClass>
+                            <mainClass>com.ai.AiApplication</mainClass>
                             <platforms>
                                 <platform>jsw</platform>
                             </platforms>
@@ -191,11 +191,11 @@
                                     <extraArgument>-Xloggc:logs/gc.log</extraArgument><!--日志文件的输出路径-->
                                 </extraArguments>
                             </jvmSettings>
-                        </daemon>
+                        </daemon>A
                     </daemons>
                     <programs>
                         <program>
-                            <mainClass>net.srt.DataAssetsApplication</mainClass>
+                            <mainClass>com.ai.AiApplication</mainClass>
                             <id>${project.artifactId}</id>
                         </program>
                     </programs>

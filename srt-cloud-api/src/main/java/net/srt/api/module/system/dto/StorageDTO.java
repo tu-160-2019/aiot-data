@@ -17,4 +17,6 @@ public class StorageDTO {
     @Schema(description = "文件大小")
     private Long size;
 
+    @Schema(description = "文件的存储路径")
+    private String path;
 }
