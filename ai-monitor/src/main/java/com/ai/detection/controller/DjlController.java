@@ -44,4 +44,61 @@ public class DjlController {
         }
         return null;
     }
+
+    @PreAuthorize("hasAuthority('aidet:reflectiveVest')")
+    @PostMapping("/reflectiveVest")
+    public Result<Map> reflectiveVest(MultipartFile file) {
+        try {
+            Result<StorageDTO> fileResult = storageApi.upload(file);
+            String resultUrl = djlService.reflectiveVest(fileResult.getData().getUrl());
+            String originUrl = fileResult.getData().getUrl();
+
+            Map result = new HashedMap();
+            result.put("origin", originUrl);
+            result.put("result", resultUrl);
+
+            return Result.ok(result);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    @PreAuthorize("hasAuthority('aidet:vehicleDetec')")
+    @PostMapping("/vehicleDetec")
+    public Result<Map> vehicle(MultipartFile file) {
+        try {
+            Result<StorageDTO> fileResult = storageApi.upload(file);
+            String resultUrl = djlService.vehicle(fileResult.getData().getUrl());
+            String originUrl = fileResult.getData().getUrl();
+
+            Map result = new HashedMap();
+            result.put("origin", originUrl);
+            result.put("result", resultUrl);
+
+            return Result.ok(result);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    @PreAuthorize("hasAuthority('aidet:camera_facemask')")
+    @PostMapping("/cameraFacemask")
+    public Result<Map> cameraFacemask(MultipartFile file) {
+        try {
+            Result<StorageDTO> fileResult = storageApi.upload(file);
+            String resultUrl = djlService.cameraFacemask(fileResult.getData().getUrl());
+            String originUrl = fileResult.getData().getUrl();
+
+            Map result = new HashedMap();
+            result.put("origin", originUrl);
+            result.put("result", resultUrl);
+
+            return Result.ok(result);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 }

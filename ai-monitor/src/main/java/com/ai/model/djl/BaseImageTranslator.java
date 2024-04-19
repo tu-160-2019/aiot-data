@@ -22,6 +22,7 @@ import java.util.Map;
 
 /**
  * 图像预处理
+ * 复制的 djl 的BaseImageTranslator，并做了部分修改
  */
 public abstract class BaseImageTranslator<T> implements Translator<Image, T> {
 
@@ -189,8 +190,7 @@ public abstract class BaseImageTranslator<T> implements Translator<Image, T> {
     }
 
     @SuppressWarnings("rawtypes")
-    public abstract static class ClassificationBuilder<T extends BaseBuilder>
-            extends BaseBuilder<T> {
+    public abstract static class ClassificationBuilder<T extends BaseBuilder> extends BaseBuilder<T> {
 
         protected SynsetLoader synsetLoader;
 

@@ -37,8 +37,7 @@ public abstract class ObjectDetectionTranslator extends BaseImageTranslator<Dete
     }
 
     @SuppressWarnings("rawtypes")
-    public abstract static class ObjectDetectionBuilder<T extends ObjectDetectionBuilder>
-            extends ClassificationBuilder<T> {
+    public abstract static class ObjectDetectionBuilder<T extends ObjectDetectionBuilder> extends ClassificationBuilder<T> {
 
         protected float threshold = 0.2f;
         protected double imageWidth;
