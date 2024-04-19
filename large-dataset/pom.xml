@@ -14,7 +14,6 @@
     <packaging>jar</packaging>
 
     <properties>
-        <dataset.core.version>3.0.0.2024040101.Alpha</dataset.core.version>
         <swagger.annotations.version>1.5.20</swagger.annotations.version>
         <swagger.bootstrap.version>1.9.6</swagger.bootstrap.version>
         <swagger.version>2.9.2</swagger.version>
