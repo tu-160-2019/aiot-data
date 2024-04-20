@@ -146,6 +146,25 @@
             <artifactId>paddlepaddle-model-zoo</artifactId>
             <version>${djl.version}</version>
         </dependency>
+        <dependency>
+            <groupId>ai.djl.huggingface</groupId>
+            <artifactId>tokenizers</artifactId>
+            <version>${djl.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>ai.djl.pytorch</groupId>
+            <artifactId>pytorch-native-cu117</artifactId>
+            <classifier>win-x86_64</classifier>
+            <version>1.13.0</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>ai.djl.pytorch</groupId>
+            <artifactId>pytorch-jni</artifactId>
+            <version>1.13.0-0.20.0</version>
+            <scope>runtime</scope>
+        </dependency>
     </dependencies>
 
     <build>
