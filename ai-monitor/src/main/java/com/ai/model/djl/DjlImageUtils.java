@@ -38,14 +38,6 @@ public class DjlImageUtils {
         return ImageFactory.getInstance().fromImage(img);
     }
 
-    public static void saveImages(List<Image> input, List<Image> generated, String path) throws IOException {
-        Path outputPath = Paths.get(path);
-        Files.createDirectories(outputPath);
-
-        save(generated, "image", outputPath);
-        save(group(input, generated), "stitch", outputPath);
-    }
-
     private static List<Image> group(List<Image> input, List<Image> generated) {
         NDList stitches = new NDList(input.size());
 
@@ -73,69 +65,11 @@ public class DjlImageUtils {
         }
     }
 
-    private static void save(List<Image> images, String name, Path path) throws IOException {
-        for (int i = 0; i < images.size(); i++) {
-            Path imagePath = path.resolve(name + i + ".png");
-            images.get(i).save(Files.newOutputStream(imagePath), "png");
-        }
-    }
-
     /**
      * BufferedImage图片格式转DJL图片格式
      */
     public static Image convert(BufferedImage img) {
         return ImageFactory.getInstance().fromImage(img);
-    }
-
-    /**
-     * 保存BufferedImage图片
-     */
-    public static void saveImage(BufferedImage img, String name, String path) {
-        Image djlImg = ImageFactory.getInstance().fromImage(img); // 支持多种图片格式，自动适配
-        Path outputDir = Paths.get(path);
-        Path imagePath = outputDir.resolve(name);
-        try {
-            djlImg.save(Files.newOutputStream(imagePath), "png");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    /**
-     * 保存DJL图片
-     */
-    public static void saveImage(Image img, String name, String path) {
-        Path outputDir = Paths.get(path);
-        Path imagePath = outputDir.resolve(name);
-        try {
-            img.save(Files.newOutputStream(imagePath), "png");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    /**
-     * 保存图片,含检测框
-     */
-    public static void saveBoundingBoxImage(
-            Image img, DetectedObjects detection, String name, String path) throws IOException {
-        // Make image copy with alpha channel because original image was jpg
-        img.drawBoundingBoxes(detection);
-        Path outputDir = Paths.get(path);
-        Files.createDirectories(outputDir);
-        Path imagePath = outputDir.resolve(name);
-        // OpenJDK can't save jpg with alpha channel
-        img.save(Files.newOutputStream(imagePath), "png");
-    }
-
-    public static void saveBoundingBoxImage(
-            Image img, DetectedObjects detection, String filePath) throws IOException {
-        // Make image copy with alpha channel because original image was jpg
-        img.drawBoundingBoxes(detection);
-        Path outputDir = Paths.get(filePath);
-        Path imagePath = outputDir.resolve(outputDir);
-        // OpenJDK can't save jpg with alpha channel
-        img.save(Files.newOutputStream(imagePath), "png");
     }
 
     /**
@@ -265,4 +199,71 @@ public class DjlImageUtils {
 
         return (int) (y * h + y1);
     }
+
+    public static void saveImages(List<Image> input, List<Image> generated, String path) throws IOException {
+        Path outputPath = Paths.get(path);
+        Files.createDirectories(outputPath);
+
+        saveImages(generated, "image", outputPath);
+        saveImages(group(input, generated), "stitch", outputPath);
+    }
+
+    private static void saveImages(List<Image> images, String name, Path path) throws IOException {
+        for (int i = 0; i < images.size(); i++) {
+            Path imagePath = path.resolve(name + i + ".png");
+            images.get(i).save(Files.newOutputStream(imagePath), "png");
+        }
+    }
+
+    /**
+     * 保存BufferedImage图片
+     */
+    public static void saveImage(BufferedImage img, String name, String path) {
+        Image djlImg = ImageFactory.getInstance().fromImage(img); // 支持多种图片格式，自动适配
+        Path outputDir = Paths.get(path);
+        Path imagePath = outputDir.resolve(name);
+        try {
+            djlImg.save(Files.newOutputStream(imagePath), "png");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * 保存DJL图片
+     */
+    public static void saveImage(Image img, String name, String path) {
+        Path outputDir = Paths.get(path);
+        Path imagePath = outputDir.resolve(name);
+        try {
+            img.save(Files.newOutputStream(imagePath), "png");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * 保存图片,含检测框
+     */
+    public static void saveBoundingBoxImage(
+            Image img, DetectedObjects detection, String name, String path) throws IOException {
+        // Make image copy with alpha channel because original image was jpg
+        img.drawBoundingBoxes(detection);
+        Path outputDir = Paths.get(path);
+        Files.createDirectories(outputDir);
+        Path imagePath = outputDir.resolve(name);
+        // OpenJDK can't save jpg with alpha channel
+        img.save(Files.newOutputStream(imagePath), "png");
+    }
+
+    public static void saveBoundingBoxImage(
+            Image img, DetectedObjects detection, String filePath) throws IOException {
+        // Make image copy with alpha channel because original image was jpg
+        img.drawBoundingBoxes(detection);
+        Path outputDir = Paths.get(filePath);
+        Path imagePath = outputDir.resolve(outputDir);
+        // OpenJDK can't save jpg with alpha channel
+        img.save(Files.newOutputStream(imagePath), "png");
+    }
+
 }

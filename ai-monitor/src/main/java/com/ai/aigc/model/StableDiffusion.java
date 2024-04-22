@@ -18,6 +18,7 @@ import ai.djl.repository.zoo.ZooModel;
 import ai.djl.training.util.ProgressBar;
 import ai.djl.translate.NoopTranslator;
 import ai.djl.translate.TranslateException;
+import com.ai.model.djl.DjlImageUtils;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.Data;
@@ -41,9 +42,10 @@ public class StableDiffusion {
     private Device device = Device.cpu();
     private int height = 512;
     private int width = 512;
-
-    private String prompt = "a photo of an astronaut riding a horse on mars";
-    private String negative_prompt = "";
+    // 提示词
+//    private String prompt = "a photo of an astronaut riding a horse on mars";
+    // 反向提示词
+//    private String negative_prompt = "";
 
     private int UNKNOWN_TOKEN = 49407;
     private int MAX_LENGTH = 77;
@@ -78,8 +80,10 @@ public class StableDiffusion {
         initTokenizer();
     }
 
-    private void initTokenizer() {
+    void initTokenizer() {
         try {
+            engine = Engine.getEngine(engineName); // PyTorch OnnxRuntime
+            manager = NDManager.newBaseManager(device, engine.getEngineName());
             tokenizer =
                     HuggingFaceTokenizer.builder()
                             .optManager(manager)
@@ -94,11 +98,15 @@ public class StableDiffusion {
         }
     }
 
-    public NDArray inference() {
+    /**
+     * 根据提示词生成图片
+     * @param prompt
+     *   提示词
+     * @param negative_prompt  反向提示词
+     * @return
+     */
+    public NDArray inference(String prompt, String negative_prompt) {
         try {
-            engine = Engine.getEngine(engineName); // PyTorch OnnxRuntime
-            manager = NDManager.newBaseManager(device, engine.getEngineName());
-
             NDList textEncoding = SDTextEncoder(SDTextTokenizer(prompt));
             NDList uncondEncoding = SDTextEncoder(SDTextTokenizer(negative_prompt));
             System.out.println(Arrays.toString(textEncoding.get(1).toFloatArray()));
@@ -142,7 +150,11 @@ public class StableDiffusion {
         return null;
     }
 
-    private static NDList buildUnetInput(NDArray input, NDArray timestep, NDArray latents) {
+    public NDArray inference(String prompt, String negative_prompt, String filePath) {
+        return null;
+    }
+
+    public NDList buildUnetInput(NDArray input, NDArray timestep, NDArray latents) {
         input.setName("encoder_hidden_states");
         NDList list = new NDList();
         list.add(latents);
@@ -151,7 +163,7 @@ public class StableDiffusion {
         return list;
     }
 
-    private NDList SDTextEncoder(NDList input)
+    public NDList SDTextEncoder(NDList input)
             throws ModelNotFoundException, MalformedModelException, IOException,
             TranslateException {
         Criteria<NDList, NDList> criteria =
@@ -173,7 +185,7 @@ public class StableDiffusion {
         return output;
     }
 
-    private Predictor<NDList, NDList> SDUNetPredictor()
+    public Predictor<NDList, NDList> SDUNetPredictor()
             throws ModelNotFoundException, MalformedModelException, IOException {
         Criteria<NDList, NDList> criteria =
                 Criteria.builder()
@@ -212,7 +224,7 @@ public class StableDiffusion {
         return output;
     }
 
-    private NDList SDTextTokenizer(String prompt) {
+    public NDList SDTextTokenizer(String prompt) {
         List<String> tokens = tokenizer.tokenize(prompt);
         int[][] tokenValues = new int[1][MAX_LENGTH];
         ObjectMapper mapper = new ObjectMapper();
@@ -237,7 +249,7 @@ public class StableDiffusion {
         return new NDList(ndArray);
     }
 
-    public void saveImage(NDArray input) throws TranslateException, ModelNotFoundException,
+    public void saveImage(NDArray input, String fileName, String outputPath) throws TranslateException, ModelNotFoundException,
             MalformedModelException, IOException {
         input = input.div(0.18215);
 
@@ -250,14 +262,7 @@ public class StableDiffusion {
         scaled = scaled.mul(255).round().toType(DataType.INT8, true).get(0);
         Image image = BufferedImageFactory.getInstance().fromNDArray(scaled);
 
-        saveImage(image, "out_pt_cpu", "output/");
-    }
-
-    public static void saveImage(Image image, String name, String path) throws IOException {
-        Path outputPath = Paths.get(path);
-        Files.createDirectories(outputPath);
-        Path imagePath = outputPath.resolve(name + ".png");
-        image.save(Files.newOutputStream(imagePath), "png");
+        DjlImageUtils.saveImage(image, fileName, outputPath);
     }
 }
 
