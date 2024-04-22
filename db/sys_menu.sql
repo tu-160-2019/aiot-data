@@ -11,7 +11,7 @@
  Target Server Version : 80036
  File Encoding         : 65001
 
- Date: 19/04/2024 11:15:34
+ Date: 22/04/2024 20:45:44
 */
 
 SET NAMES utf8mb4;
@@ -39,7 +39,7 @@ CREATE TABLE `sys_menu`  (
   `update_time` datetime(0) NULL DEFAULT NULL COMMENT '更新时间',
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `idx_pid`(`pid`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 255 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = '菜单管理' ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 257 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = '菜单管理' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of sys_menu
@@ -277,5 +277,6 @@ INSERT INTO `sys_menu` VALUES (252, 226, '烟火检测', 'ai/detection/fire-moke
 INSERT INTO `sys_menu` VALUES (253, 226, '反光衣检测', 'ai/detection/reflective-vest', 'aidet:reflectiveVest', 0, 0, 'icon-sisternode', 4, 0, 0, 10000, '2024-04-18 22:35:45', 10000, '2024-04-18 22:36:11');
 INSERT INTO `sys_menu` VALUES (254, 226, '车辆检测', 'ai/detection/vehicle-detec', 'aidet:vehicleDetec', 0, 0, 'icon-bug', 5, 0, 0, 10000, '2024-04-18 23:06:16', 10000, '2024-04-18 23:06:40');
 INSERT INTO `sys_menu` VALUES (255, 226, '摄像头检测', 'ai/detection/camera_facemask', 'aidet:camera_facemask', 0, 0, 'icon-formatpainter', 6, 0, 0, 10000, '2024-04-18 23:08:48', 10000, '2024-04-18 23:09:27');
+INSERT INTO `sys_menu` VALUES (256, 226, '文生图大模型', 'ai/aigc/aigc', 'aidet:text2img', 0, 0, 'icon-dashboard-fill', 7, 0, 0, 10000, '2024-04-21 14:18:51', 10000, '2024-04-21 14:19:34');
 
 SET FOREIGN_KEY_CHECKS = 1;
