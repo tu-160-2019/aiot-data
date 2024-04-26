@@ -97,7 +97,3 @@ AIOT人工智能物联网平台是一站式物联网开发基础平台，帮助�
 
 [铱塔智联](https://gitee.com/open-iita/iotkit-parent)
 
-
-**车牌检测**
-
-[车牌检测](https://github.com/we0091234/Chinese_license_plate_detection_recognition)
