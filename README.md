@@ -84,3 +84,20 @@ AIOT人工智能物联网平台是一站式物联网开发基础平台，帮助�
 ## FAQ:
 1、目前摄像头部分为调用本地摄像头，仅供参考，后期会修改为调用rtmp、rtsp实时视频。目前前端暂未处理。后台可供参考
 
+
+## 鸣谢声明
+
+该项目使用借鉴了以下优秀开源项目的源码进行改造集成，特此鸣谢声明。
+
+**数据平台**
+
+[数睿通数据中台](https://gitee.com/zrxjava/srt-data-center)
+
+**物联网**
+
+[铱塔智联](https://gitee.com/open-iita/iotkit-parent)
+
+
+**车牌检测**
+
+[车牌检测](https://github.com/we0091234/Chinese_license_plate_detection_recognition)
