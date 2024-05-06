@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>srt-cloud</artifactId>
+        <groupId>net.srt</groupId>
+        <version>2.0.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>ai-real</artifactId>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>detection</module>
+        <module>ai-common</module>
+        <module>tts</module>
+    </modules>
+
+    <properties>
+        <djl.version>0.27.0</djl.version>
+    </properties>
+
+</project>

@@ -20,7 +20,7 @@ import org.bytedeco.opencv.opencv_core.Point;
 import org.bytedeco.opencv.opencv_core.Rect;
 import org.bytedeco.opencv.opencv_core.Scalar;
 
-import com.ai.config.AiConfig;
+import com.ai.config.AiModelConfig;
 import com.ai.model.djl.DjlImageUtils;
 import com.ai.model.djl.FireSmokeDetect;
 import com.ai.model.djl.ReflectiveVest;
@@ -50,7 +50,7 @@ public class DjlServiceImpl implements DjlService {
     static String test_img = "";
 
     @Autowired
-    AiConfig aiConfig;
+    AiModelConfig aiConfig;
 
     @Override
     public String fireSmoke(String filepath) {

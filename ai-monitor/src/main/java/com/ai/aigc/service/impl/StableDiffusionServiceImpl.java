@@ -2,9 +2,8 @@ package com.ai.aigc.service.impl;
 
 import ai.djl.Device;
 import ai.djl.ndarray.NDArray;
-import ai.djl.ndarray.NDList;
 import com.ai.aigc.service.StableDiffusionService;
-import com.ai.config.AiConfig;
+import com.ai.config.AiModelConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,7 +13,7 @@ import com.ai.aigc.model.Img2ImgStableDiffusion;
 @Service
 public class StableDiffusionServiceImpl implements StableDiffusionService {
     @Autowired
-    AiConfig aiConfig;
+    AiModelConfig aiConfig;
 
     StableDiffusion stableDiffusion;
 

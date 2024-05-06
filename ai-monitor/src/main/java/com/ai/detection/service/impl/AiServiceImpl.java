@@ -4,7 +4,6 @@ import com.ai.detection.service.AiService;
 import com.ai.util.Onnx;
 import com.ai.util.Output;
 import com.ai.model.YoloV7;
-import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import net.srt.framework.common.utils.file.FileUtils;
 import org.opencv.core.Mat;
@@ -15,7 +14,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 import com.ai.model.*;
-import com.ai.config.AiConfig;
+import com.ai.config.AiModelConfig;
 
 @Slf4j
 @Service
@@ -26,7 +25,7 @@ public class AiServiceImpl implements AiService {
     static String test_img = "";
 
     @Autowired
-    AiConfig aiConfig;
+    AiModelConfig aiConfig;
 
     Onnx yolov7;
     Onnx yolov8;

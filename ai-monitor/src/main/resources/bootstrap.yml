@@ -23,7 +23,7 @@ spring:
         file-extension: yaml
         # 指定配置
         extension-configs:
-          - data-id: datasource.yaml
+          - data-id: ai-datasource.yaml
             refresh: true
   servlet:
     multipart:
@@ -50,6 +50,11 @@ ai:
     prefix:
   model:
     path: /bigdata/code/aiot-data/ai-monitor/src/main/resources/model
+  tts:
+    target:
+      voice: /bigdata/code/aiot-data/ai-real/tts/biaobei-009502.mp3
+    output:
+      path: /bigdata/deploy/aiot-data/upload/tts/output
 
 logging:
   # 只有配置了日志文件，才能被监控收集
