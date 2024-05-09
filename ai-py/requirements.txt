@@ -1,0 +1,26 @@
+# AI及大模型python服务端，与java形成互调关系
+numpy
+
+# web
+grpcio
+grpcio-tools
+protobuf
+flask_cors
+Flask
+# gevent
+# gevent-websocket
+# websocket-client
+# Flask-Login
+Flask-SQLAlchemy
+Flask-moment
+Flask-Excel
+MySQL-connector-python
+pyexcel-xlsx
+Werkzeug
+setproctitle # 用于自定义进程标题的第三方库
+# web debug
+selenium # 自动化浏览器机器人
+
+# 深度学习
+opencv-python
+# gensim # 用于自然语言处理和文本分析的 Python 库. 功能包括文档的相似度计算、关键词提取和文档的主题分析等
