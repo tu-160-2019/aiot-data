@@ -60,7 +60,7 @@ AIOT人工智能物联网平台是一站式物联网开发基础平台，帮助�
 
 
 ## 系统部分截图
-![输入图片说明](images/iot1.jpg)
+https://gitee.com/wangmingf83/aiot-data/raw/master/images/iot1.jpg
 ![输入图片说明](images/iot2.jpg)
 ![输入图片说明](images/iot3.jpg)
   物联网功能
