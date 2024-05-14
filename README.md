@@ -78,7 +78,7 @@ AIOT人工智能物联网平台是一站式物联网开发基础平台，帮助�
 
 
 ## 微信群(添加我微信备注"进群"):
-![alt text](https://gitee.com/wangmingf83/aiot-data/raw/master/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20240325121359.png)
+![alt text](https://gitee.com/wangmingf83/aiot-data/raw/master/20240325121359.png)
 
 
 ## 模型下载地址:
